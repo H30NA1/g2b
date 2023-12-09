@@ -43,4 +43,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function financial()
+    {
+        return $this->hasOne(UserFinancial::class);
+    }
+
+    public function professional()
+    {
+        return $this->hasOne(UserProfessional::class);
+    }
+
+    public function profile()
+    {
+        return $this->hasOne(UserProfile::class);
+    }
+
+    public function settings()
+    {
+        return $this->hasOne(UserSettings::class);
+    }
 }

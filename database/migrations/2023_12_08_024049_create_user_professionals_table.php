@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('company_url', 255)->nullable();
             $table->string('company_address', 255)->nullable();
             $table->string('company_tel', 255)->nullable();
-            $table->string('start_working_at', 255)->nullable();
-            $table->string('end_working_at', 255)->nullable();
+            $table->dateTime('start_working_at')->nullable();
+            $table->dateTime('end_working_at')->nullable();
             $table->softDeletes()->nullable();
             $table->timestamps();
         });
