@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Requests\API\Auth;
+namespace App\Http\Requests\Api\Auth;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
 class LoginRequest extends FormRequest
 {
     /**
@@ -11,7 +12,7 @@ class LoginRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +23,20 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'email' => 'required|email|exists:users,email',
+            'password' => 'required'
         ];
+    }
+
+    public function failedValidation(Validator $validator)
+    {
+        $errors = $validator->errors(); // Here is your array of errors
+
+        $response = response()->json([
+            'message' => 'Invalid data send',
+            'details' => $errors->messages()
+        ], 422);
+
+        throw new HttpResponseException($response);
     }
 }

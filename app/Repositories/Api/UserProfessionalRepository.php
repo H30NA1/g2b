@@ -4,7 +4,7 @@ namespace App\Repositories\Api;
 
 use App\Repositories\BaseRepository;
 
-class UserProfessional extends BaseRepository
+class UserProfessionalRepository extends BaseRepository
 {
     public function model()
     {

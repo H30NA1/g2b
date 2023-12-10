@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
 
-class UserSettings extends Model
+class AccessToken extends Model
 {
     use HasApiTokens, HasFactory, SoftDeletes;
 
@@ -19,12 +19,12 @@ class UserSettings extends Model
      */
     protected $fillable = [
         'user_id',
-        'role',
-        'status',
-        'is_blocked',
-        'noti_email',
-        'noti_device',
-        'plain_password',
+        'access_token',
+        'ip_address',
+        'last_logged_in',
+        'user_agent',
+        'is_active',
+        'token_expires_at'
     ];
 
     public function user()

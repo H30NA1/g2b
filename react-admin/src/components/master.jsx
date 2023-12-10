@@ -1,6 +1,5 @@
 import {Link, Outlet, Navigate } from "react-router-dom";
 import { useStateContext } from "../contexts/ContextProvider";
-import Login from "../views/auth/login";
 
 export default function Master() {
   const{user, token} = useStateContext()

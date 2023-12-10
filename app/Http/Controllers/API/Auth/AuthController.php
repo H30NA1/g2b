@@ -1,43 +1,53 @@
 <?php
 
-namespace App\Http\Controllers\API\Auth;
+namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\API\Auth\LoginRequest;
-use App\Http\Requests\API\Auth\RegisterRequest;
-use App\Services\API\UserService;
+use App\Http\Requests\Api\Auth\LoginRequest;
+use App\Http\Requests\Api\Auth\RegisterRequest;
+use App\Services\Api\UserService;
+use App\Services\Api\TokenService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use Throwable;
 
 class AuthController extends Controller
 {
     private $userService;
-    public function __construct(UserService $userService)
+    private $tokenService;
+
+    public function __construct(
+        UserService $userService,
+        TokenService $tokenService
+        )
     {
-        $userService = $userService;
+        $this->userService = $userService;
+        $this->tokenService = $tokenService;
     }
 
     public function login(LoginRequest $request)
     {
         try {
-            $credentials = $request->validate();
+            DB::beginTransaction();
+            $credentials = $request->all();
             if (!Auth::attempt($credentials)) {
                 return response()->json(['message' => 'Email or Password not correct. Please check again!!'], 404);
             }
-
+            
             $user = $request->user();
-            $tokenData = $user->createToken('Personal Access Token')->plainTextToken;
+            $token = $this->tokenService->retrieveUserToken($user, $request);
 
+            DB::commit();
             return response()->json([
-                'access_token' => $tokenData->accessToken,
-                'role' => $user->user_type,
+                'access_token' => $token->access_token,
+                'user' => $user,
                 'token_type' => 'Bearer',
-                'expires_at' => Carbon::parse($tokenData->token->expires_at)->toDateTimeString()
+                'expires_at' => Carbon::parse($token->token_expires_at)->toDateTimeString()
             ], 200);
         } catch (Throwable $e) {
+            DB::rollBack();
             report($e);
             return response()->json(['message' => $e->getMessage()], 400);
         }
@@ -46,14 +56,15 @@ class AuthController extends Controller
     public function register(RegisterRequest $request)
     {
         try {
-            $data = $request->validate();
-
+            DB::beginTransaction();
+            $data = $request->all();
             $user = $this->userService->createUser($data);
 
-            $token = $user->createToken('Personal Access Token')->plainTextToken;
-
+            $token = $this->tokenService->retrieveUserToken($user, $request);
+            DB::commit();
             return response(compact('user', 'token'));
         } catch (Throwable $e) {
+            DB::rollBack();
             report($e);
             return response()->json(['message' => $e->getMessage()], 400);
         }
@@ -68,6 +79,5 @@ class AuthController extends Controller
             report($e);
             return response()->json(['message' => $e->getMessage()], 400);
         }
-        
     }
 }

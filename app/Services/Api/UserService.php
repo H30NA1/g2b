@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Services\API;
+namespace App\Services\Api;
 
-use App\Repositories\API\UserRepository;
-use App\Repositories\API\UserFinancialRepository;
-use App\Repositories\API\UserProfessional;
-use App\Repositories\API\UserProfileRepository;
-use App\Repositories\API\UserSettingsRepository;
+use App\Repositories\Api\UserRepository;
+use App\Repositories\Api\UserFinancialRepository;
+use App\Repositories\Api\UserProfessionalRepository;
+use App\Repositories\Api\UserProfileRepository;
+use App\Repositories\Api\UserSettingsRepository;
 use Illuminate\Support\Facades\Hash;
 
 class UserService
@@ -20,7 +20,7 @@ class UserService
     public function __construct(
         UserRepository $userRepository,
         UserFinancialRepository $userFinancialRepository,
-        UserProfessional $userProfessionalRepository,
+        UserProfessionalRepository $userProfessionalRepository,
         UserProfileRepository $userProfileRepository,
         UserSettingsRepository $userSettingRepository
     ) {
@@ -41,24 +41,24 @@ class UserService
         $this->prepareData($user, $userData);
         $this->userFinancialRepository->create($userData['financial']);
         $this->userProfessionalRepository->create($userData['profile']);
-        $this->userProfileRepository->create($userData['profession']);
+        $this->userProfileRepository->create($userData['professional']);
         $this->userSettingRepository->create($userData['settings']);
 
         return $user;
     }
 
-    public function updateUser($userId, $newUserData)
+    public function updateUser($userId, $userData)
     {
-        $plainPassword = $newUserData['password'];
-        $newUserData['plain_password'] = $plainPassword;
-        $newUserData['password'] = Hash::make($plainPassword);
+        $plainPassword = $userData['password'];
+        $userData['plain_password'] = $plainPassword;
+        $userData['password'] = Hash::make($plainPassword);
 
-        $user = $this->userRepository->update($userId, $newUserData);
-        $this->prepareData($user, $newUserData);
-        $this->userFinancialRepository->updateUserFinancial($user->id, $newUserData['financial']);
-        $this->userProfessionalRepository->updateUserProfessional($user->id, $newUserData['profile']);
-        $this->userProfileRepository->updateUserProfile($user->id, $newUserData['profession']);
-        $this->userSettingRepository->updateUserSettings($user->id, $newUserData['settings']);
+        $user = $this->userRepository->update($userId, $userData);
+        $this->prepareData($user, $userData);
+        $this->userFinancialRepository->updateUserFinancial($user->id, $userData['financial']);
+        $this->userProfessionalRepository->updateUserProfessional($user->id, $userData['profile']);
+        $this->userProfileRepository->updateUserProfile($user->id, $userData['profession']);
+        $this->userSettingRepository->updateUserSettings($user->id, $userData['settings']);
 
         return $user;
     }
@@ -67,7 +67,7 @@ class UserService
     {
         $userId = $user->id;
 
-        $data = [
+        $userData = [
             'financial' => [
                 'user_id' => $userId,
                 'salary' => $userData['salary'] ?? $user->financial->salary ?? null,
@@ -108,16 +108,14 @@ class UserService
                 'plain_password' => $userData['plain_password'] ?? $user->settings->plain_password ?? null,
                 'is_blocked' => $userData['is_blocked'] ?? $user->settings->is_blocked ?? 0,
                 'noti_email' => $userData['noti_email'] ?? $user->settings->noti_email ?? 1,
-                'noti_device' => $userData['noti_device'] ?? $user->settings->noti_device ?? 1,
-            ],
+                'noti_device' => $userData['noti_device'] ?? $user->settings->noti_device ?? 1
+            ]
         ];
 
-        $this->uploadAvatarIfRequired($userData, $user, $data['professional'], 'company_logo');
-        $this->processDate($userData['start_working_at'] ?? null, $data['professional'], 'start_working_at');
-        $this->processDate($userData['end_working_at'] ?? null, $data['professional'], 'end_working_at');
-        $this->uploadAvatarIfRequired($userData, $user, $data['profile'], 'avatar');
-
-        return $data;
+        $this->uploadAvatarIfRequired($userData, $user, $userData['professional'], 'company_logo');
+        $this->processDate($userData['start_working_at'] ?? null, $userData['professional'], 'start_working_at');
+        $this->processDate($userData['end_working_at'] ?? null, $userData['professional'], 'end_working_at');
+        $this->uploadAvatarIfRequired($userData, $user, $userData['profile'], 'avatar');
     }
 
     private function uploadAvatarIfRequired($userData, $user, &$data, $field)
