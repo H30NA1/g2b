@@ -7,7 +7,7 @@ export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const [errors, setErrors] = useState(null);
-  const { setUser, setToken } = useStateContext;
+  const { setUser, setToken } = useStateContext();
 
   const onSubmit = (e) => {
     e.preventDefault();

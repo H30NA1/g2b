@@ -10,6 +10,7 @@ use App\Services\Api\TokenService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Throwable;
 
@@ -41,7 +42,7 @@ class AuthController extends Controller
 
             DB::commit();
             return response()->json([
-                'access_token' => $token->access_token,
+                'token' => $token->access_token,
                 'user' => $user,
                 'token_type' => 'Bearer',
                 'expires_at' => Carbon::parse($token->token_expires_at)->toDateTimeString()

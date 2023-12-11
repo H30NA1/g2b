@@ -24,7 +24,8 @@ class AccessToken extends Model
         'last_logged_in',
         'user_agent',
         'is_active',
-        'token_expires_at'
+        'token_expires_at',
+        'location'
     ];
 
     public function user()

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('user_agent')->nullable();
             $table->boolean('is_active')->default(true);
             $table->timestamp('token_expires_at')->nullable();
+            $table->string('location', 255)->nullable();
             $table->softDeletes()->nullable();
             $table->timestamps(); 
         });
