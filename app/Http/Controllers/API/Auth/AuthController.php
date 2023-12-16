@@ -74,7 +74,16 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         try {
-            $request->user()->token()->revoke();
+            $user = auth('sanctum')->user();
+            if (!isset($user)) {
+                return response()->json(['message' => 'Already Logged Out!!'], 200);
+            }
+            $token = $user->currentAccessToken();
+            if (!isset($token)) {
+                return response()->json(['message' => 'No Token Exists! Assume Already Logged Out!'], 200);
+            }
+
+            $token->delete();
             return response()->json(['message' => 'Successfully Logged Out!!'], 200);
         } catch (Throwable $e) {
             report($e);

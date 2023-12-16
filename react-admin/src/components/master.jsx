@@ -4,18 +4,23 @@ import { useEffect } from "react";
 import axiosClient from "../axios-client";
 
 export default function Master() {
-  const{user, token, setUser} = useStateContext()
+  const{user, token, setUser, setToken} = useStateContext()
 
   if (!token) {
-    return <Navigate to="/login"></Navigate>
+    return <Navigate to="/admin/login"></Navigate>
   }
 
   const onLogout = (e) => {
     e.preventDefault()
+    axiosClient.post('/logout')
+    .then(() => {
+      setUser({})
+      setToken(null)
+    })
   }
 
   useEffect(() => {
-    axiosClient.get('/admin/profile')
+    axiosClient.get('/profile')
     .then(({data}) => {
       setUser(data.user)
     })
