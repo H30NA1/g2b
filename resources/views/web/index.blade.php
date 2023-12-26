@@ -1,389 +1,504 @@
 @extends('web.layouts.master')
 
 @section('title', 'G2B ｜GO TO BYTES')
-@section('bodyClass', 'homepage navstate_hide')
-@section('sectionClass', 'main_body p-top')
+@section('bodyClass', 'u-body u-xl-mode')
 
 @push('css')
 <link rel="stylesheet" href="{{ getFileVersion('assets/web/css/home.css') }}" media="screen" />
 @endpush
 
 @section('content')
-
-<body data-home-page="{{ route('web.index') }}" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
-
-    <section class="u-clearfix u-image u-section-1" id="carousel_9be1">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <img src="{{ getFileVersion('assets/web/images/image1.png') }}" alt="" class="u-image u-image-contain u-image-default u-image-1" />
-            <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
-                <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-middle-xs">
-                    <h1 class="u-align-center u-custom-font u-font-oswald u-text u-text-body-alt-color u-title u-text-1">
-                        Web Development Studio
-                    </h1>
-                    <p class="u-align-center u-text u-text-body-alt-color u-text-2">
-                        Your guide to summiting the peak of digital success
-                    </p>
-                    <div class="u-border-10 u-border-palette-1-base u-line u-line-horizontal u-line-1"></div>
+<section class="u-clearfix u-palette-5-dark-3 u-section-1" id="sec-5845">
+    <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <img src="{{ getFileVersion('assets/web/images/group-business-people-having-mee.jpg') }}" alt="" class="custom-expanded u-image u-image-default u-image-1" data-image-width="1380" data-image-height="871" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750" />
+        <div class="custom-expanded u-container-align-left u-container-style u-gradient u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+            <div class="u-container-layout u-valign-middle u-container-layout-1">
+                <h1 class="u-align-left u-text u-text-body-alt-color u-text-1">
+                    Welcome to TechBoostify: Your path to digital triumph. 🚀
+                </h1>
+            </div>
+        </div>
+        <div class="u-gradient u-shape u-shape-circle u-shape-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+        <div class="u-align-left u-expanded-width-sm u-expanded-width-xs u-gradient u-shape u-shape-rectangle u-shape-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+        <div class="custom-expanded u-align-left u-container-align-left u-container-style u-group u-white u-group-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="1000">
+            <div class="u-container-layout u-valign-middle u-container-layout-2">
+                <p class="u-align-left u-text u-text-2">
+                At TechBoostify, we're more than just website builders; we're architects of digital success for small businesses. Our passion lies in integrating cutting-edge technology with tailored website solutions to elevate your business growth.
+                </p>
+                <p class="u-align-left u-text u-text-3">
+                    Click here to know more
+                </p>
+                <a href="#" class="u-align-left u-border-active-palette-1-light-1 u-border-hover-palette-1-dark-3 u-border-none u-btn u-button-style u-hover-palette-1-dark-3 u-palette-1-light-1 u-btn-2">more</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-container-align-center u-palette-5-dark-3 u-section-2" id="carousel_6cc9">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+            Our Services
+        </h2>
+        <p class="u-align-center u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla
+        </p>
+        <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="u-container-style u-list-item u-repeater-item u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-3">
+                            Banking and finance
+                        </h5>
+                        <p class="u-align-center u-text u-text-grey-40 u-text-4">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                    <div class="u-container-layout u-similar-container u-container-layout-2">
+                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-5">
+                            Capital markets
+                        </h5>
+                        <p class="u-align-center u-text u-text-grey-40 u-text-6">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-7">
+                            Compliance
+                        </h5>
+                        <p class="u-align-center u-text u-text-grey-40 u-text-8">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item u-list-item-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                    <div class="u-container-layout u-similar-container u-container-layout-4">
+                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-9">
+                            Mobility and transport
+                        </h5>
+                        <p class="u-align-center u-text u-text-grey-40 u-text-10">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item u-list-item-5" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                    <div class="u-container-layout u-similar-container u-container-layout-5">
+                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-11">
+                            Employment and labor
+                        </h5>
+                        <p class="u-align-center u-text u-text-grey-40 u-text-12">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item u-list-item-6" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                    <div class="u-container-layout u-similar-container u-container-layout-6">
+                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-13">
+                            Restructuring
+                        </h5>
+                        <p class="u-align-center u-text u-text-grey-40 u-text-14">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="u-black u-clearfix u-section-2" id="carousel_d034">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <div class="u-container-style u-group u-group-1">
-                <div class="u-container-layout u-valign-middle u-container-layout-1">
-                    <h2 class="u-align-center u-custom-font u-font-oswald u-text u-text-1">
-                        Internet Marketing
-                    </h2>
-                    <p class="u-align-center u-text u-text-2">
-                        Get a winning strategy for promoting your business online,
-                        including SEO, advertising and branding
-                    </p>
+        <div class="custom-expanded data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-align-center-sm u-container-align-center-xs u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-layout-cell u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                        <div class="u-container-layout u-valign-middle u-container-layout-7">
+                            <a href="#" class="u-active-palette-1-light-1 u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-white u-btn u-button-style u-hover-palette-1-light-1 u-text-active-black u-text-hover-black u-btn-1">view more</a>
+                        </div>
+                    </div>
+                    <div class="u-container-align-center-sm u-container-align-center-xs u-container-align-left-lg u-container-align-left-md u-container-align-left-xl u-container-style u-layout-cell u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                        <div class="u-container-layout u-valign-middle u-container-layout-8">
+                            <a href="#" class="u-active-white u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-palette-1-light-1 u-btn u-button-style u-hover-white u-palette-1-light-1 u-text-active-black u-text-hover-black u-btn-2">Contact Us</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="u-clearfix u-image u-section-3" id="carousel_7962">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-gutter-20 u-layout-wrap u-layout-wrap-1">
-                <div class="u-layout">
-                    <div class="u-layout-row">
-                        <div class="u-container-style u-expand-resize u-layout-cell u-left-cell u-size-20 u-size-20-md u-layout-cell-1">
-                            <div class="u-container-layout u-valign-middle-lg u-valign-middle-sm u-valign-middle-xl">
-                                <div class="u-palette-1-base u-shape u-shape-rectangle u-shape-1"></div>
-                                <h3 class="u-align-center u-text u-text-body-alt-color u-text-1">
-                                    01
-                                </h3>
-                                <h2 class="u-align-center u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-2">
-                                    Find
-                                </h2>
-                                <p class="u-align-center u-text u-text-body-alt-color u-text-3">
-                                    We will find clients in your area looking for your business
-                                    services through our targeted marketing systems.
-                                </p>
+    </div>
+</section>
+<section class="u-align-right u-clearfix u-container-align-center u-palette-5-dark-3 u-section-3" id="carousel_cfb2">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default-lg u-text-default-xl u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+            Vision, culture and people
+        </h2>
+        <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500">
+        With a keen understanding that every pixel and line of code contributes to your success story, we embark on a journey to design and develop websites that not only establish your online presence but also serve as powerful tools to propel your business forward.
+        </p>
+        <div class="data-layout-selected u-clearfix u-gutter-20 u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+                <div class="u-layout-col">
+                    <div class="u-size-30">
+                        <div class="u-layout-row">
+                            <div class="u-container-align-left u-container-style u-gradient u-layout-cell u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+                                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-3">
+                                        1
+                                    </h4>
+                                    <p class="u-align-left u-text u-text-body-alt-color u-text-4">
+                                        Quick can manor smart money hopes worth too. Comfort
+                                        produce husband boy her had hearing. Law others theirs
+                                        passed but wishes. You day real less till dear read.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="u-container-style u-image u-layout-cell u-shape-rectangle u-size-30 u-image-1" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                                <div class="u-container-layout u-container-layout-2"></div>
                             </div>
                         </div>
-                        <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
-                            <div class="u-container-layout">
-                                <div class="u-palette-1-base u-shape u-shape-rectangle u-shape-2"></div>
-                                <h3 class="u-align-center u-text u-text-body-alt-color u-text-4">
-                                    02
-                                </h3>
-                                <h2 class="u-align-center u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-5">
-                                    Connect
-                                </h2>
-                                <p class="u-align-center u-text u-text-body-alt-color u-text-6">
-                                    We will connect them real time to your business through
-                                    multiple means.
-                                </p>
+                    </div>
+                    <div class="u-size-30">
+                        <div class="u-layout-row">
+                            <div class="u-container-align-left u-container-style u-grey-5 u-layout-cell u-shape-rectangle u-size-30 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                                <div class="u-container-layout u-valign-middle u-container-layout-3">
+                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-5">
+                                        2
+                                    </h4>
+                                    <p class="u-align-left u-text u-text-6">
+                                        Quick can manor smart money hopes worth too. Comfort
+                                        produce husband boy her had hearing. Law others theirs
+                                        passed but wishes. You day real less till dear read.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-layout-cell-3">
-                            <div class="u-container-layout u-valign-middle-lg u-valign-middle-xl">
-                                <div class="u-palette-1-base u-shape u-shape-rectangle u-shape-3"></div>
-                                <h3 class="u-align-center u-text u-text-body-alt-color u-text-7">
-                                    03
-                                </h3>
-                                <h2 class="u-align-center u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-8">
-                                    Grow
-                                </h2>
-                                <p class="u-align-center u-text u-text-body-alt-color u-text-9">
-                                    We will grow your business by supporting your ever expanding
-                                    customer base and helping you manage your business growth.
-                                </p>
+                            <div class="u-container-style u-image u-layout-cell u-size-30 u-image-2" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">
+                                <div class="u-container-layout u-container-layout-4"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>5a60cfeb5eeac046c6e773eeb7c06964
-    </section>
-    <section class="u-black u-clearfix u-expand-resize u-section-4" id="carousel_bd7c">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <img class="u-expanded-width u-image u-image-contain u-image-1" src="{{ getFileVersion('assets/web/images/image2.png') }}" />
         </div>
-    </section>
-    <section class="u-clearfix u-image u-shading u-section-5" id="carousel_4dc9">
-        <div class="u-container-style u-group u-group-1">
-            <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-container-layout-1">
-                <h2 class="u-align-center u-custom-font u-font-oswald u-text u-text-1">
-                    Our Latest Projects
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-palette-5-dark-3 u-section-4" id="carousel_1b5f">
+    <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+                <div class="u-align-left u-container-align-left u-container-style u-gradient u-layout-cell u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                    <div class="u-container-layout u-valign-middle u-container-layout-1">
+                        <h3 class="u-align-left u-text u-text-body-alt-color u-text-1">
+                            Make legal better
+                        </h3>
+                        <img class="u-expanded-width u-image u-image-default u-image-1" src="{{ getFileVersion('assets/web/images/happy-insurance-agent-communicat.jpg') }}" alt="" data-image-width="1380" data-image-height="920" />
+                        <p class="u-align-left u-text u-text-body-alt-color u-text-default u-text-2">
+                        Driven by innovation and guided by expertise, we thrive on turning your aspirations into digital reality. Our mission is simple: Empower your business with seamless, technology-driven solutions that amplify your potential in the digital realm.
+                        </p>
+                        <a href="#" class="u-active-palette-1-light-1 u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-white u-btn u-button-style u-hover-palette-1-light-1 u-text-active-black u-text-hover-black u-btn-2">view more</a>
+                    </div>
+                </div>
+                <div class="u-align-left u-container-style u-layout-cell u-palette-5-dark-3 u-shape-rectangle u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                    <div class="u-container-layout u-valign-middle u-container-layout-2">
+                        <div class="u-expanded-width u-list u-list-1">
+                            <div class="u-repeater u-repeater-1">
+                                <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-1">
+                                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                                        <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-1"><img src="{{ getFileVersion('assets/web/images/2970777-743d0e28.png') }}" alt="" /></span>
+                                        <h5 class="u-text u-text-4">What We Do</h5>
+                                        <p class="u-text u-text-5">
+                                            Sample text. Click to select the text box. Click again
+                                            or double click to start editing the text.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-2">
+                                    <div class="u-container-layout u-similar-container u-container-layout-4">
+                                        <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-2"><img src="{{ getFileVersion('assets/web/images/3077249-9d2828a7.png') }}" alt="" /></span>
+                                        <h5 class="u-text u-text-6">Who We Are</h5>
+                                        <p class="u-text u-text-7">
+                                            Sample text. Click to select the text box. Click again
+                                            or double click to start editing the text.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-3">
+                                    <div class="u-container-layout u-similar-container u-container-layout-5">
+                                        <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-3"><img src="{{ getFileVersion('assets/web/images/13207134-10a842cb.png') }}" alt="" /></span>
+                                        <h5 class="u-text u-text-8">How We Differ</h5>
+                                        <p class="u-text u-text-9">
+                                            Sample text. Click to select the text box. Click again
+                                            or double click to start editing the text.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-container-align-center u-palette-5-dark-3 u-section-5" id="carousel_b382">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-align-center u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+            We serve our clients around the globe
+        </h2>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-col">
+                    <div class="u-size-30">
+                        <div class="u-layout-row">
+                            <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-shape-rectangle u-size-20 u-white u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-2">
+                                        Finance Awards
+                                    </h4>
+                                    <p class="u-align-left u-text u-text-default u-text-3">
+                                        Sample text. Click to select the Text Element.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="u-align-left u-container-style u-gradient u-layout-cell u-size-20 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                    <h3 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-default u-text-4">
+                                        Life sciences and healthcare
+                                    </h3>
+                                    <p class="u-text u-text-body-alt-color u-text-default u-text-5">
+                                        Sample text. Click to select the Text Element.
+                                    </p>
+                                    <a href="#" class="u-border-2 u-border-active-palette-1-light-2 u-border-hover-palette-1-light-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-none u-radius-0 u-text-active-palette-1-light-2 u-text-body-alt-color u-text-hover-palette-1-light-2 u-top-left-radius-0 u-top-right-radius-0 u-btn-1">Read More&nbsp;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="u-align-left u-container-style u-layout-cell u-shape-rectangle u-size-20 u-white u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                                <div class="u-container-layout u-container-layout-3">
+                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-6">
+                                        Responsible Business
+                                    </h4>
+                                    <p class="u-align-left u-text u-text-default u-text-7">
+                                        Sample text. Click to select the Text Element.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-size-30">
+                        <div class="u-layout-row">
+                            <div class="u-align-left u-container-style u-image u-image-default u-layout-cell u-size-20 u-image-1" data-image-width="1405" data-image-height="1080" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                                <div class="u-container-layout u-container-layout-4"></div>
+                            </div>
+                            <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-shape-rectangle u-size-20 u-white u-layout-cell-5" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                                <div class="u-container-layout u-valign-middle u-container-layout-5">
+                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-8">
+                                        Join Us
+                                    </h4>
+                                    <p class="u-align-left u-text u-text-default u-text-9">
+                                        Sample text. Click to select the Text Element.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="u-align-left u-container-style u-image u-image-default u-layout-cell u-shape-round u-size-20 u-image-2" data-image-width="1920" data-image-height="1080" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                                <div class="u-container-layout u-valign-top u-container-layout-6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-image u-shading u-section-6" id="carousel_605b" data-image-width="2250" data-image-height="1500">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-size-22 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+                        <div class="u-border-20 u-border-palette-1-light-1 u-container-layout u-container-layout-1">
+                            <h3 class="u-text u-text-default u-text-1">
+                                Corporate &amp; Finance
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-38 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                        <div class="u-container-layout u-container-layout-2">
+                            <p class="u-text u-text-default u-text-2">
+                                Success of our company first and foremost is the achievement
+                                of the teamwork of our professionals, who render a service
+                                of highest quality not only at a local level, but also
+                                abroad. Our personnel aim at being leaders in their field,
+                                offering their experience and skill, providing unique
+                                solutions for client’s requirements satisfaction. <br />
+                                <br />It is of primal importance for us to recruit the very
+                                best for every spectrum of our activity, in order to offer
+                                you services of superior quality. We appreciate team-based
+                                work system and outer directed, sociable personnel.<br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-palette-5-dark-3 u-section-7" id="carousel_567d">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-container-align-left-md u-container-align-left-sm u-container-align-left-xs u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="750">
+            <div class="u-container-layout u-valign-middle u-container-layout-1">
+                <h2 class="u-align-left-md u-align-left-sm u-align-left-xs u-text u-text-1">
+                    Why Us?
                 </h2>
-                <p class="u-align-center u-text u-text-2">
-                    Today's marketing problems are complex, specialized and ever
-                    changing. Who can keep up with all the latest trends and
-                    technologies? We can.
+                <p class="u-align-left-md u-align-left-sm u-align-left-xs u-text u-text-2">
+                    Legal excellence. Dedication to clients. Commitment to public
+                    service.
+                </p>
+                <p class="u-align-left-md u-align-left-sm u-align-left-xs u-text u-text-3">
+                    At TechBoostify, we're not just building websites; <br>
+                    We're crafting digital success stories for small businesses. <br>
+                    <br>
+                    Our commitment goes beyond mere web development; <br>
+                    we are architects of online triumphs, meticulously weaving digital strategies that transcend mere online presence. <br>
+                    <br>
+                    Your success fuels our passion, and we thrive on being the catalyst that transforms your aspirations into a thriving digital reality.
                 </p>
             </div>
         </div>
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-            <div class="u-layout">
+        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-layout-grid u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="u-container-align-left u-container-style u-gradient u-list-item u-repeater-item u-shape-rectangle u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                        <span class="u-align-left u-icon u-icon-circle u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 95.333 95.332" style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a13b"></use>
+                            </svg><svg class="u-svg-content" viewBox="0 0 95.333 95.332" x="0px" y="0px" id="svg-a13b" style="enable-background: new 0 0 95.333 95.332">
+                                <g>
+                                    <g>
+                                        <path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"></path>
+                                        <path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"></path>
+                                    </g>
+                                </g>
+                            </svg></span>
+                        <p class="u-align-left u-text u-text-body-alt-color u-text-4">
+                            We craft custom web solutions specifically for small businesses, leveraging the latest technology to suit your unique needs.
+                        </p>
+                        <h5 class="u-align-left u-text u-text-body-alt-color u-text-5">
+                            Tailored Technology
+                        </h5>
+                    </div>
+                </div>
+                <div class="u-container-align-left u-container-style u-gradient u-list-item u-repeater-item u-shape-rectangle u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                        <span class="u-align-left u-icon u-icon-circle u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 351.128 351.128" style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c1b6"></use>
+                            </svg><svg class="u-svg-content" viewBox="0 0 351.128 351.128" x="0px" y="0px" id="svg-c1b6" style="enable-background: new 0 0 351.128 351.128">
+                                <g>
+                                    <path d="M72.326,147.33c4.284-26.928,37.944-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.224-0.612,2.448-1.224,3.06-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.976,11.628   C38.054,85.518,1.946,136.313,3.782,184.662c-6.12,32.437-4.896,67.32,4.284,96.084c6.12,18.36,23.868,27.54,42.228,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.524-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C115.778,165.078,66.818,181.602,72.326,147.33z"></path>
+                                    <path d="M274.286,147.33c4.284-26.928,37.943-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.225-0.612,2.448-1.224,3.061-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.977,11.628   c-35.496,29.376-71.604,80.172-69.768,128.52c-6.12,32.437-4.896,67.32,4.283,96.084c6.12,18.36,23.868,27.54,42.229,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.523-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C317.738,165.078,268.166,181.602,274.286,147.33z"></path>
+                                </g>
+                            </svg></span>
+                        <p class="u-align-left u-text u-text-body-alt-color u-text-6">
+                            Our goal is your success. We infuse every website with features designed to amplify your business growth and enhance your online presence.
+                        </p>
+                        <h5 class="u-align-left u-text u-text-body-alt-color u-text-7">
+                            Business Growth Focus
+                        </h5>
+                    </div>
+                </div>
+                <div class="u-container-align-left u-container-style u-gradient u-list-item u-repeater-item u-shape-rectangle u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                        <span class="u-align-left u-icon u-icon-circle u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 351.128 351.128" style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c1b6"></use>
+                            </svg><svg class="u-svg-content" viewBox="0 0 351.128 351.128" x="0px" y="0px" id="svg-c1b6" style="enable-background: new 0 0 351.128 351.128">
+                                <g>
+                                    <path d="M72.326,147.33c4.284-26.928,37.944-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.224-0.612,2.448-1.224,3.06-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.976,11.628   C38.054,85.518,1.946,136.313,3.782,184.662c-6.12,32.437-4.896,67.32,4.284,96.084c6.12,18.36,23.868,27.54,42.228,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.524-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C115.778,165.078,66.818,181.602,72.326,147.33z"></path>
+                                    <path d="M274.286,147.33c4.284-26.928,37.943-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.225-0.612,2.448-1.224,3.061-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.977,11.628   c-35.496,29.376-71.604,80.172-69.768,128.52c-6.12,32.437-4.896,67.32,4.283,96.084c6.12,18.36,23.868,27.54,42.229,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.523-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C317.738,165.078,268.166,181.602,274.286,147.33z"></path>
+                                </g>
+                            </svg></span>
+                        <p class="u-align-left u-text u-text-body-alt-color u-text-8">
+                            Innovation is our cornerstone. We constantly evolve our strategies and technologies to keep your business ahead in the digital landscape.
+                        </p>
+                        <h5 class="u-align-left u-text u-text-body-alt-color u-text-9">
+                            Innovation at Heart
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-container-align-center u-palette-5-dark-3 u-section-8" id="carousel_d3a5">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
                 <div class="u-layout-row">
-                    <div class="u-container-style u-image u-layout-cell u-left-cell u-size-12 u-size-60-md u-image-1">
-                        <div class="u-container-layout"></div>
-                    </div>
-                    <div class="u-container-style u-image u-layout-cell u-size-12 u-size-60-md u-image-2">
-                        <div class="u-container-layout"></div>
-                    </div>
-                    <div class="u-container-style u-image u-layout-cell u-size-12 u-size-60-md u-image-3">
-                        <div class="u-container-layout"></div>
-                    </div>
-                    <div class="u-container-style u-image u-layout-cell u-size-12 u-size-60-md u-image-4">
-                        <div class="u-container-layout"></div>
-                    </div>
-                    <div class="u-container-style u-hidden-md u-image u-layout-cell u-right-cell u-size-12 u-size-60-md u-image-5">
-                        <div class="u-container-layout"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="{{ route('web.index') }}/c/counter-html-templates" class="u-btn u-button-style u-palette-1-base u-btn-1">view more</a>
-    </section>
-    <section class="u-black u-clearfix u-section-6" id="carousel_d30f">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <div class="u-align-center u-container-style u-expanded-width-xs u-group u-group-1">
-                <div class="u-container-layout u-valign-middle u-container-layout-1">
-                    <h2 class="u-custom-font u-font-oswald u-text u-text-1">Why Us?</h2>
-                    <p class="u-text u-text-2">
-                        Your ingenious ideas. Our state-of-the-art web development
-                    </p>
-                </div>
-            </div>
-            <div class="u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
-                <div class="u-layout">
-                    <div class="u-layout-col">
-                        <div class="u-size-30">
-                            <div class="u-layout-row">
-                                <div class="u-container-style u-expand-resize u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
-                                    <div class="u-container-layout">
-                                        <span class="u-icon u-icon-circle u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 54 54" style="">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-522c"></use>
-                                            </svg><svg class="u-svg-content" viewBox="0 0 54 54" x="0px" y="0px" id="svg-522c" style="enable-background: new 0 0 54 54">
-                                                <g>
-                                                    <path d="M51.22,21h-5.052c-0.812,0-1.481-0.447-1.792-1.197s-0.153-1.54,0.42-2.114l3.572-3.571   c0.525-0.525,0.814-1.224,0.814-1.966c0-0.743-0.289-1.441-0.814-1.967l-4.553-4.553c-1.05-1.05-2.881-1.052-3.933,0l-3.571,3.571   c-0.574,0.573-1.366,0.733-2.114,0.421C33.447,9.313,33,8.644,33,7.832V2.78C33,1.247,31.753,0,30.22,0H23.78   C22.247,0,21,1.247,21,2.78v5.052c0,0.812-0.447,1.481-1.197,1.792c-0.748,0.313-1.54,0.152-2.114-0.421l-3.571-3.571   c-1.052-1.052-2.883-1.05-3.933,0l-4.553,4.553c-0.525,0.525-0.814,1.224-0.814,1.967c0,0.742,0.289,1.44,0.814,1.966l3.572,3.571   c0.573,0.574,0.73,1.364,0.42,2.114S8.644,21,7.832,21H2.78C1.247,21,0,22.247,0,23.78v6.439C0,31.753,1.247,33,2.78,33h5.052   c0.812,0,1.481,0.447,1.792,1.197s0.153,1.54-0.42,2.114l-3.572,3.571c-0.525,0.525-0.814,1.224-0.814,1.966   c0,0.743,0.289,1.441,0.814,1.967l4.553,4.553c1.051,1.051,2.881,1.053,3.933,0l3.571-3.572c0.574-0.573,1.363-0.731,2.114-0.42   c0.75,0.311,1.197,0.98,1.197,1.792v5.052c0,1.533,1.247,2.78,2.78,2.78h6.439c1.533,0,2.78-1.247,2.78-2.78v-5.052   c0-0.812,0.447-1.481,1.197-1.792c0.751-0.312,1.54-0.153,2.114,0.42l3.571,3.572c1.052,1.052,2.883,1.05,3.933,0l4.553-4.553   c0.525-0.525,0.814-1.224,0.814-1.967c0-0.742-0.289-1.44-0.814-1.966l-3.572-3.571c-0.573-0.574-0.73-1.364-0.42-2.114   S45.356,33,46.168,33h5.052c1.533,0,2.78-1.247,2.78-2.78V23.78C54,22.247,52.753,21,51.22,21z M52,30.22   C52,30.65,51.65,31,51.22,31h-5.052c-1.624,0-3.019,0.932-3.64,2.432c-0.622,1.5-0.295,3.146,0.854,4.294l3.572,3.571   c0.305,0.305,0.305,0.8,0,1.104l-4.553,4.553c-0.304,0.304-0.799,0.306-1.104,0l-3.571-3.572c-1.149-1.149-2.794-1.474-4.294-0.854   c-1.5,0.621-2.432,2.016-2.432,3.64v5.052C31,51.65,30.65,52,30.22,52H23.78C23.35,52,23,51.65,23,51.22v-5.052   c0-1.624-0.932-3.019-2.432-3.64c-0.503-0.209-1.021-0.311-1.533-0.311c-1.014,0-1.997,0.4-2.761,1.164l-3.571,3.572   c-0.306,0.306-0.801,0.304-1.104,0l-4.553-4.553c-0.305-0.305-0.305-0.8,0-1.104l3.572-3.571c1.148-1.148,1.476-2.794,0.854-4.294   C10.851,31.932,9.456,31,7.832,31H2.78C2.35,31,2,30.65,2,30.22V23.78C2,23.35,2.35,23,2.78,23h5.052   c1.624,0,3.019-0.932,3.64-2.432c0.622-1.5,0.295-3.146-0.854-4.294l-3.572-3.571c-0.305-0.305-0.305-0.8,0-1.104l4.553-4.553   c0.304-0.305,0.799-0.305,1.104,0l3.571,3.571c1.147,1.147,2.792,1.476,4.294,0.854C22.068,10.851,23,9.456,23,7.832V2.78   C23,2.35,23.35,2,23.78,2h6.439C30.65,2,31,2.35,31,2.78v5.052c0,1.624,0.932,3.019,2.432,3.64   c1.502,0.622,3.146,0.294,4.294-0.854l3.571-3.571c0.306-0.305,0.801-0.305,1.104,0l4.553,4.553c0.305,0.305,0.305,0.8,0,1.104   l-3.572,3.571c-1.148,1.148-1.476,2.794-0.854,4.294c0.621,1.5,2.016,2.432,3.64,2.432h5.052C51.65,23,52,23.35,52,23.78V30.22z"></path>
-                                                    <path d="M27,18c-4.963,0-9,4.037-9,9s4.037,9,9,9s9-4.037,9-9S31.963,18,27,18z M27,34c-3.859,0-7-3.141-7-7s3.141-7,7-7   s7,3.141,7,7S30.859,34,27,34z"></path>
-                                                </g>
-                                            </svg></span>
-                                        <h3 class="u-custom-font u-font-oswald u-text u-text-3">
-                                            Best Ideas
-                                        </h3>
-                                        <p class="u-text u-text-4">
-                                            Bring us your wildest ideas and with our creative
-                                            mindset and tools we’ll make it happen. Our team will
-                                            provide you with a unique site designed for your
-                                            specific needs, and help you develop an online business
-                                            strategy to outplay your competitors
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
-                                    <div class="u-container-layout">
-                                        <span class="u-icon u-icon-circle u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style="">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-10e0"></use>
-                                            </svg><svg class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px" id="svg-10e0" style="enable-background: new 0 0 60 60">
-                                                <path d="M55.014,45.389l-9.553-4.776C44.56,40.162,44,39.256,44,38.248v-3.381c0.229-0.28,0.47-0.599,0.719-0.951  c1.239-1.75,2.232-3.698,2.954-5.799C49.084,27.47,50,26.075,50,24.5v-4c0-0.963-0.36-1.896-1-2.625v-5.319  c0.056-0.55,0.276-3.824-2.092-6.525C44.854,3.688,41.521,2.5,37,2.5s-7.854,1.188-9.908,3.53c-1.435,1.637-1.918,3.481-2.064,4.805  C23.314,9.949,21.294,9.5,19,9.5c-10.389,0-10.994,8.855-11,9v4.579c-0.648,0.706-1,1.521-1,2.33v3.454  c0,1.079,0.483,2.085,1.311,2.765c0.825,3.11,2.854,5.46,3.644,6.285v2.743c0,0.787-0.428,1.509-1.171,1.915l-6.653,4.173  C1.583,48.134,0,50.801,0,53.703V57.5h14h2h44v-4.043C60,50.019,58.089,46.927,55.014,45.389z M14,53.262V55.5H2v-1.797  c0-2.17,1.184-4.164,3.141-5.233l6.652-4.173c1.333-0.727,2.161-2.121,2.161-3.641v-3.591l-0.318-0.297  c-0.026-0.024-2.683-2.534-3.468-5.955l-0.091-0.396l-0.342-0.22C9.275,29.899,9,29.4,9,28.863v-3.454  c0-0.36,0.245-0.788,0.671-1.174L10,23.938l-0.002-5.38C10.016,18.271,10.537,11.5,19,11.5c2.393,0,4.408,0.553,6,1.644v4.731  c-0.64,0.729-1,1.662-1,2.625v4c0,0.304,0.035,0.603,0.101,0.893c0.027,0.116,0.081,0.222,0.118,0.334  c0.055,0.168,0.099,0.341,0.176,0.5c0.001,0.002,0.002,0.003,0.003,0.005c0.256,0.528,0.629,1,1.099,1.377  c0.005,0.019,0.011,0.036,0.016,0.054c0.06,0.229,0.123,0.457,0.191,0.68l0.081,0.261c0.014,0.046,0.031,0.093,0.046,0.139  c0.035,0.108,0.069,0.215,0.105,0.321c0.06,0.175,0.123,0.356,0.196,0.553c0.031,0.082,0.065,0.156,0.097,0.237  c0.082,0.209,0.164,0.411,0.25,0.611c0.021,0.048,0.039,0.1,0.06,0.147l0.056,0.126c0.026,0.058,0.053,0.11,0.079,0.167  c0.098,0.214,0.194,0.421,0.294,0.621c0.016,0.032,0.031,0.067,0.047,0.099c0.063,0.125,0.126,0.243,0.189,0.363  c0.108,0.206,0.214,0.4,0.32,0.588c0.052,0.092,0.103,0.182,0.154,0.269c0.144,0.246,0.281,0.472,0.414,0.682  c0.029,0.045,0.057,0.092,0.085,0.135c0.242,0.375,0.452,0.679,0.626,0.916c0.046,0.063,0.086,0.117,0.125,0.17  c0.022,0.029,0.052,0.071,0.071,0.097v3.309c0,0.968-0.528,1.856-1.377,2.32l-2.646,1.443l-0.461-0.041l-0.188,0.395l-5.626,3.069  C15.801,46.924,14,49.958,14,53.262z M58,55.5H16v-2.238c0-2.571,1.402-4.934,3.659-6.164l8.921-4.866  C30.073,41.417,31,39.854,31,38.155v-4.018v-0.001l-0.194-0.232l-0.038-0.045c-0.002-0.003-0.064-0.078-0.165-0.21  c-0.006-0.008-0.012-0.016-0.019-0.024c-0.053-0.069-0.115-0.152-0.186-0.251c-0.001-0.002-0.002-0.003-0.003-0.005  c-0.149-0.207-0.336-0.476-0.544-0.8c-0.005-0.007-0.009-0.015-0.014-0.022c-0.098-0.153-0.202-0.32-0.308-0.497  c-0.008-0.013-0.016-0.026-0.024-0.04c-0.226-0.379-0.466-0.808-0.705-1.283c0,0-0.001-0.001-0.001-0.002  c-0.127-0.255-0.254-0.523-0.378-0.802l0,0c-0.017-0.039-0.035-0.077-0.052-0.116h0c-0.055-0.125-0.11-0.256-0.166-0.391  c-0.02-0.049-0.04-0.1-0.06-0.15c-0.052-0.131-0.105-0.263-0.161-0.414c-0.102-0.272-0.198-0.556-0.29-0.849l-0.055-0.178  c-0.006-0.02-0.013-0.04-0.019-0.061c-0.094-0.316-0.184-0.639-0.26-0.971l-0.091-0.396l-0.341-0.22  C26.346,25.803,26,25.176,26,24.5v-4c0-0.561,0.238-1.084,0.67-1.475L27,18.728V12.5v-0.354l-0.027-0.021  c-0.034-0.722,0.009-2.935,1.623-4.776C30.253,5.458,33.081,4.5,37,4.5c3.905,0,6.727,0.951,8.386,2.828  c1.947,2.201,1.625,5.017,1.623,5.041L47,18.728l0.33,0.298C47.762,19.416,48,19.939,48,20.5v4c0,0.873-0.572,1.637-1.422,1.899  l-0.498,0.153l-0.16,0.495c-0.669,2.081-1.622,4.003-2.834,5.713c-0.297,0.421-0.586,0.794-0.837,1.079L42,34.123v4.125  c0,1.77,0.983,3.361,2.566,4.153l9.553,4.776C56.513,48.374,58,50.78,58,53.457V55.5z"></path>
-                                            </svg></span>
-                                        <h3 class="u-custom-font u-font-oswald u-text u-text-5">
-                                            Support 24/7
-                                        </h3>
-                                        <p class="u-text u-text-6">
-                                            We will help you convert your visitors into clients, and
-                                            increase your revenue
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-size-30">
-                            <div class="u-layout-row">
-                                <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-3">
-                                    <div class="u-container-layout u-valign-middle-xs">
-                                        <span class="u-icon u-icon-circle u-text-palette-1-base u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 49.94 49.94" style="">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f097"></use>
-                                            </svg><svg class="u-svg-content" viewBox="0 0 49.94 49.94" x="0px" y="0px" id="svg-f097" style="enable-background: new 0 0 49.94 49.94">
-                                                <path d="M48.856,22.731c0.983-0.958,1.33-2.364,0.906-3.671c-0.425-1.307-1.532-2.24-2.892-2.438l-12.092-1.757  c-0.515-0.075-0.96-0.398-1.19-0.865L28.182,3.043c-0.607-1.231-1.839-1.996-3.212-1.996c-1.372,0-2.604,0.765-3.211,1.996  L16.352,14c-0.23,0.467-0.676,0.79-1.191,0.865L3.069,16.623C1.71,16.82,0.603,17.753,0.178,19.06  c-0.424,1.307-0.077,2.713,0.906,3.671l8.749,8.528c0.373,0.364,0.544,0.888,0.456,1.4L8.224,44.702  c-0.232,1.353,0.313,2.694,1.424,3.502c1.11,0.809,2.555,0.914,3.772,0.273l10.814-5.686c0.461-0.242,1.011-0.242,1.472,0  l10.815,5.686c0.528,0.278,1.1,0.415,1.669,0.415c0.739,0,1.475-0.231,2.103-0.688c1.111-0.808,1.656-2.149,1.424-3.502  L39.651,32.66c-0.088-0.513,0.083-1.036,0.456-1.4L48.856,22.731z M37.681,32.998l2.065,12.042c0.104,0.606-0.131,1.185-0.629,1.547  c-0.499,0.361-1.12,0.405-1.665,0.121l-10.815-5.687c-0.521-0.273-1.095-0.411-1.667-0.411s-1.145,0.138-1.667,0.412l-10.813,5.686  c-0.547,0.284-1.168,0.24-1.666-0.121c-0.498-0.362-0.732-0.94-0.629-1.547l2.065-12.042c0.199-1.162-0.186-2.348-1.03-3.17  L2.48,21.299c-0.441-0.43-0.591-1.036-0.4-1.621c0.19-0.586,0.667-0.988,1.276-1.077l12.091-1.757  c1.167-0.169,2.176-0.901,2.697-1.959l5.407-10.957c0.272-0.552,0.803-0.881,1.418-0.881c0.616,0,1.146,0.329,1.419,0.881  l5.407,10.957c0.521,1.058,1.529,1.79,2.696,1.959l12.092,1.757c0.609,0.089,1.086,0.491,1.276,1.077  c0.19,0.585,0.041,1.191-0.4,1.621l-8.749,8.528C37.866,30.65,37.481,31.835,37.681,32.998z"></path>
-                                            </svg></span>
-                                        <h3 class="u-custom-font u-font-oswald u-text u-text-7">
-                                            Professional team
-                                        </h3>
-                                        <p class="u-text u-text-8">
-                                            We are a professional web development company with a
-                                            team of tech savvies who are always on top of latest
-                                            trends in web development, web design, SEO and marketing
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-4">
-                                    <div class="u-container-layout">
-                                        <span class="u-icon u-icon-circle u-text-palette-1-base u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style="">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1393"></use>
-                                            </svg><svg class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px" id="svg-1393" style="enable-background: new 0 0 60 60">
-                                                <g>
-                                                    <path d="M31.634,37.989c1.041-0.081,1.99-0.612,2.606-1.459l9.363-12.944c0.287-0.397,0.244-0.945-0.104-1.293   c-0.348-0.347-0.896-0.39-1.293-0.104L29.26,31.555c-0.844,0.614-1.375,1.563-1.456,2.604s0.296,2.06,1.033,2.797   C29.508,37.628,30.413,38,31.354,38C31.447,38,31.54,37.996,31.634,37.989z M29.798,34.315c0.035-0.457,0.269-0.874,0.637-1.142   l7.897-5.713l-5.711,7.895c-0.27,0.371-0.687,0.604-1.144,0.64c-0.455,0.03-0.902-0.128-1.227-0.453   C29.928,35.219,29.762,34.771,29.798,34.315z"></path>
-                                                    <path d="M54.034,19.564c-0.01-0.021-0.01-0.043-0.021-0.064c-0.012-0.02-0.031-0.031-0.044-0.05   c-1.011-1.734-2.207-3.347-3.565-4.809l2.148-2.147l1.414,1.414l4.242-4.243l-4.242-4.242l-4.243,4.242l1.415,1.415l-2.148,2.147   c-1.462-1.358-3.074-2.555-4.809-3.566c-0.019-0.013-0.03-0.032-0.05-0.044c-0.021-0.012-0.043-0.011-0.064-0.022   c-3.093-1.782-6.568-2.969-10.273-3.404V5h1.5c1.379,0,2.5-1.121,2.5-2.5S36.672,0,35.293,0h-9c-1.379,0-2.5,1.121-2.5,2.5   s1.121,2.5,2.5,2.5h1.5v1.156c-1.08,0.115-2.158,0.291-3.224,0.535c-0.538,0.123-0.875,0.66-0.751,1.198   c0.123,0.538,0.66,0.876,1.198,0.751c0.92-0.211,1.849-0.37,2.78-0.477l1.073-0.083c0.328-0.025,0.63-0.043,0.924-0.057V10   c0,0.553,0.447,1,1,1s1-0.447,1-1V8.03c3.761,0.173,7.305,1.183,10.456,2.845l-0.986,1.707c-0.276,0.479-0.112,1.09,0.366,1.366   c0.157,0.091,0.329,0.134,0.499,0.134c0.346,0,0.682-0.179,0.867-0.5l0.983-1.703c3.129,1.985,5.787,4.643,7.772,7.772   l-1.703,0.983C49.57,20.91,49.406,21.521,49.683,22c0.186,0.321,0.521,0.5,0.867,0.5c0.17,0,0.342-0.043,0.499-0.134l1.707-0.986   c1.685,3.196,2.698,6.798,2.849,10.619H53.63c-0.553,0-1,0.447-1,1s0.447,1,1,1h1.975c-0.151,3.821-1.164,7.423-2.849,10.619   l-1.707-0.986c-0.478-0.276-1.09-0.114-1.366,0.366c-0.276,0.479-0.112,1.09,0.366,1.366l1.703,0.983   c-1.985,3.129-4.643,5.787-7.772,7.772l-0.983-1.703c-0.277-0.48-0.89-0.643-1.366-0.366c-0.479,0.276-0.643,0.888-0.366,1.366   l0.986,1.707c-3.151,1.662-6.695,2.672-10.456,2.845V56c0-0.553-0.447-1-1-1s-1,0.447-1,1v1.976   c-1.597-0.055-3.199-0.255-4.776-0.617c-0.538-0.129-1.075,0.213-1.198,0.751c-0.124,0.538,0.213,1.075,0.751,1.198   C26.568,59.768,28.607,60,30.63,60c0.049,0,0.096-0.003,0.145-0.004c0.007,0,0.012,0.004,0.018,0.004   c0.008,0,0.015-0.005,0.023-0.005c4.807-0.033,9.317-1.331,13.219-3.573c0.031-0.014,0.064-0.021,0.094-0.039   c0.02-0.012,0.031-0.031,0.05-0.044c4.039-2.354,7.414-5.725,9.773-9.761c0.019-0.027,0.043-0.048,0.06-0.078   c0.012-0.021,0.011-0.043,0.021-0.064C56.317,42.476,57.63,37.89,57.63,33S56.317,23.524,54.034,19.564z M53.965,8.251l1.414,1.414   l-1.414,1.415L52.55,9.665L53.965,8.251z M29.793,6.021V3h-3.5c-0.275,0-0.5-0.225-0.5-0.5s0.225-0.5,0.5-0.5h9   c0.275,0,0.5,0.225,0.5,0.5S35.568,3,35.293,3h-3.5v3.021C31.445,6.007,31.113,6,30.793,6c-0.028,0-0.06,0.002-0.088,0.002   C30.68,6.002,30.655,6,30.63,6c-0.164,0-0.328,0.011-0.492,0.014C30.022,6.017,29.913,6.016,29.793,6.021z"></path>
-                                                    <path d="M21.793,14h-5c-0.553,0-1,0.447-1,1s0.447,1,1,1h5c0.553,0,1-0.447,1-1S22.346,14,21.793,14z"></path>
-                                                    <path d="M21.793,21h-10c-0.553,0-1,0.447-1,1s0.447,1,1,1h10c0.553,0,1-0.447,1-1S22.346,21,21.793,21z"></path>
-                                                    <path d="M21.793,28h-15c-0.553,0-1,0.447-1,1s0.447,1,1,1h15c0.553,0,1-0.447,1-1S22.346,28,21.793,28z"></path>
-                                                    <path d="M21.793,35h-19c-0.553,0-1,0.447-1,1s0.447,1,1,1h19c0.553,0,1-0.447,1-1S22.346,35,21.793,35z"></path>
-                                                    <path d="M21.793,42h-13c-0.553,0-1,0.447-1,1s0.447,1,1,1h13c0.553,0,1-0.447,1-1S22.346,42,21.793,42z"></path>
-                                                    <path d="M21.793,49h-7c-0.553,0-1,0.447-1,1s0.447,1,1,1h7c0.553,0,1-0.447,1-1S22.346,49,21.793,49z"></path>
-                                                </g>
-                                            </svg></span>
-                                        <h3 class="u-custom-font u-font-oswald u-text u-text-9">
-                                            Quick work
-                                        </h3>
-                                        <p class="u-text u-text-10">
-                                            We are result-oriented and passionate about each of our
-                                            projects, and “OK” is not good enough for us.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="u-clearfix u-image u-shading u-section-7" id="carousel_9c61">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-gutter-20 u-layout-wrap u-layout-wrap-1">
-                <div class="u-gutter-0 u-layout">
-                    <div class="u-layout-row">
-                        <div class="u-container-style u-layout-cell u-left-cell u-size-20-md u-size-22 u-layout-cell-1">
-                            <div class="u-container-layout u-valign-middle-lg u-valign-top-sm u-valign-top-xl u-container-layout-1">
-                                <h2 class="u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-1">
-                                    Industry Expertise + Laser-Focused Team =
-                                </h2>
-                                <h1 class="u-custom-font u-font-oswald u-text u-text-palette-1-base u-title u-text-2">
-                                    SUCCESS
-                                </h1>
-                            </div>
-                        </div>
-                        <div class="u-container-style u-layout-cell u-size-18 u-size-20-md u-layout-cell-2">
-                            <div class="u-container-layout u-container-layout-2">
-                                <p class="u-text u-text-body-alt-color u-text-3">
-                                    Businesses know that a single, full-time marketing manager
-                                    simply cannot perform all the roles in digital marketing.
-                                    Comrade Web Agency positions itself as your&nbsp;digital
-                                    marketing partner: we cover all aspects of your website,
-                                    branding, digital marketing strategy, and data analysis, all
-                                    while owning our results (leads, calls, sales, conversions,
-                                    targeted traffic, etc).
-                                </p>
-                            </div>
-                        </div>
-                        <div class="u-container-style u-image u-layout-cell u-right-cell u-size-20 u-size-20-md u-image-1">
-                            <div class="u-container-layout"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="u-carousel u-slide u-block-8a00-1" id="carousel_1bad" data-interval="5000" data-u-ride="carousel">
-        <ol class="u-absolute-hcenter u-carousel-indicators u-block-8a00-2">
-            <li data-u-target="#carousel_1bad" data-u-slide-to="0" class="u-active u-grey-30"></li>
-            <li data-u-target="#carousel_1bad" class="u-grey-30" data-u-slide-to="1"></li>
-        </ol>
-        <div class="u-carousel-inner" role="listbox">
-            <div class="u-active u-black u-carousel-item u-clearfix u-section-8-1">
-                <div class="u-clearfix u-sheet u-sheet-1">
-                    <div class="u-container-style u-group u-group-1">
-                        <div class="u-container-layout u-valign-middle u-container-layout-1">
-                            <h2 class="u-align-center u-custom-font u-font-oswald u-text u-text-1">
-                                Ask Our Clients
+                    <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-align-center u-container-style u-gradient u-layout-cell u-size-34 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+                        <div class="u-container-layout u-valign-middle-xs u-container-layout-1">
+                            <h2 class="u-align-center u-text u-text-body-alt-color u-text-1">
+                                Get in touch!
                             </h2>
-                        </div>
-                    </div>
-                    <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
-                        <div class="u-layout">
-                            <div class="u-layout-row">
-                                <div class="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-left-cell u-size-13 u-layout-cell-1">
-                                    <div class="u-container-layout u-container-layout-2">
-                                        <img src="{{ getFileVersion('assets/web/images/image4.jpeg') }}" alt="" class="u-align-left u-image u-image-circle u-image-1" />
+                            <div class="u-align-center u-border-5 u-border-white u-line u-line-horizontal u-line-1"></div>
+                            <div class="custom-expanded u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-form u-form-1">
+                                <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px" source="email" name="form">
+                                    <div class="u-form-group u-form-name">
+                                        <label for="name-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Name</label>
+                                        <input type="text" placeholder="Enter your Name" id="name-5a14" name="name" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-1" required="" />
                                     </div>
-                                </div>
-                                <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-47 u-layout-cell-2">
-                                    <div class="u-container-layout u-container-layout-3">
-                                        <p class="u-text u-text-2">
-                                            The Creative Studio is a full-service creative agency
-                                            specializing in custom web design, web development,
-                                            UI/UX, and software development. Having worked with
-                                            almost every technology language (.NET, PHP, Laravel,
-                                            Angular 1.0/2.0, etc...), we start with your business
-                                            goals and then provide the right scalable solution.
-                                        </p>
-                                        <h5 class="u-custom-font u-font-oswald u-text u-text-3">
-                                            Dani Yourk
-                                        </h5>
+                                    <div class="u-form-email u-form-group">
+                                        <label for="email-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Email</label>
+                                        <input type="email" placeholder="Enter a valid email address" id="email-5a14" name="email" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-2" required="" />
                                     </div>
-                                </div>
+                                    <div class="u-form-group u-form-message">
+                                        <label for="message-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Message</label>
+                                        <textarea placeholder="" rows="4" cols="50" id="message-5a14" name="message" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-3" required=""></textarea>
+                                    </div>
+                                    <div class="u-align-left u-form-group u-form-submit">
+                                        <a href="#" class="u-active-palette-1-light-3 u-btn u-btn-submit u-button-style u-hover-palette-1-light-3 u-white u-btn-1">Submit</a>
+                                        <input type="submit" value="submit" class="u-form-control-hidden" wfd-invisible="true" />
+                                    </div>
+                                    <div class="u-form-send-message u-form-send-success" wfd-invisible="true">
+                                        Thank you! Your message has been sent.
+                                    </div>
+                                    <div class="u-form-send-error u-form-send-message" wfd-invisible="true">
+                                        Unable to send your message. Please fix errors then try
+                                        again.
+                                    </div>
+                                    <input type="hidden" value="" name="recaptchaResponse" wfd-invisible="true" />
+                                    <input type="hidden" name="formServices" value="2867d665-fcbb-9ba9-9572-15130719680c" />
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="u-text u-text-4"></div>
-                </div>
-            </div>
-            <div class="u-black u-carousel-item u-clearfix u-section-8-2">
-                <div class="u-clearfix u-sheet u-sheet-1">
-                    <div class="u-container-style u-group u-group-1">
-                        <div class="u-container-layout u-valign-middle u-container-layout-1">
-                            <h2 class="u-align-center u-custom-font u-font-oswald u-text u-text-1">
-                                Ask Our Clients
-                            </h2>
+                    <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-26 u-white u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                        <div class="u-container-layout u-valign-top u-container-layout-2">
+                            <h5 class="u-align-left u-text u-text-2">Address</h5>
+                            <p class="u-align-left u-text u-text-grey-50 u-text-3">
+                                1234 Sreet, 56 Avenue, <br />Viet Nam, Ho Chi Minh city 700000
+                            </p>
+                            <h5 class="u-align-left u-text u-text-4">Call Us</h5>
+                            <p class="u-align-left u-text u-text-grey-50 u-text-5">
+                                1 (234) 567-891 <br />1 (234) 567-891
+                            </p>
                         </div>
                     </div>
-                    <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
-                        <div class="u-layout">
-                            <div class="u-layout-row">
-                                <div class="u-align-center-sm u-align-left-lg u-align-left-md u-align-left-xl u-align-left-xs u-container-style u-layout-cell u-left-cell u-size-13 u-layout-cell-1">
-                                    <div class="u-container-layout u-valign-middle-sm u-container-layout-2">
-                                        <img src="{{ getFileVersion('assets/web/images/image3.png') }}" alt="" class="u-align-left u-image u-image-circle u-image-1" />
-                                    </div>
-                                </div>
-                                <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-47 u-layout-cell-2">
-                                    <div class="u-container-layout u-container-layout-3">
-                                        <p class="u-text u-text-2">
-                                            Our range of services include full branding, SEO, PPC,
-                                            Explainer Videos, and Inbound Marketing.<br />Our
-                                            clients range from entrepreneurs to Fortune 100
-                                            companies in a wide range of industries.&nbsp;Our team
-                                            has over 15+ years of experience in their areas of
-                                            expertise.<br />
-                                        </p>
-                                        <h5 class="u-custom-font u-font-oswald u-text u-text-3">
-                                            Mark Johnson
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="u-text u-text-4"></div>
                 </div>
             </div>
         </div>
-        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-text-body-alt-color u-block-8a00-3" href="#carousel_1bad" role="button" data-u-slide="prev">
-            <span aria-hidden="true">
-                <svg viewBox="0 0 477.175 477.175">
-                    <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
-                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path>
-                </svg>
-            </span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-body-alt-color u-block-8a00-4" href="#carousel_1bad" role="button" data-u-slide="next">
-            <span aria-hidden="true">
-                <svg viewBox="0 0 477.175 477.175">
-                    <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path>
-                </svg>
-            </span>
-            <span class="sr-only">Next</span>
-        </a>
-    </section>
-</body>
+    </div>
+</section>
 @endsection
 
 @push('js')
