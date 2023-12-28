@@ -416,7 +416,8 @@
                             </h2>
                             <div class="u-align-center u-border-5 u-border-white u-line u-line-horizontal u-line-1"></div>
                             <div class="custom-expanded u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-form u-form-1">
-                                <form action="#" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px" source="email" name="form">
+                                <form action="{{ route('web.contact') }}" method="POST" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px" source="email" name="form">
+                                    @csrf
                                     <div class="u-form-group u-form-name">
                                         <label for="name-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Name</label>
                                         <input type="text" placeholder="Enter your Name" id="name-5a14" name="name" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-1" required />

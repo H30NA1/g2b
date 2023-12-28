@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <!-- if IEmeta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')-->
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     <meta name="keywords" content="TechBoostify"/>
     <meta name="description" content="" />
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="format-detection" content="telephone=no">
     <title>Tech Boostify</title>
+    <link rel="icon" type="image/x-icon" href="#" sizes="32x32">
     <link rel="stylesheet" href="{{ getFileVersion('assets/web/css/index.css') }}" media="screen" />
-    <script class="u-script" type="text/javascript" src="{{ getFileVersion('assets/web/js/jquery.js') }}" defer=""></script>
-    <script class="u-script" type="text/javascript" src="{{ getFileVersion('assets/web/js/index.js') }}" defer=""></script>
-    <meta name="generator" content="Nicepage 6.1.3, nicepage.com" />
-    <meta name="referrer" content="origin" />
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Cantarell:400,400i,700,700i"/>
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"/>
+    <script class="u-script" type="text/javascript" src="{{ getFileVersion('assets/web/js/jquery.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ getFileVersion('assets/web/js/index.js') }}" defer=""></script>
 
     <script type="application/ld+json">
       {
