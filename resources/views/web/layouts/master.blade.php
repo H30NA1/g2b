@@ -4,9 +4,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="keywords" content=""/>
+    <meta name="keywords" content="TechBoostify"/>
     <meta name="description" content="" />
-    <title>G2B</title>
+    <title>Tech Boostify</title>
     <link rel="stylesheet" href="{{ getFileVersion('assets/web/css/index.css') }}" media="screen" />
     <script class="u-script" type="text/javascript" src="{{ getFileVersion('assets/web/js/jquery.js') }}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{{ getFileVersion('assets/web/js/index.js') }}" defer=""></script>

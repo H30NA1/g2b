@@ -23,12 +23,8 @@
         <div class="custom-expanded u-align-left u-container-align-left u-container-style u-group u-white u-group-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="1000">
             <div class="u-container-layout u-valign-middle u-container-layout-2">
                 <p class="u-align-left u-text u-text-2">
-                At TechBoostify, we're more than just website builders; we're architects of digital success for small businesses. Our passion lies in integrating cutting-edge technology with tailored website solutions to elevate your business growth.
+                    At TechBoostify, we're more than just website builders; we're architects of digital success for small businesses. Our passion lies in integrating cutting-edge technology with tailored website solutions to elevate your business growth.
                 </p>
-                <p class="u-align-left u-text u-text-3">
-                    Click here to know more
-                </p>
-                <a href="#" class="u-align-left u-border-active-palette-1-light-1 u-border-hover-palette-1-dark-3 u-border-none u-btn u-button-style u-hover-palette-1-dark-3 u-palette-1-light-1 u-btn-2">more</a>
             </div>
         </div>
     </div>
@@ -39,86 +35,67 @@
             Our Services
         </h2>
         <p class="u-align-center u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore eu fugiat nulla
+            From code to design, we craft digital dreams in every line.
         </p>
         <div class="u-expanded-width u-list u-list-1">
             <div class="u-repeater u-repeater-1">
                 <div class="u-container-style u-list-item u-repeater-item u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                     <div class="u-container-layout u-similar-container u-container-layout-1">
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-3">
-                            Banking and finance
+                            Cutting-Edge System Engineering and Hosting Mastery
                         </h5>
                         <p class="u-align-center u-text u-text-grey-40 u-text-4">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                            Our proficiency in system engineering ensures reliable hosting and management across diverse server types, ensuring optimal digital infrastructure performance.
                         </p>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                     <div class="u-container-layout u-similar-container u-container-layout-2">
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-5">
-                            Capital markets
+                            Backend Brilliance for Robust Functionality
                         </h5>
                         <p class="u-align-center u-text u-text-grey-40 u-text-6">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                            Dive deep into seamless functionality with our backend engineering. We build robust, scalable systems to power your platform's core functionalities and data management.
                         </p>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                     <div class="u-container-layout u-similar-container u-container-layout-3">
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-7">
-                            Compliance
+                            Frontend Finesse for Captivating User Experiences
                         </h5>
                         <p class="u-align-center u-text u-text-grey-40 u-text-8">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                            Captivate your audience with stunning interfaces. Our frontend experts craft visually engaging, responsive designs for seamless user interaction and navigation.
                         </p>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item u-list-item-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
                     <div class="u-container-layout u-similar-container u-container-layout-4">
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-9">
-                            Mobility and transport
+                            Bespoke Web Development Tailored to You
                         </h5>
                         <p class="u-align-center u-text u-text-grey-40 u-text-10">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                            Your unique business needs deserve tailor-made solutions. From dynamic web apps to e-commerce platforms, we breathe life into your vision.
                         </p>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item u-list-item-5" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
                     <div class="u-container-layout u-similar-container u-container-layout-5">
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-11">
-                            Employment and labor
+                            Fortify Your Platform: Security and Compliance Mastery
                         </h5>
                         <p class="u-align-center u-text u-text-grey-40 u-text-12">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                            Shield your digital assets with our expert security integration. We fortify your platform against threats while ensuring strict compliance with industry standards.
                         </p>
                     </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item u-list-item-6" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
                     <div class="u-container-layout u-similar-container u-container-layout-6">
                         <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-13">
-                            Restructuring
+                            Speed, Precision, Excellence: Performance Optimization
                         </h5>
                         <p class="u-align-center u-text u-text-grey-40 u-text-14">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                            Experience peak performance. We fine-tune your systems for speed, efficiency, and an unparalleled user experience.
                         </p>
                     </div>
                 </div>
@@ -134,7 +111,7 @@
                     </div>
                     <div class="u-container-align-center-sm u-container-align-center-xs u-container-align-left-lg u-container-align-left-md u-container-align-left-xl u-container-style u-layout-cell u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
                         <div class="u-container-layout u-valign-middle u-container-layout-8">
-                            <a href="#" class="u-active-white u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-palette-1-light-1 u-btn u-button-style u-hover-white u-palette-1-light-1 u-text-active-black u-text-hover-black u-btn-2">Contact Us</a>
+                            <a href="#carousel_d3a5" class="u-active-white u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-palette-1-light-1 u-btn u-button-style u-hover-white u-palette-1-light-1 u-text-active-black u-text-hover-black u-btn-2">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -148,7 +125,7 @@
             Vision, culture and people
         </h2>
         <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500">
-        With a keen understanding that every pixel and line of code contributes to your success story, we embark on a journey to design and develop websites that not only establish your online presence but also serve as powerful tools to propel your business forward.
+            With a keen understanding that every pixel and line of code contributes to your success story, we embark on a journey to design and develop websites that not only establish your online presence but also serve as powerful tools to propel your business forward.
         </p>
         <div class="data-layout-selected u-clearfix u-gutter-20 u-layout-wrap u-layout-wrap-1">
             <div class="u-gutter-0 u-layout">
@@ -161,9 +138,7 @@
                                         1
                                     </h4>
                                     <p class="u-align-left u-text u-text-body-alt-color u-text-4">
-                                        Quick can manor smart money hopes worth too. Comfort
-                                        produce husband boy her had hearing. Law others theirs
-                                        passed but wishes. You day real less till dear read.
+                                        Our vision shapes our culture, creating an environment where our people thrive, innovate, and share common values.
                                     </p>
                                 </div>
                             </div>
@@ -180,9 +155,7 @@
                                         2
                                     </h4>
                                     <p class="u-align-left u-text u-text-6">
-                                        Quick can manor smart money hopes worth too. Comfort
-                                        produce husband boy her had hearing. Law others theirs
-                                        passed but wishes. You day real less till dear read.
+                                        Vision propels us, culture nurtures us, and our people bring these elements to life, defining who we are and our path to success.
                                     </p>
                                 </div>
                             </div>
@@ -207,9 +180,8 @@
                         </h3>
                         <img class="u-expanded-width u-image u-image-default u-image-1" src="{{ getFileVersion('assets/web/images/happy-insurance-agent-communicat.jpg') }}" alt="" data-image-width="1380" data-image-height="920" />
                         <p class="u-align-left u-text u-text-body-alt-color u-text-default u-text-2">
-                        Driven by innovation and guided by expertise, we thrive on turning your aspirations into digital reality. Our mission is simple: Empower your business with seamless, technology-driven solutions that amplify your potential in the digital realm.
+                            In today's digital landscape, ensuring legal compliance isn't just a legal obligation; it's a cornerstone of trust and reliability. "Make legal better" serves as our guiding principle, embedding legal compliance seamlessly into every aspect of website development. From privacy policies to terms of use, we meticulously craft each element to safeguard your business and build trust with your audience. Prioritizing legal integrity isn't just a choice; it's our commitment to fortify your online presence.
                         </p>
-                        <a href="#" class="u-active-palette-1-light-1 u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-white u-btn u-button-style u-hover-palette-1-light-1 u-text-active-black u-text-hover-black u-btn-2">view more</a>
                     </div>
                 </div>
                 <div class="u-align-left u-container-style u-layout-cell u-palette-5-dark-3 u-shape-rectangle u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
@@ -221,8 +193,7 @@
                                         <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-1"><img src="{{ getFileVersion('assets/web/images/2970777-743d0e28.png') }}" alt="" /></span>
                                         <h5 class="u-text u-text-4">What We Do</h5>
                                         <p class="u-text u-text-5">
-                                            Sample text. Click to select the text box. Click again
-                                            or double click to start editing the text.
+                                            Discover our comprehensive approach to weaving legal compliance into every pixel of your website, ensuring airtight protection and trustworthiness for your business.
                                         </p>
                                     </div>
                                 </div>
@@ -231,8 +202,7 @@
                                         <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-2"><img src="{{ getFileVersion('assets/web/images/3077249-9d2828a7.png') }}" alt="" /></span>
                                         <h5 class="u-text u-text-6">Who We Are</h5>
                                         <p class="u-text u-text-7">
-                                            Sample text. Click to select the text box. Click again
-                                            or double click to start editing the text.
+                                            Meet our dedicated team of legal experts and tech enthusiasts committed to reshaping the digital landscape by making legal intricacies seamless and understandable for your online presence.
                                         </p>
                                     </div>
                                 </div>
@@ -241,8 +211,7 @@
                                         <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-3"><img src="{{ getFileVersion('assets/web/images/13207134-10a842cb.png') }}" alt="" /></span>
                                         <h5 class="u-text u-text-8">How We Differ</h5>
                                         <p class="u-text u-text-9">
-                                            Sample text. Click to select the text box. Click again
-                                            or double click to start editing the text.
+                                            Explore our unique methodology that sets us apart, amalgamating cutting-edge technology with legal finesse to redefine how websites comply with regulations, setting new standards in the industry.
                                         </p>
                                     </div>
                                 </div>
@@ -267,32 +236,30 @@
                             <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-shape-rectangle u-size-20 u-white u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                                 <div class="u-container-layout u-valign-middle u-container-layout-1">
                                     <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-2">
-                                        Finance Awards
+                                        Global Reach
                                     </h4>
                                     <p class="u-align-left u-text u-text-default u-text-3">
-                                        Sample text. Click to select the Text Element.
+                                        From bustling cities to remote corners, we extend our services worldwide, ensuring no geographical boundaries limit our support.
                                     </p>
                                 </div>
                             </div>
                             <div class="u-align-left u-container-style u-gradient u-layout-cell u-size-20 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                                 <div class="u-container-layout u-valign-middle u-container-layout-2">
                                     <h3 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-default u-text-4">
-                                        Life sciences and healthcare
+                                        Worldwide Support
                                     </h3>
                                     <p class="u-text u-text-body-alt-color u-text-default u-text-5">
-                                        Sample text. Click to select the Text Element.
+                                        Around the clock, our experts stand ready to assist, providing unwavering support across the globe, wherever your business takes you.
                                     </p>
-                                    <a href="#" class="u-border-2 u-border-active-palette-1-light-2 u-border-hover-palette-1-light-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-none u-radius-0 u-text-active-palette-1-light-2 u-text-body-alt-color u-text-hover-palette-1-light-2 u-top-left-radius-0 u-top-right-radius-0 u-btn-1">Read More&nbsp;
-                                    </a>
                                 </div>
                             </div>
                             <div class="u-align-left u-container-style u-layout-cell u-shape-rectangle u-size-20 u-white u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                                 <div class="u-container-layout u-container-layout-3">
                                     <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-6">
-                                        Responsible Business
+                                        International Presence
                                     </h4>
                                     <p class="u-align-left u-text u-text-default u-text-7">
-                                        Sample text. Click to select the Text Element.
+                                        With a footprint across continents, our dedicated teams are strategically positioned to cater to your needs wherever you operate.
                                     </p>
                                 </div>
                             </div>
@@ -306,10 +273,10 @@
                             <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-shape-rectangle u-size-20 u-white u-layout-cell-5" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
                                 <div class="u-container-layout u-valign-middle u-container-layout-5">
                                     <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-8">
-                                        Join Us
+                                        Borderless Solutions
                                     </h4>
                                     <p class="u-align-left u-text u-text-default u-text-9">
-                                        Sample text. Click to select the Text Element.
+                                        Our commitment knows no bounds. We deliver seamless solutions across time zones, embracing diversity and cultural nuances.
                                     </p>
                                 </div>
                             </div>
@@ -338,16 +305,13 @@
                     <div class="u-container-style u-layout-cell u-size-38 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                         <div class="u-container-layout u-container-layout-2">
                             <p class="u-text u-text-default u-text-2">
-                                Success of our company first and foremost is the achievement
-                                of the teamwork of our professionals, who render a service
-                                of highest quality not only at a local level, but also
-                                abroad. Our personnel aim at being leaders in their field,
-                                offering their experience and skill, providing unique
-                                solutions for client’s requirements satisfaction. <br />
-                                <br />It is of primal importance for us to recruit the very
-                                best for every spectrum of our activity, in order to offer
-                                you services of superior quality. We appreciate team-based
-                                work system and outer directed, sociable personnel.<br />
+                                At the heart of our company's success lies the collaborative effort of our exceptional professionals, dedicated to delivering unparalleled service. Our team not only excels locally but extends its expertise globally. <br>
+                                <br>
+                                Driven by the pursuit of excellence, our personnel are steadfast leaders in their respective fields. They offer a wealth of experience and expertise, consistently delivering bespoke solutions that exceed our clients' expectations. <br>
+                                <br>
+                                Our commitment to client satisfaction is unwavering. We pride ourselves on understanding and meeting our clients' unique requirements with innovative and tailored approaches. <br>
+                                <br>
+                                At our core, we embody a commitment to excellence, global reach, and client-centric solutions, ensuring that our success remains intertwined with the success of our clients.
                             </p>
                         </div>
                     </div>
@@ -452,18 +416,18 @@
                             </h2>
                             <div class="u-align-center u-border-5 u-border-white u-line u-line-horizontal u-line-1"></div>
                             <div class="custom-expanded u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-form u-form-1">
-                                <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px" source="email" name="form">
+                                <form action="#" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px" source="email" name="form">
                                     <div class="u-form-group u-form-name">
                                         <label for="name-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Name</label>
-                                        <input type="text" placeholder="Enter your Name" id="name-5a14" name="name" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-1" required="" />
+                                        <input type="text" placeholder="Enter your Name" id="name-5a14" name="name" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-1" required />
                                     </div>
                                     <div class="u-form-email u-form-group">
                                         <label for="email-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Email</label>
-                                        <input type="email" placeholder="Enter a valid email address" id="email-5a14" name="email" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-2" required="" />
+                                        <input type="email" placeholder="Enter a valid email address" id="email-5a14" name="email" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-2" required />
                                     </div>
                                     <div class="u-form-group u-form-message">
                                         <label for="message-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Message</label>
-                                        <textarea placeholder="" rows="4" cols="50" id="message-5a14" name="message" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-3" required=""></textarea>
+                                        <textarea placeholder="" rows="4" cols="50" id="message-5a14" name="message" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-3" required></textarea>
                                     </div>
                                     <div class="u-align-left u-form-group u-form-submit">
                                         <a href="#" class="u-active-palette-1-light-3 u-btn u-btn-submit u-button-style u-hover-palette-1-light-3 u-white u-btn-1">Submit</a>
