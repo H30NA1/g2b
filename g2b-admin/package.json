@@ -1,55 +1,75 @@
 {
-  "name": "g2b-admin",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "clean": "rimraf ./build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "cra-template-retypewind",
+    "description": "Create React Typescript Tailwindcss App.",
+    "version": "1.0.4",
+    "license": "MIT",
+    "keywords": [
+        "create-react-app",
+        "react",
+        "typescript",
+        "tailwindcss",
+        "template"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "homepage": ".",
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@types/node": "^20.10.5",
-    "@types/react": "^18.2.45",
-    "@types/react-dom": "^18.2.18",
-    "@typescript-eslint/parser": "^5.62.0",
-    "classnames": "^2.5.0",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^3.1.1",
-    "react-scripts": "^5.0.1",
-    "sass": "^1.69.5",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.3.3"
-  },
-  "overrides": {
-    "typescript": "$typescript"
-  }
+    "author": "ngdduy17427",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ngdduy17427/cra-template-retypewind.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ngdduy17427/cra-template-retypewind/issues"
+    },
+    "readme": "README.md",
+    "files": [
+        "template",
+        "template.json"
+    ],
+    "main": "template.json",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "clean": "rimraf ./build"
+    },
+    "dependencies": {
+        "apexcharts": "^3.41.0",
+        "headlessui": "^0.0.0",
+        "jsvectormap": "^1.5.3",
+        "match-sorter": "^6.3.1",
+        "react": "^18.2.0",
+        "react-apexcharts": "^1.4.1",
+        "react-dom": "^18.2.0",
+        "react-hot-toast": "^2.4.1",
+        "react-icons": "^4.10.1",
+        "react-router-dom": "^6.14.2",
+        "react-toastify": "^9.1.3",
+        "sort-by": "^0.0.2"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.17",
+        "@types/react-dom": "^18.2.7",
+        "@vitejs/plugin-react": "^4.0.3",
+        "autoprefixer": "^10.4.14",
+        "file-loader": "^6.2.0",
+        "postcss": "^8.4.27",
+        "prettier-plugin-tailwindcss": "^0.4.1",
+        "vite": "^4.4.7",
+        "webpack": "^5.88.2",
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "@types/node": "^20.2.1",
+        "@typescript-eslint/parser": "^5.62.0",
+        "classnames": "^2.3.2",
+        "eslint": "^8.55.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.0.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "^3.1.1",
+        "react-scripts": "^5.0.1",
+        "sass": "^1.69.5",
+        "tailwindcss": "^3.3.3",
+        "typescript": "^5.0.4"
+    },
+    "overrides": {
+      "typescript": "$typescript"
+    }
 }
