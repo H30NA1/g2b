@@ -1,13 +1,21 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './index.scss';
+import ReactDOM from 'react-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from 'react-router-dom';
 
-const container = document.getElementById('root')!;
-const root = createRoot(container);
+import 'nprogress/nprogress.css';
+import App from 'src/App';
+import { SidebarProvider } from 'src/contexts/SidebarContext';
+import * as serviceWorker from 'src/serviceWorker';
 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOM.render(
+  <HelmetProvider>
+    <SidebarProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </SidebarProvider>
+  </HelmetProvider>,
+  document.getElementById('root')
 );
+
+serviceWorker.unregister();

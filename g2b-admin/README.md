@@ -1,72 +1,61 @@
-# TailAdmin React - Free React Tailwind Admin Dashboard Template
+<p align="center">
+    <a href="https://bloomui.com" title="BloomUI.com">
+        <img src="https://bloomui.s3.us-east-2.amazonaws.com/tokyo-logo.png" alt="Tokyo Free White Typescript React Admin Dashboard">
+    </a>
+</p>
+<h1 align="center">
+    <b>Tokyo Free White Typescript React Admin Dashboard</b>
+    <br>
+    <a href="https://twitter.com/intent/tweet?url=https://bloomui.com&text=I like this React admin dashboard">
+        <img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" />
+    </a>
+</h1>
+<div align="center">
 
-TailAdmin is a free and open-source admin dashboard template built on **React and Tailwind CSS**, providing developers with everything they need to create a comprehensive, data-driven back-end, 
-dashboard, or admin panel solution for upcoming web projects.
+![version](https://img.shields.io/badge/version-2.0.0-blue.svg)
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-[![tailwind react admin template](https://ucarecdn.com/d2a6daed-eb9c-4c2f-8a95-4419c450e23a/tailadminreact.jpg)](https://react-demo.tailadmin.com/)
+<a href="https://bloomui.com/product/tokyo-free-white-react-typescript-material-ui-admin-dashboard/"><img src="https://bloomui.s3.us-east-2.amazonaws.com/tokyo-free-white-react-typescript-material-ui-admin-dashboard.jpg" /></a>
+</div>
 
+<a href="https://bloomui.com/product/tokyo-free-white-react-typescript-material-ui-admin-dashboard/"><h3>Free React Typescript Admin Dashboard Template built with Material-UI</h3></a>
+<p>
+    This free and open source admin dashboard template is built for React and it’s bootstrapped from Facebook’s create-react-app. All NPM dependencies are up to date and it contains multiple fully customized components based on the popular frontend components framework, Material-UI.
+</p>
+<p>
+Tokyo Free White Typescript Dashboard features a nice classic light & clean design and color scheme.
+</p>
+<p>
+You can customize the color scheme and style by editing a single variables files. This Typescript admin dashboard doesn’t use SCSS stylesheets but the more modern approach with styled-components.
+</p>
+<p>
+We’ve included a few page examples for most used user flows that will give you a solid base for getting started with your new project’s development. With very light modifications you can even integrate Tokyo Free White Typescript Dashboard into existing projects giving them a much deserved makeover.
+</p>
 
-With TailAdmin, you get access to all the necessary dashboard UI components, elements, and pages required to build a feature-rich and complete dashboard or admin panel. Whether you're building dashboard or admin panel for a complex web application or a simple website, TailAdmin is the perfect solution to help you get up and running quickly.
+---
+<h3>Updrade to PRO</h3>
 
-### [✨ Visit Website](https://tailadmin.com/)
+<p>If you're looking for more features like translations, complex user flows, redux examples and more,  we recommend taking a look at the premium version (Tokyo White Typescript Dashboard) on <a href="https://bloomui.com">bloomui.com</a></p>
 
-### [🚀 PRO Demo](https://react-demo.tailadmin.com/)
-### [🚀 FREE Demo](https://free-react-demo.tailadmin.com/)
+---
 
-### TailAdmin React PRO vs TailAdmin React FREE Comparison 📊
+<h2>
+    Quick Start
+</h2>
+<ol>
+    <li>Make sure you have the latest stable versions for Node.js and NPM installed</li>
+    <li>Clone repository: <code>git clone https://github.com/bloomui/tokyo-free-white-react-admin-dashboard.git</code></li>
+    <li>Install dependencies: Run <code>npm install</code> inside the project folder</li>
+    <li>Start dev server: After the install finishes, run <code>npm run start</code>. A browser window will open on http://localhost:3000 where you''ll see the live preview</li>
+</ol>
 
-#### [TailAdmin React PRO](https://react-demo.tailadmin.com/)
-- 4 Unique Dashboards: Analytics, Ecommerce, Marketing, and CRM (More will be added)
-- 120+ Dashboard UI Components
-- 200+ Total UI Elements
-- 45+ HTML Files
-- All Essential Elements and Files
-- Full Figma Design Source - As Shown on Demo
+---
 
-___
-
-#### [TailAdmin React FREE](https://free-react-demo.tailadmin.com/)
-- 1 Unique Dashboard
-- 30+ Dashboard UI Components
-- 50+ Total UI Elements 
-- 10+ HTML Files
-- TypeScript Support
-- Basic UI Kit Elements and Files
-- Figma Design Source - Free Sample
-___
-
-### [⬇️ Download Now](https://tailadmin.com/download)
-
-### [⚡ Get PRO Version](https://tailadmin.com/pricing)
-
-### [📄 Documentation/Installation](https://tailadmin.com/docs)
-
-### [🖌️ TailAdmin Figma Free Sample](https://www.figma.com/community/file/1214477970819985778)
-
-### [👉 TailAdmin HTML Version](https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template)
-
-TailAdmin React dashboard template based on Tailwind CSS is a pre-designed starting point for building a web-based dashboard using the React JavaScript library and the Tailwind CSS utility-first framework. This Tailwind CSS + React Dashboard Template - built using Tailwind CSS and **includes pre-built components, such as navigation menus, charts, tables, and forms, which can be easily customized and integrated into a small-to-large React web application**.
-
-If you're looking for a high-quality **React-Tailwind Dashboard, Admin Panel Template, or UI Kit**, TailAdmin will be the perfect choice for you!
-
-## TailAdmin React - Installation
-
-You'll need to install Node.js >=v14.16+ (Recommended Version) (NPM comes along with it) and TailAdmin uses **Vite** for frontend tooling, to peform installation and building production version, please follow these steps from below:
-
-- Use terminal and navigate to the project (tailadmin-react) root.
-
-- Then run : <code>npm install</code>
-
-- Then run : <code>npm run dev</code>
-
-Now, in the browser go to <code>localhost:5173</code>
-
-**For Production Build**
-Run : <code>npm run build</code>
-
-Default build output directory: /dist
-
-This command will generate a dist as build folder in the root of your template that you can upload to your server.
-
-## Tons of React Tailwind Components for Dashboard
-React and Tailwind are two popular technologies that have taken the web development world by storm. React is a JavaScript library for building user interfaces, while Tailwind is a utility-first CSS framework that makes it easy to style web applications. TailAdmin React Offers 200+ Essential React + Tailwind CSS UI Components that you copy-paste and use with your dashboard projects. That includes - charts, graphs, navbars, tabs, buttons, cards, tables, profile, tabs, forms, modals, app pages, calender, web apps example templates and more... for React and Styled using Tailwind CSS
+<h2>
+    Technical Support
+</h2>
+<p>
+    You can open a support ticket by sending an email here: <a href="mailto:support@bloomui.freshdesk.com" title="Open Support Ticket">
+        support@bloomui.freshdesk.com
+    </a>
+</p>
