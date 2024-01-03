@@ -5,7 +5,7 @@ use Carbon\Carbon;
 function getFileVersion($file)
 {
     $filePath = public_path($file);
-
+    
     if (file_exists($filePath)) {
         return "{$file}?v=" . date("YmdHis", filemtime($filePath));
     }
