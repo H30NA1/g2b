@@ -9,11 +9,11 @@ import Wallets from './Wallets';
 import AccountSecurity from './AccountSecurity';
 import WatchList from './WatchList';
 
-function DashboardCrypto() {
+function Dashboard() {
   return (
     <>
       <Helmet>
-        <title>Crypto Dashboard</title>
+        <title>Dashboard</title>
       </Helmet>
       <PageTitleWrapper>
         <PageHeader />
@@ -45,4 +45,4 @@ function DashboardCrypto() {
   );
 }
 
-export default DashboardCrypto;
+export default Dashboard;
