@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_settings', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('project_id')->nullable();
+            $table->unsignedBigInteger('task_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->string('role', 255)->nullable();
-            $table->string('status', 255)->nullable();
-            $table->boolean('is_blocked')->default(0);
-            $table->boolean('noti_email')->default(0);
-            $table->boolean('noti_device')->default(0);
-            $table->softDeletes()->nullable();
+            $table->string('amount', 255)->nullable();
+            $table->string('real_amount', 255)->nullable();
+            $table->string('taxes', 255)->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_settings');
+        Schema::dropIfExists('transactions');
     }
 };

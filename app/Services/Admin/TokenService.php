@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\Api;
+namespace App\Services\Admin;
 
-use App\Repositories\Api\AccessTokenRepository;
+use App\Repositories\Admin\AccessTokenRepository;
 use Illuminate\Support\Facades\Hash;
 use Stevebauman\Location\Facades\Location;
 

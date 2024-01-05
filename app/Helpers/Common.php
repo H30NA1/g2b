@@ -5,7 +5,7 @@ use Carbon\Carbon;
 function getFileVersion($file)
 {
     $filePath = public_path($file);
-    
+
     if (file_exists($filePath)) {
         return "{$file}?v=" . date("YmdHis", filemtime($filePath));
     }
@@ -34,4 +34,55 @@ function formatDate($date, $format = 'Y-m-d')
     }
 
     return null;
+}
+
+function getUserStatus($status)
+{
+    $data = [];
+    $status = (int) $status;
+    switch ($status) {
+        case 0:
+            $data = [
+                'status' => 'danger',
+                'label' => 'Inactive'
+            ];
+            break;
+        case 1:
+            $data = [
+                'status' => 'success',
+                'label' => 'Active'
+            ];
+            break;
+        case 2:
+            $data = [
+                'status' => 'success',
+                'label' => 'Verified'
+            ];
+            break;
+        case 3:
+            $data = [
+                'status' => 'danger',
+                'label' => 'Pending'
+            ];
+            break;
+        case 4:
+            $data = [
+                'status' => 'danger',
+                'label' => 'Need Review'
+            ];
+            break;
+        case 5:
+            $data = [
+                'status' => 'danger',
+                'label' => 'Blocked'
+            ];
+            break;
+        default:
+            $data = [
+                'status' => 'danger',
+                'label' => 'Inactive'
+            ];
+            break;
+    }
+    return $data;
 }

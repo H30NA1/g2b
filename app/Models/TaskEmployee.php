@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
 
-class AccessToken extends Model
+class TaskEmployee extends Model
 {
     use HasApiTokens, HasFactory, SoftDeletes;
 
@@ -18,24 +17,24 @@ class AccessToken extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'user_id',
+        'task_id',
+        'lead_id',
         'employee_id',
-        'access_token',
-        'ip_address',
-        'last_logged_in',
-        'user_agent',
-        'is_active',
-        'token_expires_at',
-        'location'
+        'progress'
     ];
 
-    public function user()
+    public function task()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Task::class);
+    }
+
+    public function leader()
+    {
+        return $this->belongsTo(Employee::class, 'lead_id', 'id');
     }
 
     public function employee()
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Employee::class, 'employee_id', 'id');
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Services\Api;
+namespace App\Services\Admin;
 
-use App\Repositories\Api\UserRepository;
-use App\Repositories\Api\UserFinancialRepository;
-use App\Repositories\Api\UserProfessionalRepository;
-use App\Repositories\Api\UserProfileRepository;
-use App\Repositories\Api\UserSettingsRepository;
+use App\Repositories\Admin\UserRepository;
+use App\Repositories\Admin\UserFinancialRepository;
+use App\Repositories\Admin\UserProfessionalRepository;
+use App\Repositories\Admin\UserProfileRepository;
+use App\Repositories\Admin\UserSettingsRepository;
 use Illuminate\Support\Facades\Hash;
 
 class UserService
@@ -29,6 +29,12 @@ class UserService
         $this->userProfessionalRepository = $userProfessionalRepository;
         $this->userProfileRepository = $userProfileRepository;
         $this->userSettingRepository = $userSettingRepository;
+    }
+
+    public function getUsers($dataRequest)
+    {
+        $model = $this->userRepository->get();
+        return $model;
     }
 
     public function createUser($userData)
@@ -132,4 +138,6 @@ class UserService
             $data[$field] = isset($data[$field]) ? $data[$field] : formatDate($date, 'Y-m-d H:i:s');
         }
     }
+
+    
 }

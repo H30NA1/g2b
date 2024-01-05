@@ -121,10 +121,11 @@
                     <a href="javascript:void(0)" class="btn btn-primary btn-sm ms-2">+ Add Task</a>
                 </div>
             </div>
+            @foreach ($projects as $key => $project)
             <div class="col-xl-3 col-sm-6">
                 <div class="card box-hover">
                     <div class="card-header">
-                        <h5 class="mb-0"># 1 . Advertising Platform AD.</h5>
+                        <h5 class="mb-0"># {{ $key }} . Advertising Platform AD.</h5>
                     </div>
                     <div class="card-body">
                         <div class="products style-1">
@@ -162,6 +163,7 @@
                     </div>
                 </div>
             </div>
+            @endforeach
             <div class="col-xl-3 col-sm-6">
                 <div class="card box-hover">
                     <div class="card-header">

@@ -3,17 +3,30 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Services\Admin\UserService;
 use Illuminate\Http\Request;
+use Throwable;
 
 class ClientsController extends Controller
 {
-    public function __construct()
+    private $userService;
+    public function __construct(
+            UserService $userService
+        )
     {
+       $this->userService = $userService; 
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.pages.clients.index');
+        $data = $request->all();
+        try {
+            $users = $this->userService->getUsers($data);
+            return view('admin.pages.clients.index', compact('users'));
+        } catch (Throwable $e) {
+            report($e);
+            return redirect()->route('admin.index');
+        }
     }
 
     public function add()

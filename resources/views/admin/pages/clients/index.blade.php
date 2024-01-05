@@ -46,294 +46,32 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($users as $user)
                                     <tr>
                                         <td>
                                             <div class="products">
                                                 <img src="{{ getFileVersion('/assets/admin/images/contacts/pic2.jpg') }}" class="avatar avatar-md" alt="">
                                                 <div>
-                                                    <h6>Ricky Antony</h6>
-                                                    <span>Web Designer</span>
+                                                    <h6>{{ @$user->profile->first_name }} {{ @$user->profile->last_name }}</h6>
+                                                    <span>{{ isset($user->settings->role) ? ucfirst($user->settings->role) : 'bronze' }}</span>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td><span class="text-primary">ricky.antony</span></td>
+                                        <td><span class="text-primary">{{ @$user->username }}</span></td>
                                         <td>
-                                            <span>+91 123 456 7890</span>
+                                            <span>{{ @$user->profile->tel }}</span>
                                         </td>
                                         <td>
-                                            <span>Male</span>
+                                            <span>{{ isset($user->profile->sex) ? ucfirst($user->profile->sex) : '' }}</span>
                                         </td>
                                         <td>
-                                            <span>Uk</span>
+                                            <span>{{ isset($user->profile->nationality) ? ucfirst($user->profile->nationality) : '' }}</span>
                                         </td>
                                         <td>
-                                            <span class="badge badge-success light border-0">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>Ricky Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">ricky.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Female</span>
-                                        </td>
-                                        <td>
-                                            <span>Usa</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success light border-0">Active</span>
+                                            <span class="badge badge-{{ isset($user->settings->status) ? getUserStatus($user->settings->status)['status'] : '' }} light border-0">{{ isset($user->settings->status) ? getUserStatus($user->settings->status)['label'] : '' }}</span>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic3.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>John Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">john.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Male</span>
-                                        </td>
-                                        <td>
-                                            <span>USA</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-danger light border-0">Inactive</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic2.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>Ricky Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">ricky.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Male</span>
-                                        </td>
-                                        <td>
-                                            <span>Uk</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success light border-0">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>Ricky Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">ricky.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Female</span>
-                                        </td>
-                                        <td>
-                                            <span>Usa</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success light border-0">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>John Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">john.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Male</span>
-                                        </td>
-                                        <td>
-                                            <span>USA</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-danger light border-0">Inactive</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic2.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>Ricky Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">ricky.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Male</span>
-                                        </td>
-                                        <td>
-                                            <span>Uk</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success light border-0">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>Ricky Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">ricky.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Female</span>
-                                        </td>
-                                        <td>
-                                            <span>Usa</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success light border-0">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic3.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>John Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">john.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Male</span>
-                                        </td>
-                                        <td>
-                                            <span>USA</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-danger light border-0">Inactive</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic2.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>Ricky Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">ricky.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Male</span>
-                                        </td>
-                                        <td>
-                                            <span>Uk</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success light border-0">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>Ricky Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">ricky.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Female</span>
-                                        </td>
-                                        <td>
-                                            <span>Usa</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success light border-0">Active</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="products">
-                                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar avatar-md" alt="">
-                                                <div>
-                                                    <h6>John Antony</h6>
-                                                    <span>Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="text-primary">john.antony</span></td>
-                                        <td>
-                                            <span>+91 123 456 7890</span>
-                                        </td>
-                                        <td>
-                                            <span>Male</span>
-                                        </td>
-                                        <td>
-                                            <span>USA</span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-danger light border-0">Inactive</span>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
 
                             </table>
@@ -347,7 +85,6 @@
 @endsection
 
 @push('js')
-
 <script src="{{ getFileVersion('/assets/admin/vendor/bootstrap-datetimepicker/js/moment.js') }}"></script>
 <script src="{{ getFileVersion('/assets/admin/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
 @endpush
