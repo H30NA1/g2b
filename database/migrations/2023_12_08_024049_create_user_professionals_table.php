@@ -16,10 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('working_experiences', 255)->nullable();
             $table->string('job_title', 255)->nullable();
-            $table->string('company_name', 255)->nullable();
             $table->string('company_logo', 255)->nullable();
-            $table->string('company_tax_number', 255)->nullable();
-            $table->string('company_url', 255)->nullable();
             $table->string('company_address', 255)->nullable();
             $table->string('company_tel', 255)->nullable();
             $table->dateTime('start_working_at')->nullable();

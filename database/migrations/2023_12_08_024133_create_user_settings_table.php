@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('user_settings', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->string('role', 255)->nullable();
+            $table->enum('role', ['super_admin','admin','employee','freelancer'])->nullable();
             $table->string('status', 255)->nullable();
             $table->boolean('is_blocked')->default(0);
             $table->boolean('noti_email')->default(0);

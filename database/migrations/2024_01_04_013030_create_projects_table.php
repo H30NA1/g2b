@@ -14,11 +14,9 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255)->nullable();
-            $table->string('server', 255)->nullable();
-            $table->string('status', 255)->nullable();
+            $table->dateTime('deadline_at')->nullable();
             $table->dateTime('began_at')->nullable();
             $table->dateTime('finished_at')->nullable();
-            $table->json('extra')->nullable();
             $table->softDeletes()->nullable();
             $table->timestamps();
         });

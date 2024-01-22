@@ -25,6 +25,8 @@ class Task extends Model
         'deadline'
     ];
 
+    public $timestamps = false;
+
     public function project()
     {
         return $this->belongsTo(Project::class);

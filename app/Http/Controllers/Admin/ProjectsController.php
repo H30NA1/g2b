@@ -3,18 +3,33 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Services\Admin\ProjectService;
 use Illuminate\Http\Request;
+use Throwable;
 
 class ProjectsController extends Controller
 {
-    public function __construct()
+    private $projectService;
+
+    public function __construct(
+            ProjectService $projectService
+        )
     {
+       $this->projectService = $projectService; 
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.pages.projects.index');
+        $data = $request->all();
+        try {
+            $projects = $this->projectService->getProjects($data);
+            return view('admin.pages.projects.index', compact('projects'));
+        } catch (Throwable $e) {
+            report($e);
+            return redirect()->route('admin.index');
+        }
     }
+
 
     public function add()
     {

@@ -16,7 +16,7 @@
   <meta name="format-detection" content="telephone=no">
 
   <!-- PAGE TITLE HERE -->
-  <title>G2B Admin</title>
+  <title>Server Info</title>
   <!-- FAVICONS ICON -->
 
   <link rel="shortcut icon" type="image/png" href="{{ getFileVersion('/assets/admin/images/favicon.png') }}">

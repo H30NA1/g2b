@@ -18,12 +18,15 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         $starting = $this->faker->dateTimeBetween('-20 years');
+        $finishing = $this->faker->dateTimeBetween($starting);
+        $created = $this->faker->dateTimeBetween('-20 years');
         return [
             'name' => $this->faker->name(), // Assign a unique random user ID
-            'server' => $this->faker->ipv4(),
-            'status' => rand(0, 5),
             'began_at' => $starting,
-            'finished_at' => $this->faker->dateTimeBetween($starting),
+            'finished_at' => $finishing,
+            'deadline_at' => $this->faker->dateTimeBetween($starting, $finishing),
+            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
+            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
         ];
     }
 }

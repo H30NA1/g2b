@@ -3,7 +3,14 @@
 namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
+use App\Models\Project;
+use App\Models\Task;
+use App\Models\User;
+use App\Policies\Admin\ProjectPolicy;
+use App\Policies\Admin\TaskPolicy;
+use App\Policies\Admin\UserPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -13,7 +20,9 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        //
+        User::class => UserPolicy::class,
+        Project::class => ProjectPolicy::class,
+        Task::class => TaskPolicy::class
     ];
 
     /**
@@ -22,5 +31,8 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->registerPolicies();
+        Passport::tokensExpireIn(now()->endOfDay());
+        Passport::refreshTokensExpireIn(now()->addDays(30)->endOfDay());
+        Passport::personalAccessTokensExpireIn(now()->addMonths(6)->endOfDay());
     }
 }

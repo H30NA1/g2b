@@ -125,7 +125,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="card box-hover">
                     <div class="card-header">
-                        <h5 class="mb-0"># {{ $key }} . Advertising Platform AD.</h5>
+                        <h5 class="mb-0"># {{ $key }} . {{ @$project->name }}</h5>
                     </div>
                     <div class="card-body">
                         <div class="products style-1">
@@ -139,11 +139,9 @@
                         <div>
                             <p class="text-secondary mb-1 font-w500">Team</p>
                             <div class="avatar-list avatar-list-stacked">
+                                @foreach ($project->users as $user)
                                 <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
+                                @endforeach
                             </div>
                         </div>
                         <div class="progress mt-4">
@@ -152,308 +150,22 @@
                     </div>
                     <div class="card-footer d-flex justify-content-between flex-wrap">
                         <div class="due-progress">
-                            <p class="mb-0 text-secondary">Due <span class="text-purple">: 2023-06-02</span></p>
+                            <p class="mb-0 text-secondary">Due <span class="text-purple">: {{ formatDate(isset($project->deadline_at) ? $project->deadline_at : now()) }}</span></p>
                         </div>
                         <select class="default-select status-select">
-                            <option value="progress">In Progress</option>
-                            <option value="pending">Pending</option>
-                            <option value="testing">Testing</option>
-                            <option value="complete">Complete</option>
+                            <option value="pending" {{ $project->setting->status == 0 ? 'selected' : '' }}>Pending</option>
+                            <option value="progress" {{ $project->setting->status == 1 ? 'selected' : '' }}>In Progress</option>
+                            <option value="testing" {{ $project->setting->status == 2 ? 'selected' : '' }}>Testing</option>
+                            <option value="complete" {{ $project->setting->status == 3 ? 'selected' : '' }}>Complete</option>
                         </select>
                     </div>
                 </div>
             </div>
             @endforeach
-            <div class="col-xl-3 col-sm-6">
-                <div class="card box-hover">
-                    <div class="card-header">
-                        <h5 class="mb-0"># 1 . Advertising Platform AD.</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="products style-1">
-                            <img src="{{ getFileVersion('/assets/admin/images/contacts/pic2.jpg') }}" class="avatar avatar-lg rounded-circle" alt="">
-                            <div>
-                                <h6>Cedric Kelly</h6>
-                                <span>06 Feb 2023</span>
-                            </div>
-                        </div>
-                        <p class="my-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <div>
-                            <p class="text-secondary mb-1 font-w500">Team</p>
-                            <div class="avatar-list avatar-list-stacked">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                            </div>
-                        </div>
-                        <div class="progress mt-4">
-                            <div class="progress-bar bg-danger" style="width:60%; height:5px; border-radius:4px;" role="progressbar"></div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between flex-wrap">
-                        <div class="due-progress">
-                            <p class="mb-0 text-secondary">Due <span class="text-dabger">: 2023-06-02</span></p>
-                        </div>
-                        <select class="default-select status-select">
-                            <option value="pending">Pending</option>
-                            <option value="progress">In Progress</option>
-                            <option value="testing">Testing</option>
-                            <option value="complete">Complete</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6">
-                <div class="card box-hover">
-                    <div class="card-header">
-                        <h5 class="mb-0"># 1 . Advertising Platform AD.</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="products style-1">
-                            <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar avatar-lg rounded-circle" alt="">
-                            <div>
-                                <h6>Cedric Kelly</h6>
-                                <span>06 Feb 2023</span>
-                            </div>
-                        </div>
-                        <p class="my-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <div>
-                            <p class="text-secondary mb-1 font-w500">Team</p>
-                            <div class="avatar-list avatar-list-stacked">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                            </div>
-                        </div>
-                        <div class="progress mt-4">
-                            <div class="progress-bar bg-purple" style="width:60%; height:5px; border-radius:4px;" role="progressbar"></div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between flex-wrap">
-                        <div class="due-progress">
-                            <p class="mb-0 text-secondary">Due <span class="text-purple">: 2023-06-02</span></p>
-                        </div>
-                        <select class="default-select status-select">
-                            <option value="progress">In Progress</option>
-                            <option value="pending">Pending</option>
-                            <option value="testing">Testing</option>
-                            <option value="complete">Complete</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6">
-                <div class="card box-hover">
-                    <div class="card-header">
-                        <h5 class="mb-0"># 1 . Advertising Platform AD.</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="products style-1">
-                            <img src="{{ getFileVersion('/assets/admin/images/contacts/pic3.jpg') }}" class="avatar avatar-lg rounded-circle" alt="">
-                            <div>
-                                <h6>Cedric Kelly</h6>
-                                <span>06 Feb 2023</span>
-                            </div>
-                        </div>
-                        <p class="my-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <div>
-                            <p class="text-secondary mb-1 font-w500">Team</p>
-                            <div class="avatar-list avatar-list-stacked">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                            </div>
-                        </div>
-                        <div class="progress mt-4">
-                            <div class="progress-bar bg-danger" style="width:60%; height:5px; border-radius:4px;" role="progressbar"></div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between flex-wrap">
-                        <div class="due-progress">
-                            <p class="mb-0 text-secondary">Due <span class="text-dabger">: 2023-06-02</span></p>
-                        </div>
-                        <select class="default-select status-select">
-                            <option value="pending">Pending</option>
-                            <option value="progress">In Progress</option>
-                            <option value="testing">Testing</option>
-                            <option value="complete">Complete</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6">
-                <div class="card box-hover">
-                    <div class="card-header">
-                        <h5 class="mb-0"># 1 . Advertising Platform AD.</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="products style-1">
-                            <img src="{{ getFileVersion('/assets/admin/images/contacts/pic3.jpg') }}" class="avatar avatar-lg rounded-circle" alt="">
-                            <div>
-                                <h6>Cedric Kelly</h6>
-                                <span>06 Feb 2023</span>
-                            </div>
-                        </div>
-                        <p class="my-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <div>
-                            <p class="text-secondary mb-1 font-w500">Team</p>
-                            <div class="avatar-list avatar-list-stacked">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                            </div>
-                        </div>
-                        <div class="progress mt-4">
-                            <div class="progress-bar bg-danger" style="width:60%; height:5px; border-radius:4px;" role="progressbar"></div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between flex-wrap">
-                        <div class="due-progress">
-                            <p class="mb-0 text-secondary">Due <span class="text-dabger">: 2023-06-02</span></p>
-                        </div>
-                        <select class="default-select status-select">
-                            <option value="pending">Pending</option>
-                            <option value="progress">In Progress</option>
-                            <option value="testing">Testing</option>
-                            <option value="complete">Complete</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6">
-                <div class="card box-hover">
-                    <div class="card-header">
-                        <h5 class="mb-0"># 1 . Advertising Platform AD.</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="products style-1">
-                            <img src="{{ getFileVersion('/assets/admin/images/contacts/pic3.jpg') }}" class="avatar avatar-lg rounded-circle" alt="">
-                            <div>
-                                <h6>Cedric Kelly</h6>
-                                <span>06 Feb 2023</span>
-                            </div>
-                        </div>
-                        <p class="my-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <div>
-                            <p class="text-secondary mb-1 font-w500">Team</p>
-                            <div class="avatar-list avatar-list-stacked">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                            </div>
-                        </div>
-                        <div class="progress mt-4">
-                            <div class="progress-bar bg-danger" style="width:60%; height:5px; border-radius:4px;" role="progressbar"></div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between flex-wrap">
-                        <div class="due-progress">
-                            <p class="mb-0 text-secondary">Due <span class="text-dabger">: 2023-06-02</span></p>
-                        </div>
-                        <select class="default-select status-select">
-                            <option value="pending">Pending</option>
-                            <option value="progress">In Progress</option>
-                            <option value="testing">Testing</option>
-                            <option value="complete">Complete</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6">
-                <div class="card box-hover">
-                    <div class="card-header">
-                        <h5 class="mb-0"># 1 . Advertising Platform AD.</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="products style-1">
-                            <img src="{{ getFileVersion('/assets/admin/images/contacts/pic2.jpg') }}" class="avatar avatar-lg rounded-circle" alt="">
-                            <div>
-                                <h6>Cedric Kelly</h6>
-                                <span>06 Feb 2023</span>
-                            </div>
-                        </div>
-                        <p class="my-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <div>
-                            <p class="text-secondary mb-1 font-w500">Team</p>
-                            <div class="avatar-list avatar-list-stacked">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                            </div>
-                        </div>
-                        <div class="progress mt-4">
-                            <div class="progress-bar bg-purple" style="width:60%; height:5px; border-radius:4px;" role="progressbar"></div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between flex-wrap">
-                        <div class="due-progress">
-                            <p class="mb-0 text-secondary">Due <span class="text-purple">: 2023-06-02</span></p>
-                        </div>
-                        <select class="default-select status-select">
-                            <option value="progress">In Progress</option>
-                            <option value="pending">Pending</option>
-                            <option value="testing">Testing</option>
-                            <option value="complete">Complete</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6">
-                <div class="card box-hover">
-                    <div class="card-header">
-                        <h5 class="mb-0"># 1 . Advertising Platform AD.</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="products style-1">
-                            <img src="{{ getFileVersion('/assets/admin/images/contacts/pic2.jpg') }}" class="avatar avatar-lg rounded-circle" alt="">
-                            <div>
-                                <h6>Cedric Kelly</h6>
-                                <span>06 Feb 2023</span>
-                            </div>
-                        </div>
-                        <p class="my-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <div>
-                            <p class="text-secondary mb-1 font-w500">Team</p>
-                            <div class="avatar-list avatar-list-stacked">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic1.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic555.jpg') }}" class="avatar rounded-circle" alt="">
-                                <img src="{{ getFileVersion('/assets/admin/images/contacts/pic666.jpg') }}" class="avatar rounded-circle" alt="">
-                            </div>
-                        </div>
-                        <div class="progress mt-4">
-                            <div class="progress-bar bg-danger" style="width:60%; height:5px; border-radius:4px;" role="progressbar"></div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between flex-wrap">
-                        <div class="due-progress">
-                            <p class="mb-0 text-secondary">Due <span class="text-dabger">: 2023-06-02</span></p>
-                        </div>
-                        <select class="default-select status-select">
-                            <option value="pending">Pending</option>
-                            <option value="progress">In Progress</option>
-                            <option value="testing">Testing</option>
-                            <option value="complete">Complete</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+        </div>
     </div>
+    {{ $projects->links() }}
 </div>
 @endsection
 

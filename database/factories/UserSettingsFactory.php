@@ -10,7 +10,7 @@ use App\Models\User;
  */
 class UserSettingsFactory extends Factory
 {
-    private static int $currentUserId = 1;
+    private static int $currentUserId = 2;
     /**
      * Define the model's default state.
      *
@@ -18,13 +18,17 @@ class UserSettingsFactory extends Factory
      */
     public function definition(): array
     {
+        $status = rand(0, 2);
+        $created = $this->faker->dateTimeBetween('-20 years');
         return [
             'user_id' => self::$currentUserId++, // Assign a unique random user ID
-            'role' => $this->faker->randomElement(['bronze', 'silver', 'gold', 'platinum', 'diamond']),
-            'status' => rand(1, 4),
-            'is_blocked' => rand(1, 0),
+            'role' => $this->faker->randomElement(['admin', 'employee', 'freelancer']),
+            'status' => $status,
+            'is_blocked' => $status == 0 ? 1 : 0,
             'noti_email' => rand(1, 0),
-            'noti_device' => rand(1, 0)
+            'noti_device' => rand(1, 0),
+            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
+            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
         ];
     }
 }

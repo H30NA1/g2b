@@ -35,10 +35,9 @@ class TokenService
     {
         $tokenData = $user->createToken('Personal Access Token');
         $ip = $this->getClientIP($request);
-        
         return  [
             'user_id' => $user->id,
-            'access_token' => $tokenData->plainTextToken,
+            'access_token' => $tokenData->accessToken,
             'ip_address' => $ip,
             'last_logged_in' => now(),
             'user_agent' => $request->header('user-agent'),

@@ -3,7 +3,6 @@
 namespace App\Services\Admin;
 
 use App\Repositories\Admin\UserRepository;
-use App\Repositories\Admin\UserFinancialRepository;
 use App\Repositories\Admin\UserProfessionalRepository;
 use App\Repositories\Admin\UserProfileRepository;
 use App\Repositories\Admin\UserSettingsRepository;
@@ -12,28 +11,31 @@ use Illuminate\Support\Facades\Hash;
 class UserService
 {
     protected $userRepository;
-    protected $userFinancialRepository;
     protected $userProfessionalRepository;
     protected $userProfileRepository;
     protected $userSettingRepository;
 
     public function __construct(
         UserRepository $userRepository,
-        UserFinancialRepository $userFinancialRepository,
         UserProfessionalRepository $userProfessionalRepository,
         UserProfileRepository $userProfileRepository,
         UserSettingsRepository $userSettingRepository
     ) {
         $this->userRepository = $userRepository;
-        $this->userFinancialRepository = $userFinancialRepository;
         $this->userProfessionalRepository = $userProfessionalRepository;
         $this->userProfileRepository = $userProfileRepository;
         $this->userSettingRepository = $userSettingRepository;
     }
 
+    public function getUser($id)
+    {
+        $model = $this->userRepository->getUser($id);
+        return $model;
+    }
+
     public function getUsers($dataRequest)
     {
-        $model = $this->userRepository->get();
+        $model = $this->userRepository->getUsers($dataRequest);
         return $model;
     }
 
@@ -42,58 +44,67 @@ class UserService
         $plainPassword = $userData['password'];
         $userData['plain_password'] = $plainPassword;
         $userData['password'] = Hash::make($userData['password']);
-        $user = $this->userRepository->create($userData);
+        $user = $this->userRepository->create([
+            'username' => $userData['username'],
+            'email' => $userData['email'],
+            'password' => $userData['password'],
+            'plain_password' => $userData['plain_password'],
+        ]);
 
         $this->prepareData($user, $userData);
-        $this->userFinancialRepository->create($userData['financial']);
-        $this->userProfessionalRepository->create($userData['profile']);
-        $this->userProfileRepository->create($userData['professional']);
+        $this->userProfessionalRepository->create($userData['professional']);
+        $this->userProfileRepository->create($userData['profile']);
         $this->userSettingRepository->create($userData['settings']);
 
-        return $user;
+        return $user->load(['profile', 'professional', 'settings']);
     }
 
     public function updateUser($userId, $userData)
     {
+        $password = [];
         $plainPassword = $userData['password'];
-        $userData['plain_password'] = $plainPassword;
-        $userData['password'] = Hash::make($plainPassword);
+        
+        if (isset($plainPassword)) {
+            $password['plain_password'] = $plainPassword;
+            $password['password'] = Hash::make($plainPassword);
+        }
 
-        $user = $this->userRepository->update($userId, $userData);
+        $user = $this->userRepository->update([
+            'username' => $userData['username'],
+            'email' => $userData['email'],
+            'password' => $password['password'],
+            'plain_password' => $password['plain_password'],
+        ], $userId);
+
         $this->prepareData($user, $userData);
-        $this->userFinancialRepository->updateUserFinancial($user->id, $userData['financial']);
-        $this->userProfessionalRepository->updateUserProfessional($user->id, $userData['profile']);
-        $this->userProfileRepository->updateUserProfile($user->id, $userData['profession']);
+        $this->userProfessionalRepository->updateUserProfessional($user->id, $userData['professional']);
+        $this->userProfileRepository->updateUserProfile($user->id, $userData['profile']);
         $this->userSettingRepository->updateUserSettings($user->id, $userData['settings']);
 
         return $user;
     }
 
-    public function prepareData($user, &$userData)
+    public function deleteUser($id)
+    {
+        return $this->userRepository->deleteUser($id);
+    }
+
+    private function prepareData($user, &$userData)
     {
         $userId = $user->id;
-
-        $userData = [
-            'financial' => [
-                'user_id' => $userId,
-                'salary' => $userData['salary'] ?? $user->financial->salary ?? null,
-                'bank_name' => $userData['bank_name'] ?? $user->financial->bank_name ?? null,
-                'account_number' => $userData['account_number'] ?? $user->financial->account_number ?? null,
-                'routing_number' => $userData['routing_number'] ?? $user->financial->routing_number ?? null,
-                'currency' => $userData['currency'] ?? $user->financial->currency ?? null,
-            ],
+        // dd($userData);
+        $data = [
             'professional' => [
                 'user_id' => $userId,
                 'working_experiences' => $userData['working_experiences'] ?? $user->professional->working_experiences ?? null,
                 'job_title' => $userData['job_title'] ?? $user->professional->job_title ?? null,
-                'company_name' => $userData['company_name'] ?? $user->professional->company_name ?? null,
-                'company_tax_number' => $userData['company_tax_number'] ?? $user->professional->company_tax_number ?? null,
-                'company_url' => $userData['company_url'] ?? $user->professional->company_url ?? null,
                 'company_address' => $userData['company_address'] ?? $user->professional->company_address ?? null,
                 'company_tel' => $userData['company_tel'] ?? $user->professional->company_tel ?? null,
             ],
             'profile' => [
                 'user_id' => $userId,
+                'birthday' => $userData['birthday'] ?? $user->profile->birthday ?? null,
+                'sex' => $userData['sex'] ?? $user->profile->sex ?? 'male',
                 'first_name' => $userData['first_name'] ?? $user->profile->first_name ?? null,
                 'last_name' => $userData['last_name'] ?? $user->profile->last_name ?? null,
                 'nationality' => $userData['nationality'] ?? $user->profile->nationality ?? null,
@@ -109,19 +120,19 @@ class UserService
             ],
             'settings' => [
                 'user_id' => $userId,
-                'role' => $userData['role'] ?? $user->settings->role ?? 'customer',
-                'status' => $userData['status'] ?? $user->settings->status ?? 'active',
-                'plain_password' => $userData['plain_password'] ?? $user->settings->plain_password ?? null,
+                'role' => $userData['role'] ?? $user->settings->role ?? 'employee',
+                'status' => $userData['status'] ?? $user->settings->status ?? 1,
                 'is_blocked' => $userData['is_blocked'] ?? $user->settings->is_blocked ?? 0,
                 'noti_email' => $userData['noti_email'] ?? $user->settings->noti_email ?? 1,
                 'noti_device' => $userData['noti_device'] ?? $user->settings->noti_device ?? 1
             ]
         ];
+        $this->uploadAvatarIfRequired($userData, $user, $data['professional'], 'company_logo');
+        $this->processDate($userData['start_working_at'] ?? null, $data['professional'], 'start_working_at');
+        $this->processDate($userData['end_working_at'] ?? null, $data['professional'], 'end_working_at');
+        $this->uploadAvatarIfRequired($userData, $user, $data['profile'], 'avatar');
 
-        $this->uploadAvatarIfRequired($userData, $user, $userData['professional'], 'company_logo');
-        $this->processDate($userData['start_working_at'] ?? null, $userData['professional'], 'start_working_at');
-        $this->processDate($userData['end_working_at'] ?? null, $userData['professional'], 'end_working_at');
-        $this->uploadAvatarIfRequired($userData, $user, $userData['profile'], 'avatar');
+        $userData = $data;
     }
 
     private function uploadAvatarIfRequired($userData, $user, &$data, $field)
@@ -138,6 +149,4 @@ class UserService
             $data[$field] = isset($data[$field]) ? $data[$field] : formatDate($date, 'Y-m-d H:i:s');
         }
     }
-
-    
 }

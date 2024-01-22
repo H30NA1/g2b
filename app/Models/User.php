@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -44,14 +44,12 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function token()
+    /** Remove this when uploading to Production */
+    public $timestamps = false;
+
+    public function userToken()
     {
         return $this->hasOne(AccessToken::class);
-    }
-
-    public function financial()
-    {
-        return $this->hasOne(UserFinancial::class);
     }
 
     public function professional()
@@ -67,5 +65,29 @@ class User extends Authenticatable
     public function settings()
     {
         return $this->hasOne(UserSettings::class);
+    }
+
+    public function tasks()
+    {
+        return $this->hasMany(UserTask::class);
+    }
+
+    public function role()
+    {
+        return $this->hasOne(UserRole::class)->latest();
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($user) {
+            $user->userToken()->delete();
+            $user->professional()->delete();
+            $user->profile()->delete();
+            $user->settings()->delete();
+            $user->tasks()->delete();
+            $user->role()->delete();
+        });
     }
 }

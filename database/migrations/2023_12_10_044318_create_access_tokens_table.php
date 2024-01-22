@@ -11,8 +11,10 @@ return new class extends Migration
         Schema::create('access_tokens', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('access_token');
-            $table->string('ip_address', 45);
+            $table->text('access_token');
+            $table->string('encrypt_data')->nullable();
+            $table->string('encrypt_information')->nullable();
+            $table->string('ip_address', 45)->nullable();
             $table->timestamp('last_logged_in')->useCurrent();
             $table->string('user_agent')->nullable();
             $table->boolean('is_active')->default(true);
