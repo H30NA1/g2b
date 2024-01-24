@@ -8,462 +8,1223 @@
 @endpush
 
 @section('content')
-<section class="u-clearfix u-palette-5-dark-3 u-section-1" id="sec-5845">
-    <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <img src="{{ getFileVersion('assets/web/images/group-business-people-having-mee.jpg') }}" alt="" class="custom-expanded u-image u-image-default u-image-1" data-image-width="1380" data-image-height="871" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750" />
-        <div class="custom-expanded u-container-align-left u-container-style u-gradient u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
-            <div class="u-container-layout u-valign-middle u-container-layout-1">
-                <h1 class="u-align-left u-text u-text-body-alt-color u-text-1">
-                    Welcome to TechBoostify: Your path to digital triumph. 🚀
-                </h1>
+<!--begin::How It Works Section-->
+<div class="mb-n10 mb-lg-n20 z-index-2">
+    <!--begin::Container-->
+    <div class="container">
+        <!--begin::Heading-->
+        <div class="text-center mb-17">
+            <!--begin::Title-->
+            <h3 class="fs-2hx text-gray-900 mb-5" id="how-it-works" data-kt-scroll-offset="{default: 100, lg: 150}">How it Works</h3>
+            <!--end::Title-->
+            <!--begin::Text-->
+            <div class="fs-5 text-muted fw-bold">Save thousands to millions of bucks by using single tool
+                <br />for different amazing and great useful admin
             </div>
+            <!--end::Text-->
         </div>
-        <div class="u-gradient u-shape u-shape-circle u-shape-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
-        <div class="u-align-left u-expanded-width-sm u-expanded-width-xs u-gradient u-shape u-shape-rectangle u-shape-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
-        <div class="custom-expanded u-align-left u-container-align-left u-container-style u-group u-white u-group-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="1000">
-            <div class="u-container-layout u-valign-middle u-container-layout-2">
-                <p class="u-align-left u-text u-text-2">
-                    At TechBoostify, we're more than just website builders; we're architects of digital success for small businesses. Our passion lies in integrating cutting-edge technology with tailored website solutions to elevate your business growth.
-                </p>
+        <!--end::Heading-->
+        <!--begin::Row-->
+        <div class="row w-100 gy-10 mb-md-20">
+            <!--begin::Col-->
+            <div class="col-md-4 px-5">
+                <!--begin::Story-->
+                <div class="text-center mb-10 mb-md-0">
+                    <!--begin::Illustration-->
+                    <img src="{{ getFileVersion('/assets/web/media/illustrations/sketchy-1/2.png') }}" class="mh-125px mb-9" alt="" />
+                    <!--end::Illustration-->
+                    <!--begin::Heading-->
+                    <div class="d-flex flex-center mb-5">
+                        <!--begin::Badge-->
+                        <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">1</span>
+                        <!--end::Badge-->
+                        <!--begin::Title-->
+                        <div class="fs-5 fs-lg-3 fw-bold text-gray-900">Jane Miller</div>
+                        <!--end::Title-->
+                    </div>
+                    <!--end::Heading-->
+                    <!--begin::Description-->
+                    <div class="fw-semibold fs-6 fs-lg-4 text-muted">Save thousands to millions of bucks
+                        <br />by using single tool for different
+                        <br />amazing and great
+                    </div>
+                    <!--end::Description-->
+                </div>
+                <!--end::Story-->
             </div>
+            <!--end::Col-->
+            <!--begin::Col-->
+            <div class="col-md-4 px-5">
+                <!--begin::Story-->
+                <div class="text-center mb-10 mb-md-0">
+                    <!--begin::Illustration-->
+                    <img src="{{ getFileVersion('/assets/web/media/illustrations/sketchy-1/8.png') }}" class="mh-125px mb-9" alt="" />
+                    <!--end::Illustration-->
+                    <!--begin::Heading-->
+                    <div class="d-flex flex-center mb-5">
+                        <!--begin::Badge-->
+                        <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">2</span>
+                        <!--end::Badge-->
+                        <!--begin::Title-->
+                        <div class="fs-5 fs-lg-3 fw-bold text-gray-900">Setup Your App</div>
+                        <!--end::Title-->
+                    </div>
+                    <!--end::Heading-->
+                    <!--begin::Description-->
+                    <div class="fw-semibold fs-6 fs-lg-4 text-muted">Save thousands to millions of bucks
+                        <br />by using single tool for different
+                        <br />amazing and great
+                    </div>
+                    <!--end::Description-->
+                </div>
+                <!--end::Story-->
+            </div>
+            <!--end::Col-->
+            <!--begin::Col-->
+            <div class="col-md-4 px-5">
+                <!--begin::Story-->
+                <div class="text-center mb-10 mb-md-0">
+                    <!--begin::Illustration-->
+                    <img src="{{ getFileVersion('/assets/web/media/illustrations/sketchy-1/12.png') }}" class="mh-125px mb-9" alt="" />
+                    <!--end::Illustration-->
+                    <!--begin::Heading-->
+                    <div class="d-flex flex-center mb-5">
+                        <!--begin::Badge-->
+                        <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">3</span>
+                        <!--end::Badge-->
+                        <!--begin::Title-->
+                        <div class="fs-5 fs-lg-3 fw-bold text-gray-900">Enjoy Nautica App</div>
+                        <!--end::Title-->
+                    </div>
+                    <!--end::Heading-->
+                    <!--begin::Description-->
+                    <div class="fw-semibold fs-6 fs-lg-4 text-muted">Save thousands to millions of bucks
+                        <br />by using single tool for different
+                        <br />amazing and great
+                    </div>
+                    <!--end::Description-->
+                </div>
+                <!--end::Story-->
+            </div>
+            <!--end::Col-->
         </div>
+        <!--end::Row-->
+        <!--begin::Product slider-->
+        <div class="tns tns-default">
+            <!--begin::Slider-->
+            <div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="2000" data-tns-autoplay="true" data-tns-autoplay-timeout="18000" data-tns-controls="true" data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false" data-tns-prev-button="#kt_team_slider_prev1" data-tns-next-button="#kt_team_slider_next1">
+                <!--begin::Item-->
+                <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+                    <img src="{{ getFileVersion('/assets/web/media/preview/demos/demo1/light-ltr.png') }}" class="card-rounded shadow mh-lg-650px mw-100" alt="" />
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+                    <img src="{{ getFileVersion('/assets/web/media/preview/demos/demo2/light-ltr.png') }}" class="card-rounded shadow mh-lg-650px mw-100" alt="" />
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+                    <img src="{{ getFileVersion('/assets/web/media/preview/demos/demo4/light-ltr.png') }}" class="card-rounded shadow mh-lg-650px mw-100" alt="" />
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+                    <img src="{{ getFileVersion('/assets/web/media/preview/demos/demo5/light-ltr.png') }}" class="card-rounded shadow mh-lg-650px mw-100" alt="" />
+                </div>
+                <!--end::Item-->
+            </div>
+            <!--end::Slider-->
+            <!--begin::Slider button-->
+            <button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev1">
+                <i class="ki-outline ki-left fs-2x"></i>
+            </button>
+            <!--end::Slider button-->
+            <!--begin::Slider button-->
+            <button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_next1">
+                <i class="ki-outline ki-right fs-2x"></i>
+            </button>
+            <!--end::Slider button-->
+        </div>
+        <!--end::Product slider-->
     </div>
-</section>
-<section class="u-clearfix u-container-align-center u-palette-5-dark-3 u-section-2" id="carousel_6cc9">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
-            Our Services
-        </h2>
-        <p class="u-align-center u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500">
-            From code to design, we craft digital dreams in every line.
-        </p>
-        <div class="u-expanded-width u-list u-list-1">
-            <div class="u-repeater u-repeater-1">
-                <div class="u-container-style u-list-item u-repeater-item u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    <div class="u-container-layout u-similar-container u-container-layout-1">
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-3">
-                            Cutting-Edge System Engineering and Hosting Mastery
-                        </h5>
-                        <p class="u-align-center u-text u-text-grey-40 u-text-4">
-                            Our proficiency in system engineering ensures reliable hosting and management across diverse server types, ensuring optimal digital infrastructure performance.
-                        </p>
-                    </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    <div class="u-container-layout u-similar-container u-container-layout-2">
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-5">
-                            Backend Brilliance for Robust Functionality
-                        </h5>
-                        <p class="u-align-center u-text u-text-grey-40 u-text-6">
-                            Dive deep into seamless functionality with our backend engineering. We build robust, scalable systems to power your platform's core functionalities and data management.
-                        </p>
-                    </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    <div class="u-container-layout u-similar-container u-container-layout-3">
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-7">
-                            Frontend Finesse for Captivating User Experiences
-                        </h5>
-                        <p class="u-align-center u-text u-text-grey-40 u-text-8">
-                            Captivate your audience with stunning interfaces. Our frontend experts craft visually engaging, responsive designs for seamless user interaction and navigation.
-                        </p>
-                    </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item u-list-item-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                    <div class="u-container-layout u-similar-container u-container-layout-4">
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-9">
-                            Bespoke Web Development Tailored to You
-                        </h5>
-                        <p class="u-align-center u-text u-text-grey-40 u-text-10">
-                            Your unique business needs deserve tailor-made solutions. From dynamic web apps to e-commerce platforms, we breathe life into your vision.
-                        </p>
-                    </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item u-list-item-5" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                    <div class="u-container-layout u-similar-container u-container-layout-5">
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-11">
-                            Fortify Your Platform: Security and Compliance Mastery
-                        </h5>
-                        <p class="u-align-center u-text u-text-grey-40 u-text-12">
-                            Shield your digital assets with our expert security integration. We fortify your platform against threats while ensuring strict compliance with industry standards.
-                        </p>
-                    </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item u-list-item-6" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                    <div class="u-container-layout u-similar-container u-container-layout-6">
-                        <h5 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-13">
-                            Speed, Precision, Excellence: Performance Optimization
-                        </h5>
-                        <p class="u-align-center u-text u-text-grey-40 u-text-14">
-                            Experience peak performance. We fine-tune your systems for speed, efficiency, and an unparalleled user experience.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="custom-expanded data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
-            <div class="u-layout">
-                <div class="u-layout-row">
-                    <div class="u-container-align-center-sm u-container-align-center-xs u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-layout-cell u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                        <div class="u-container-layout u-valign-middle u-container-layout-7">
-                            <a href="#" class="u-active-palette-1-light-1 u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-white u-btn u-button-style u-hover-palette-1-light-1 u-text-active-black u-text-hover-black u-btn-1">view more</a>
-                        </div>
-                    </div>
-                    <div class="u-container-align-center-sm u-container-align-center-xs u-container-align-left-lg u-container-align-left-md u-container-align-left-xl u-container-style u-layout-cell u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                        <div class="u-container-layout u-valign-middle u-container-layout-8">
-                            <a href="#carousel_d3a5" class="u-active-white u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-palette-1-light-1 u-btn u-button-style u-hover-white u-palette-1-light-1 u-text-active-black u-text-hover-black u-btn-2">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!--end::Container-->
+</div>
+<!--end::How It Works Section-->
+<!--begin::Statistics Section-->
+<div class="mt-sm-n10">
+    <!--begin::Curve top-->
+    <div class="landing-curve landing-dark-color">
+        <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z" fill="currentColor"></path>
+        </svg>
     </div>
-</section>
-<section class="u-align-right u-clearfix u-container-align-center u-palette-5-dark-3 u-section-3" id="carousel_cfb2">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h2 class="u-align-center u-text u-text-default-lg u-text-default-xl u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
-            Vision, culture and people
-        </h2>
-        <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500">
-            With a keen understanding that every pixel and line of code contributes to your success story, we embark on a journey to design and develop websites that not only establish your online presence but also serve as powerful tools to propel your business forward.
-        </p>
-        <div class="data-layout-selected u-clearfix u-gutter-20 u-layout-wrap u-layout-wrap-1">
-            <div class="u-gutter-0 u-layout">
-                <div class="u-layout-col">
-                    <div class="u-size-30">
-                        <div class="u-layout-row">
-                            <div class="u-container-align-left u-container-style u-gradient u-layout-cell u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
-                                <div class="u-container-layout u-valign-middle u-container-layout-1">
-                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-3">
-                                        1
-                                    </h4>
-                                    <p class="u-align-left u-text u-text-body-alt-color u-text-4">
-                                        Our vision shapes our culture, creating an environment where our people thrive, innovate, and share common values.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="u-container-style u-image u-layout-cell u-shape-rectangle u-size-30 u-image-1" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                                <div class="u-container-layout u-container-layout-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="u-size-30">
-                        <div class="u-layout-row">
-                            <div class="u-container-align-left u-container-style u-grey-5 u-layout-cell u-shape-rectangle u-size-30 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                                <div class="u-container-layout u-valign-middle u-container-layout-3">
-                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-5">
-                                        2
-                                    </h4>
-                                    <p class="u-align-left u-text u-text-6">
-                                        Vision propels us, culture nurtures us, and our people bring these elements to life, defining who we are and our path to success.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="u-container-style u-image u-layout-cell u-size-30 u-image-2" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">
-                                <div class="u-container-layout u-container-layout-4"></div>
-                            </div>
-                        </div>
-                    </div>
+    <!--end::Curve top-->
+    <!--begin::Wrapper-->
+    <div class="pb-15 pt-18 landing-dark-bg">
+        <!--begin::Container-->
+        <div class="container">
+            <!--begin::Heading-->
+            <div class="text-center mt-15 mb-18" id="achievements" data-kt-scroll-offset="{default: 100, lg: 150}">
+                <!--begin::Title-->
+                <h3 class="fs-2hx text-white fw-bold mb-5">We Make Things Better</h3>
+                <!--end::Title-->
+                <!--begin::Description-->
+                <div class="fs-5 text-gray-700 fw-bold">Save thousands to millions of bucks by using single tool
+                    <br />for different amazing and great useful admin
                 </div>
+                <!--end::Description-->
             </div>
+            <!--end::Heading-->
+            <!--begin::Statistics-->
+            <div class="d-flex flex-center">
+                <!--begin::Items-->
+                <div class="d-flex flex-wrap flex-center justify-content-lg-between mb-15 mx-auto w-xl-900px">
+                    <!--begin::Item-->
+                    <div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain" style="background-image: url('{{ getFileVersion('/assets/web/media/svg/misc/octagon.svg') }}')">
+                        <!--begin::Symbol-->
+                        <i class="ki-outline ki-element-11 fs-2tx text-white mb-3"></i>
+                        <!--end::Symbol-->
+                        <!--begin::Info-->
+                        <div class="mb-0">
+                            <!--begin::Value-->
+                            <div class="fs-lg-2hx fs-2x fw-bold text-white d-flex flex-center">
+                                <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="700" data-kt-countup-suffix="+">0</div>
+                            </div>
+                            <!--end::Value-->
+                            <!--begin::Label-->
+                            <span class="text-gray-600 fw-semibold fs-5 lh-0">Known Companies</span>
+                            <!--end::Label-->
+                        </div>
+                        <!--end::Info-->
+                    </div>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain" style="background-image: url('{{ getFileVersion('/assets/web/media/svg/misc/octagon.svg') }}')">
+                        <!--begin::Symbol-->
+                        <i class="ki-outline ki-chart-pie-4 fs-2tx text-white mb-3"></i>
+                        <!--end::Symbol-->
+                        <!--begin::Info-->
+                        <div class="mb-0">
+                            <!--begin::Value-->
+                            <div class="fs-lg-2hx fs-2x fw-bold text-white d-flex flex-center">
+                                <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="80" data-kt-countup-suffix="K+">0</div>
+                            </div>
+                            <!--end::Value-->
+                            <!--begin::Label-->
+                            <span class="text-gray-600 fw-semibold fs-5 lh-0">Statistic Reports</span>
+                            <!--end::Label-->
+                        </div>
+                        <!--end::Info-->
+                    </div>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain" style="background-image: url('{{ getFileVersion('/assets/web/media/svg/misc/octagon.svg') }}')">
+                        <!--begin::Symbol-->
+                        <i class="ki-outline ki-basket fs-2tx text-white mb-3"></i>
+                        <!--end::Symbol-->
+                        <!--begin::Info-->
+                        <div class="mb-0">
+                            <!--begin::Value-->
+                            <div class="fs-lg-2hx fs-2x fw-bold text-white d-flex flex-center">
+                                <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="35" data-kt-countup-suffix="M+">0</div>
+                            </div>
+                            <!--end::Value-->
+                            <!--begin::Label-->
+                            <span class="text-gray-600 fw-semibold fs-5 lh-0">Secure Payments</span>
+                            <!--end::Label-->
+                        </div>
+                        <!--end::Info-->
+                    </div>
+                    <!--end::Item-->
+                </div>
+                <!--end::Items-->
+            </div>
+            <!--end::Statistics-->
+            <!--begin::Testimonial-->
+            <div class="fs-2 fw-semibold text-muted text-center mb-3">
+                <span class="fs-1 lh-1 text-gray-700">“</span>When you care about your topic, you’ll write about it in a
+                <br />
+                <span class="text-gray-700 me-1">more powerful</span>, emotionally expressive way
+                <span class="fs-1 lh-1 text-gray-700">“</span>
+            </div>
+            <!--end::Testimonial-->
+            <!--begin::Author-->
+            <div class="fs-2 fw-semibold text-muted text-center">
+                <a href="account/security.html" class="link-primary fs-4 fw-bold">Marcus Levy,</a>
+                <span class="fs-4 fw-bold text-gray-600">KeenThemes CEO</span>
+            </div>
+            <!--end::Author-->
         </div>
+        <!--end::Container-->
     </div>
-</section>
-<section class="u-align-center u-clearfix u-palette-5-dark-3 u-section-4" id="carousel_1b5f">
-    <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-        <div class="u-gutter-0 u-layout">
-            <div class="u-layout-row">
-                <div class="u-align-left u-container-align-left u-container-style u-gradient u-layout-cell u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500">
-                    <div class="u-container-layout u-valign-middle u-container-layout-1">
-                        <h3 class="u-align-left u-text u-text-body-alt-color u-text-1">
-                            Make legal better
-                        </h3>
-                        <img class="u-expanded-width u-image u-image-default u-image-1" src="{{ getFileVersion('assets/web/images/happy-insurance-agent-communicat.jpg') }}" alt="" data-image-width="1380" data-image-height="920" />
-                        <p class="u-align-left u-text u-text-body-alt-color u-text-default u-text-2">
-                            In today's digital landscape, ensuring legal compliance isn't just a legal obligation; it's a cornerstone of trust and reliability. "Make legal better" serves as our guiding principle, embedding legal compliance seamlessly into every aspect of website development. From privacy policies to terms of use, we meticulously craft each element to safeguard your business and build trust with your audience. Prioritizing legal integrity isn't just a choice; it's our commitment to fortify your online presence.
-                        </p>
-                    </div>
-                </div>
-                <div class="u-align-left u-container-style u-layout-cell u-palette-5-dark-3 u-shape-rectangle u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    <div class="u-container-layout u-valign-middle u-container-layout-2">
-                        <div class="u-expanded-width u-list u-list-1">
-                            <div class="u-repeater u-repeater-1">
-                                <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-1">
-                                    <div class="u-container-layout u-similar-container u-container-layout-3">
-                                        <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-1"><img src="{{ getFileVersion('assets/web/images/2970777-743d0e28.png') }}" alt="" /></span>
-                                        <h5 class="u-text u-text-4">What We Do</h5>
-                                        <p class="u-text u-text-5">
-                                            Discover our comprehensive approach to weaving legal compliance into every pixel of your website, ensuring airtight protection and trustworthiness for your business.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-2">
-                                    <div class="u-container-layout u-similar-container u-container-layout-4">
-                                        <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-2"><img src="{{ getFileVersion('assets/web/images/3077249-9d2828a7.png') }}" alt="" /></span>
-                                        <h5 class="u-text u-text-6">Who We Are</h5>
-                                        <p class="u-text u-text-7">
-                                            Meet our dedicated team of legal experts and tech enthusiasts committed to reshaping the digital landscape by making legal intricacies seamless and understandable for your online presence.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-3">
-                                    <div class="u-container-layout u-similar-container u-container-layout-5">
-                                        <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-3"><img src="{{ getFileVersion('assets/web/images/13207134-10a842cb.png') }}" alt="" /></span>
-                                        <h5 class="u-text u-text-8">How We Differ</h5>
-                                        <p class="u-text u-text-9">
-                                            Explore our unique methodology that sets us apart, amalgamating cutting-edge technology with legal finesse to redefine how websites comply with regulations, setting new standards in the industry.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!--end::Wrapper-->
+    <!--begin::Curve bottom-->
+    <div class="landing-curve landing-dark-color">
+        <svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z" fill="currentColor"></path>
+        </svg>
     </div>
-</section>
-<section class="u-clearfix u-container-align-center u-palette-5-dark-3 u-section-5" id="carousel_b382">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h2 class="u-align-center u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
-            We serve our clients around the globe
-        </h2>
-        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-            <div class="u-layout">
-                <div class="u-layout-col">
-                    <div class="u-size-30">
-                        <div class="u-layout-row">
-                            <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-shape-rectangle u-size-20 u-white u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                                <div class="u-container-layout u-valign-middle u-container-layout-1">
-                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-2">
-                                        Global Reach
-                                    </h4>
-                                    <p class="u-align-left u-text u-text-default u-text-3">
-                                        From bustling cities to remote corners, we extend our services worldwide, ensuring no geographical boundaries limit our support.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="u-align-left u-container-style u-gradient u-layout-cell u-size-20 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                                <div class="u-container-layout u-valign-middle u-container-layout-2">
-                                    <h3 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-default u-text-4">
-                                        Worldwide Support
-                                    </h3>
-                                    <p class="u-text u-text-body-alt-color u-text-default u-text-5">
-                                        Around the clock, our experts stand ready to assist, providing unwavering support across the globe, wherever your business takes you.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="u-align-left u-container-style u-layout-cell u-shape-rectangle u-size-20 u-white u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                                <div class="u-container-layout u-container-layout-3">
-                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-6">
-                                        International Presence
-                                    </h4>
-                                    <p class="u-align-left u-text u-text-default u-text-7">
-                                        With a footprint across continents, our dedicated teams are strategically positioned to cater to your needs wherever you operate.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="u-size-30">
-                        <div class="u-layout-row">
-                            <div class="u-align-left u-container-style u-image u-image-default u-layout-cell u-size-20 u-image-1" data-image-width="1405" data-image-height="1080" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                                <div class="u-container-layout u-container-layout-4"></div>
-                            </div>
-                            <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-shape-rectangle u-size-20 u-white u-layout-cell-5" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                                <div class="u-container-layout u-valign-middle u-container-layout-5">
-                                    <h4 class="u-align-left u-custom-font u-font-montserrat u-text u-text-8">
-                                        Borderless Solutions
-                                    </h4>
-                                    <p class="u-align-left u-text u-text-default u-text-9">
-                                        Our commitment knows no bounds. We deliver seamless solutions across time zones, embracing diversity and cultural nuances.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="u-align-left u-container-style u-image u-image-default u-layout-cell u-shape-round u-size-20 u-image-2" data-image-width="1920" data-image-height="1080" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                                <div class="u-container-layout u-valign-top u-container-layout-6"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!--end::Curve bottom-->
+</div>
+<!--end::Statistics Section-->
+<!--begin::Team Section-->
+<div class="py-10 py-lg-20">
+    <!--begin::Container-->
+    <div class="container">
+        <!--begin::Heading-->
+        <div class="text-center mb-12">
+            <!--begin::Title-->
+            <h3 class="fs-2hx text-gray-900 mb-5" id="team" data-kt-scroll-offset="{default: 100, lg: 150}">Our Great Team</h3>
+            <!--end::Title-->
+            <!--begin::Sub-title-->
+            <div class="fs-5 text-muted fw-bold">It’s no doubt that when a development takes longer to complete, additional costs to
+                <br />integrate and test each extra feature creeps up and haunts most of us.
             </div>
+            <!--end::Sub-title=-->
         </div>
+        <!--end::Heading-->
+        <!--begin::Slider-->
+        <div class="tns tns-default" style="direction: ltr">
+            <!--begin::Wrapper-->
+            <div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="2000" data-tns-autoplay="true" data-tns-autoplay-timeout="18000" data-tns-controls="true" data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false" data-tns-prev-button="#kt_team_slider_prev" data-tns-next-button="#kt_team_slider_next" data-tns-responsive="{1200: {items: 3}, 992: {items: 2}}">
+                <!--begin::Item-->
+                <div class="text-center">
+                    <!--begin::Photo-->
+                    <div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('{{ getFileVersion('/assets/web/media/avatars/300-1.jpg') }}')"></div>
+                    <!--end::Photo-->
+                    <!--begin::Person-->
+                    <div class="mb-0">
+                        <!--begin::Name-->
+                        <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-3">Paul Miles</a>
+                        <!--end::Name-->
+                        <!--begin::Position-->
+                        <div class="text-muted fs-6 fw-semibold mt-1">Development Lead</div>
+                        <!--begin::Position-->
+                    </div>
+                    <!--end::Person-->
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="text-center">
+                    <!--begin::Photo-->
+                    <div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('{{ getFileVersion('/assets/web/media/avatars/300-2.jpg') }}')"></div>
+                    <!--end::Photo-->
+                    <!--begin::Person-->
+                    <div class="mb-0">
+                        <!--begin::Name-->
+                        <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-3">Melisa Marcus</a>
+                        <!--end::Name-->
+                        <!--begin::Position-->
+                        <div class="text-muted fs-6 fw-semibold mt-1">Creative Director</div>
+                        <!--begin::Position-->
+                    </div>
+                    <!--end::Person-->
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="text-center">
+                    <!--begin::Photo-->
+                    <div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('{{ getFileVersion('/assets/web/media/avatars/300-5.jpg') }}')"></div>
+                    <!--end::Photo-->
+                    <!--begin::Person-->
+                    <div class="mb-0">
+                        <!--begin::Name-->
+                        <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-3">David Nilson</a>
+                        <!--end::Name-->
+                        <!--begin::Position-->
+                        <div class="text-muted fs-6 fw-semibold mt-1">Python Expert</div>
+                        <!--begin::Position-->
+                    </div>
+                    <!--end::Person-->
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="text-center">
+                    <!--begin::Photo-->
+                    <div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('{{ getFileVersion('/assets/web/media/avatars/300-20.jpg') }}')"></div>
+                    <!--end::Photo-->
+                    <!--begin::Person-->
+                    <div class="mb-0">
+                        <!--begin::Name-->
+                        <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-3">Anne Clarc</a>
+                        <!--end::Name-->
+                        <!--begin::Position-->
+                        <div class="text-muted fs-6 fw-semibold mt-1">Project Manager</div>
+                        <!--begin::Position-->
+                    </div>
+                    <!--end::Person-->
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="text-center">
+                    <!--begin::Photo-->
+                    <div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('{{ getFileVersion('/assets/web/media/avatars/300-23.jpg') }}')"></div>
+                    <!--end::Photo-->
+                    <!--begin::Person-->
+                    <div class="mb-0">
+                        <!--begin::Name-->
+                        <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-3">Ricky Hunt</a>
+                        <!--end::Name-->
+                        <!--begin::Position-->
+                        <div class="text-muted fs-6 fw-semibold mt-1">Art Director</div>
+                        <!--begin::Position-->
+                    </div>
+                    <!--end::Person-->
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="text-center">
+                    <!--begin::Photo-->
+                    <div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('{{ getFileVersion('/assets/web/media/avatars/300-12.jpg') }}')"></div>
+                    <!--end::Photo-->
+                    <!--begin::Person-->
+                    <div class="mb-0">
+                        <!--begin::Name-->
+                        <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-3">Alice Wayde</a>
+                        <!--end::Name-->
+                        <!--begin::Position-->
+                        <div class="text-muted fs-6 fw-semibold mt-1">Marketing Manager</div>
+                        <!--begin::Position-->
+                    </div>
+                    <!--end::Person-->
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="text-center">
+                    <!--begin::Photo-->
+                    <div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('{{ getFileVersion('/assets/web/media/avatars/300-9.jpg') }}')"></div>
+                    <!--end::Photo-->
+                    <!--begin::Person-->
+                    <div class="mb-0">
+                        <!--begin::Name-->
+                        <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-3">Carles Puyol</a>
+                        <!--end::Name-->
+                        <!--begin::Position-->
+                        <div class="text-muted fs-6 fw-semibold mt-1">QA Managers</div>
+                        <!--begin::Position-->
+                    </div>
+                    <!--end::Person-->
+                </div>
+                <!--end::Item-->
+            </div>
+            <!--end::Wrapper-->
+            <!--begin::Button-->
+            <button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev">
+                <i class="ki-outline ki-left fs-2x"></i>
+            </button>
+            <!--end::Button-->
+            <!--begin::Button-->
+            <button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_next">
+                <i class="ki-outline ki-right fs-2x"></i>
+            </button>
+            <!--end::Button-->
+        </div>
+        <!--end::Slider-->
     </div>
-</section>
-<section class="u-clearfix u-image u-shading u-section-6" id="carousel_605b" data-image-width="2250" data-image-height="1500">
-    <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-            <div class="u-layout">
-                <div class="u-layout-row">
-                    <div class="u-container-style u-layout-cell u-size-22 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
-                        <div class="u-border-20 u-border-palette-1-light-1 u-container-layout u-container-layout-1">
-                            <h3 class="u-text u-text-default u-text-1">
-                                Corporate &amp; Finance
-                            </h3>
+    <!--end::Container-->
+</div>
+<!--end::Team Section-->
+<!--begin::Projects Section-->
+<div class="mb-lg-n15 position-relative z-index-2">
+    <!--begin::Container-->
+    <div class="container">
+        <!--begin::Card-->
+        <div class="card" style="filter: drop-shadow(0px 0px 40px rgba(68, 81, 96, 0.08))">
+            <!--begin::Card body-->
+            <div class="card-body p-lg-20">
+                <!--begin::Heading-->
+                <div class="text-center mb-5 mb-lg-10">
+                    <!--begin::Title-->
+                    <h3 class="fs-2hx text-gray-900 mb-5" id="portfolio" data-kt-scroll-offset="{default: 100, lg: 250}">Our Projects</h3>
+                    <!--end::Title-->
+                </div>
+                <!--end::Heading-->
+                <!--begin::Tabs wrapper-->
+                <div class="d-flex flex-center mb-5 mb-lg-15">
+                    <!--begin::Tabs-->
+                    <ul class="nav border-transparent flex-center fs-5 fw-bold">
+                        <li class="nav-item">
+                            <a class="nav-link text-gray-500 text-active-primary px-3 px-lg-6 active" href="#" data-bs-toggle="tab" data-bs-target="#kt_landing_projects_latest">Latest</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray-500 text-active-primary px-3 px-lg-6" href="#" data-bs-toggle="tab" data-bs-target="#kt_landing_projects_web_design">Web Design</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray-500 text-active-primary px-3 px-lg-6" href="#" data-bs-toggle="tab" data-bs-target="#kt_landing_projects_mobile_apps">Mobile Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-gray-500 text-active-primary px-3 px-lg-6" href="#" data-bs-toggle="tab" data-bs-target="#kt_landing_projects_development">Development</a>
+                        </li>
+                    </ul>
+                    <!--end::Tabs-->
+                </div>
+                <!--end::Tabs wrapper-->
+                <!--begin::Tabs content-->
+                <div class="tab-content">
+                    <!--begin::Tab pane-->
+                    <div class="tab-pane fade show active" id="kt_landing_projects_latest">
+                        <!--begin::Row-->
+                        <div class="row g-10">
+                            <!--begin::Col-->
+                            <div class="col-lg-6">
+                                <!--begin::Item-->
+                                <a class="d-block card-rounded overlay h-lg-100" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-23.jpg') }}">
+                                    <!--begin::Image-->
+                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-23.jpg') }}')"></div>
+                                    <!--end::Image-->
+                                    <!--begin::Action-->
+                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                        <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                    </div>
+                                    <!--end::Action-->
+                                </a>
+                                <!--end::Item-->
+                            </div>
+                            <!--end::Col-->
+                            <!--begin::Col-->
+                            <div class="col-lg-6">
+                                <!--begin::Row-->
+                                <div class="row g-10 mb-10">
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-22.jpg') }}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-22.jpg') }}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-21.jpg') }}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-21.jpg') }}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Row-->
+                                <!--begin::Item-->
+                                <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x400/img-20.jpg') }}">
+                                    <!--begin::Image-->
+                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-20.jpg') }}')"></div>
+                                    <!--end::Image-->
+                                    <!--begin::Action-->
+                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                        <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                    </div>
+                                    <!--end::Action-->
+                                </a>
+                                <!--end::Item-->
+                            </div>
+                            <!--end::Col-->
                         </div>
+                        <!--end::Row-->
                     </div>
-                    <div class="u-container-style u-layout-cell u-size-38 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                        <div class="u-container-layout u-container-layout-2">
-                            <p class="u-text u-text-default u-text-2">
-                                At the heart of our company's success lies the collaborative effort of our exceptional professionals, dedicated to delivering unparalleled service. Our team not only excels locally but extends its expertise globally. <br>
-                                <br>
-                                Driven by the pursuit of excellence, our personnel are steadfast leaders in their respective fields. They offer a wealth of experience and expertise, consistently delivering bespoke solutions that exceed our clients' expectations. <br>
-                                <br>
-                                Our commitment to client satisfaction is unwavering. We pride ourselves on understanding and meeting our clients' unique requirements with innovative and tailored approaches. <br>
-                                <br>
-                                At our core, we embody a commitment to excellence, global reach, and client-centric solutions, ensuring that our success remains intertwined with the success of our clients.
-                            </p>
+                    <!--end::Tab pane-->
+                    <!--begin::Tab pane-->
+                    <div class="tab-pane fade" id="kt_landing_projects_web_design">
+                        <!--begin::Row-->
+                        <div class="row g-10">
+                            <!--begin::Col-->
+                            <div class="col-lg-6">
+                                <!--begin::Item-->
+                                <a class="d-block card-rounded overlay h-lg-100" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-11.jpg') }}">
+                                    <!--begin::Image-->
+                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-11.jpg') }}')"></div>
+                                    <!--end::Image-->
+                                    <!--begin::Action-->
+                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                        <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                    </div>
+                                    <!--end::Action-->
+                                </a>
+                                <!--end::Item-->
+                            </div>
+                            <!--end::Col-->
+                            <!--begin::Col-->
+                            <div class="col-lg-6">
+                                <!--begin::Row-->
+                                <div class="row g-10 mb-10">
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-12.jpg') }}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-12.jpg') }}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-21.jpg') }}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-21.jpg') }}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Row-->
+                                <!--begin::Item-->
+                                <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x400/img-20.jpg') }}">
+                                    <!--begin::Image-->
+                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-20.jpg') }}')"></div>
+                                    <!--end::Image-->
+                                    <!--begin::Action-->
+                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                        <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                    </div>
+                                    <!--end::Action-->
+                                </a>
+                                <!--end::Item-->
+                            </div>
+                            <!--end::Col-->
                         </div>
+                        <!--end::Row-->
                     </div>
+                    <!--end::Tab pane-->
+                    <!--begin::Tab pane-->
+                    <div class="tab-pane fade" id="kt_landing_projects_mobile_apps">
+                        <!--begin::Row-->
+                        <div class="row g-10">
+                            <!--begin::Col-->
+                            <div class="col-lg-6">
+                                <!--begin::Row-->
+                                <div class="row g-10 mb-10">
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-16.jpg') }}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-16.jpg') }}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-12.jpg') }}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-12.jpg') }}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Row-->
+                                <!--begin::Item-->
+                                <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x400/img-15.jpg') }}">
+                                    <!--begin::Image-->
+                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-15.jpg') }}')"></div>
+                                    <!--end::Image-->
+                                    <!--begin::Action-->
+                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                        <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                    </div>
+                                    <!--end::Action-->
+                                </a>
+                                <!--end::Item-->
+                            </div>
+                            <!--end::Col-->
+                            <!--begin::Col-->
+                            <div class="col-lg-6">
+                                <!--begin::Item-->
+                                <a class="d-block card-rounded overlay h-lg-100" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-23.jpg') }}">
+                                    <!--begin::Image-->
+                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-23.jpg') }}')"></div>
+                                    <!--end::Image-->
+                                    <!--begin::Action-->
+                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                        <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                    </div>
+                                    <!--end::Action-->
+                                </a>
+                                <!--end::Item-->
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Tab pane-->
+                    <!--begin::Tab pane-->
+                    <div class="tab-pane fade" id="kt_landing_projects_development">
+                        <!--begin::Row-->
+                        <div class="row g-10">
+                            <!--begin::Col-->
+                            <div class="col-lg-6">
+                                <!--begin::Item-->
+                                <a class="d-block card-rounded overlay h-lg-100" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-15.jpg') }}">
+                                    <!--begin::Image-->
+                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-15.jpg') }}')"></div>
+                                    <!--end::Image-->
+                                    <!--begin::Action-->
+                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                        <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                    </div>
+                                    <!--end::Action-->
+                                </a>
+                                <!--end::Item-->
+                            </div>
+                            <!--end::Col-->
+                            <!--begin::Col-->
+                            <div class="col-lg-6">
+                                <!--begin::Row-->
+                                <div class="row g-10 mb-10">
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-22.jpg') }}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-22.jpg') }}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x600/img-21.jpg') }}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-21.jpg') }}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Row-->
+                                <!--begin::Item-->
+                                <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects" href="{{ getFileVersion('/assets/web/media/stock/600x400/img-14.jpg') }}">
+                                    <!--begin::Image-->
+                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px" style="background-image:url('{{ getFileVersion('/assets/web/media/stock/600x600/img-14.jpg') }}')"></div>
+                                    <!--end::Image-->
+                                    <!--begin::Action-->
+                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                        <i class="ki-outline ki-eye fs-3x text-white"></i>
+                                    </div>
+                                    <!--end::Action-->
+                                </a>
+                                <!--end::Item-->
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Tab pane-->
                 </div>
+                <!--end::Tabs content-->
             </div>
+            <!--end::Card body-->
         </div>
+        <!--end::Card-->
     </div>
-</section>
-<section class="u-clearfix u-palette-5-dark-3 u-section-7" id="carousel_567d">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-container-align-left-md u-container-align-left-sm u-container-align-left-xs u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="750">
-            <div class="u-container-layout u-valign-middle u-container-layout-1">
-                <h2 class="u-align-left-md u-align-left-sm u-align-left-xs u-text u-text-1">
-                    Why Us?
-                </h2>
-                <p class="u-align-left-md u-align-left-sm u-align-left-xs u-text u-text-2">
-                    Legal excellence. Dedication to clients. Commitment to public
-                    service.
-                </p>
-                <p class="u-align-left-md u-align-left-sm u-align-left-xs u-text u-text-3">
-                    At TechBoostify, we're not just building websites; <br>
-                    We're crafting digital success stories for small businesses. <br>
-                    <br>
-                    Our commitment goes beyond mere web development; <br>
-                    we are architects of online triumphs, meticulously weaving digital strategies that transcend mere online presence. <br>
-                    <br>
-                    Your success fuels our passion, and we thrive on being the catalyst that transforms your aspirations into a thriving digital reality.
-                </p>
-            </div>
-        </div>
-        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-layout-grid u-list u-list-1">
-            <div class="u-repeater u-repeater-1">
-                <div class="u-container-align-left u-container-style u-gradient u-list-item u-repeater-item u-shape-rectangle u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                        <span class="u-align-left u-icon u-icon-circle u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 95.333 95.332" style="">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a13b"></use>
-                            </svg><svg class="u-svg-content" viewBox="0 0 95.333 95.332" x="0px" y="0px" id="svg-a13b" style="enable-background: new 0 0 95.333 95.332">
-                                <g>
-                                    <g>
-                                        <path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"></path>
-                                        <path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"></path>
-                                    </g>
-                                </g>
-                            </svg></span>
-                        <p class="u-align-left u-text u-text-body-alt-color u-text-4">
-                            We craft custom web solutions specifically for small businesses, leveraging the latest technology to suit your unique needs.
-                        </p>
-                        <h5 class="u-align-left u-text u-text-body-alt-color u-text-5">
-                            Tailored Technology
-                        </h5>
-                    </div>
-                </div>
-                <div class="u-container-align-left u-container-style u-gradient u-list-item u-repeater-item u-shape-rectangle u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                        <span class="u-align-left u-icon u-icon-circle u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 351.128 351.128" style="">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c1b6"></use>
-                            </svg><svg class="u-svg-content" viewBox="0 0 351.128 351.128" x="0px" y="0px" id="svg-c1b6" style="enable-background: new 0 0 351.128 351.128">
-                                <g>
-                                    <path d="M72.326,147.33c4.284-26.928,37.944-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.224-0.612,2.448-1.224,3.06-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.976,11.628   C38.054,85.518,1.946,136.313,3.782,184.662c-6.12,32.437-4.896,67.32,4.284,96.084c6.12,18.36,23.868,27.54,42.228,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.524-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C115.778,165.078,66.818,181.602,72.326,147.33z"></path>
-                                    <path d="M274.286,147.33c4.284-26.928,37.943-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.225-0.612,2.448-1.224,3.061-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.977,11.628   c-35.496,29.376-71.604,80.172-69.768,128.52c-6.12,32.437-4.896,67.32,4.283,96.084c6.12,18.36,23.868,27.54,42.229,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.523-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C317.738,165.078,268.166,181.602,274.286,147.33z"></path>
-                                </g>
-                            </svg></span>
-                        <p class="u-align-left u-text u-text-body-alt-color u-text-6">
-                            Our goal is your success. We infuse every website with features designed to amplify your business growth and enhance your online presence.
-                        </p>
-                        <h5 class="u-align-left u-text u-text-body-alt-color u-text-7">
-                            Business Growth Focus
-                        </h5>
-                    </div>
-                </div>
-                <div class="u-container-align-left u-container-style u-gradient u-list-item u-repeater-item u-shape-rectangle u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
-                        <span class="u-align-left u-icon u-icon-circle u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 351.128 351.128" style="">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c1b6"></use>
-                            </svg><svg class="u-svg-content" viewBox="0 0 351.128 351.128" x="0px" y="0px" id="svg-c1b6" style="enable-background: new 0 0 351.128 351.128">
-                                <g>
-                                    <path d="M72.326,147.33c4.284-26.928,37.944-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.224-0.612,2.448-1.224,3.06-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.976,11.628   C38.054,85.518,1.946,136.313,3.782,184.662c-6.12,32.437-4.896,67.32,4.284,96.084c6.12,18.36,23.868,27.54,42.228,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.524-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C115.778,165.078,66.818,181.602,72.326,147.33z"></path>
-                                    <path d="M274.286,147.33c4.284-26.928,37.943-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.225-0.612,2.448-1.224,3.061-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.977,11.628   c-35.496,29.376-71.604,80.172-69.768,128.52c-6.12,32.437-4.896,67.32,4.283,96.084c6.12,18.36,23.868,27.54,42.229,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.523-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C317.738,165.078,268.166,181.602,274.286,147.33z"></path>
-                                </g>
-                            </svg></span>
-                        <p class="u-align-left u-text u-text-body-alt-color u-text-8">
-                            Innovation is our cornerstone. We constantly evolve our strategies and technologies to keep your business ahead in the digital landscape.
-                        </p>
-                        <h5 class="u-align-left u-text u-text-body-alt-color u-text-9">
-                            Innovation at Heart
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!--end::Container-->
+</div>
+<!--end::Projects Section-->
+<!--begin::Pricing Section-->
+<div class="mt-sm-n20">
+    <!--begin::Curve top-->
+    <div class="landing-curve landing-dark-color">
+        <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z" fill="currentColor"></path>
+        </svg>
     </div>
-</section>
-<section class="u-clearfix u-container-align-center u-palette-5-dark-3 u-section-8" id="carousel_d3a5">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-            <div class="u-gutter-0 u-layout">
-                <div class="u-layout-row">
-                    <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-align-center u-container-style u-gradient u-layout-cell u-size-34 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
-                        <div class="u-container-layout u-valign-middle-xs u-container-layout-1">
-                            <h2 class="u-align-center u-text u-text-body-alt-color u-text-1">
-                                Get in touch!
-                            </h2>
-                            <div class="u-align-center u-border-5 u-border-white u-line u-line-horizontal u-line-1"></div>
-                            <div class="custom-expanded u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-form u-form-1">
-                                <form action="{{ route('web.contact') }}" method="POST" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px" source="email" name="form">
-                                    @csrf
-                                    <div class="u-form-group u-form-name">
-                                        <label for="name-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Name</label>
-                                        <input type="text" placeholder="Enter your Name" id="name-5a14" name="name" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-1" required />
+    <!--end::Curve top-->
+    <!--begin::Wrapper-->
+    <div class="py-20 landing-dark-bg">
+        <!--begin::Container-->
+        <div class="container">
+            <!--begin::Plans-->
+            <div class="d-flex flex-column container pt-lg-20">
+                <!--begin::Heading-->
+                <div class="mb-13 text-center">
+                    <h1 class="fs-2hx fw-bold text-white mb-5" id="pricing" data-kt-scroll-offset="{default: 100, lg: 150}">Clear Pricing Makes it Easy</h1>
+                    <div class="text-gray-600 fw-semibold fs-5">Save thousands to millions of bucks by using single tool for different
+                        <br />amazing and outstanding cool and great useful admin
+                    </div>
+                </div>
+                <!--end::Heading-->
+                <!--begin::Pricing-->
+                <div class="text-center" id="kt_pricing">
+                    <!--begin::Nav group-->
+                    <div class="nav-group landing-dark-bg d-inline-flex mb-15" data-kt-buttons="true" style="border: 1px dashed #2B4666;">
+                        <a href="#" class="btn btn-color-gray-600 btn-active btn-active-success px-6 py-3 me-2 active" data-kt-plan="month">Monthly</a>
+                        <a href="#" class="btn btn-color-gray-600 btn-active btn-active-success px-6 py-3" data-kt-plan="annual">Annual</a>
+                    </div>
+                    <!--end::Nav group-->
+                    <!--begin::Row-->
+                    <div class="row g-10">
+                        <!--begin::Col-->
+                        <div class="col-xl-4">
+                            <div class="d-flex h-100 align-items-center">
+                                <!--begin::Option-->
+                                <div class="w-100 d-flex flex-column flex-center rounded-3 bg-body py-15 px-10">
+                                    <!--begin::Heading-->
+                                    <div class="mb-7 text-center">
+                                        <!--begin::Title-->
+                                        <h1 class="text-gray-900 mb-5 fw-boldest">Startup</h1>
+                                        <!--end::Title-->
+                                        <!--begin::Description-->
+                                        <div class="text-gray-500 fw-semibold mb-5">Best Settings for Startups</div>
+                                        <!--end::Description-->
+                                        <!--begin::Price-->
+                                        <div class="text-center">
+                                            <span class="mb-2 text-primary">$</span>
+                                            <span class="fs-3x fw-bold text-primary" data-kt-plan-price-month="99" data-kt-plan-price-annual="999">99</span>
+                                            <span class="fs-7 fw-semibold opacity-50" data-kt-plan-price-month="/ Mon" data-kt-plan-price-annual="/ Ann">/ Mon</span>
+                                        </div>
+                                        <!--end::Price-->
                                     </div>
-                                    <div class="u-form-email u-form-group">
-                                        <label for="email-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Email</label>
-                                        <input type="email" placeholder="Enter a valid email address" id="email-5a14" name="email" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-2" required />
+                                    <!--end::Heading-->
+                                    <!--begin::Features-->
+                                    <div class="w-100 mb-10">
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-gray-800 text-start pe-3">Up to 10 Active Users</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-success"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-gray-800 text-start pe-3">Up to 30 Project Integrations</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-success"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-gray-800">Keen Analytics Platform</span>
+                                            <i class="ki-outline ki-cross-circle fs-1"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-gray-800">Targets Timelines & Files</span>
+                                            <i class="ki-outline ki-cross-circle fs-1"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack">
+                                            <span class="fw-semibold fs-6 text-gray-800">Unlimited Projects</span>
+                                            <i class="ki-outline ki-cross-circle fs-1"></i>
+                                        </div>
+                                        <!--end::Item-->
                                     </div>
-                                    <div class="u-form-group u-form-message">
-                                        <label for="message-5a14" class="u-form-control-hidden u-label u-text-body-alt-color" wfd-invisible="true">Message</label>
-                                        <textarea placeholder="" rows="4" cols="50" id="message-5a14" name="message" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-alt-color u-input-3" required></textarea>
-                                    </div>
-                                    <div class="u-align-left u-form-group u-form-submit">
-                                        <a href="#" class="u-active-palette-1-light-3 u-btn u-btn-submit u-button-style u-hover-palette-1-light-3 u-white u-btn-1">Submit</a>
-                                        <input type="submit" value="submit" class="u-form-control-hidden" wfd-invisible="true" />
-                                    </div>
-                                    <div class="u-form-send-message u-form-send-success" wfd-invisible="true">
-                                        Thank you! Your message has been sent.
-                                    </div>
-                                    <div class="u-form-send-error u-form-send-message" wfd-invisible="true">
-                                        Unable to send your message. Please fix errors then try
-                                        again.
-                                    </div>
-                                    <input type="hidden" value="" name="recaptchaResponse" wfd-invisible="true" />
-                                    <input type="hidden" name="formServices" value="2867d665-fcbb-9ba9-9572-15130719680c" />
-                                </form>
+                                    <!--end::Features-->
+                                    <!--begin::Select-->
+                                    <a href="#" class="btn btn-primary">Select</a>
+                                    <!--end::Select-->
+                                </div>
+                                <!--end::Option-->
                             </div>
                         </div>
-                    </div>
-                    <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-26 u-white u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                        <div class="u-container-layout u-valign-top u-container-layout-2">
-                            <h5 class="u-align-left u-text u-text-2">Address</h5>
-                            <p class="u-align-left u-text u-text-grey-50 u-text-3">
-                                1234 Sreet, 56 Avenue, <br />Viet Nam, Ho Chi Minh city 700000
-                            </p>
-                            <h5 class="u-align-left u-text u-text-4">Call Us</h5>
-                            <p class="u-align-left u-text u-text-grey-50 u-text-5">
-                                1 (234) 567-891 <br />1 (234) 567-891
-                            </p>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-xl-4">
+                            <div class="d-flex h-100 align-items-center">
+                                <!--begin::Option-->
+                                <div class="w-100 d-flex flex-column flex-center rounded-3 bg-primary py-20 px-10">
+                                    <!--begin::Heading-->
+                                    <div class="mb-7 text-center">
+                                        <!--begin::Title-->
+                                        <h1 class="text-white mb-5 fw-boldest">Business</h1>
+                                        <!--end::Title-->
+                                        <!--begin::Description-->
+                                        <div class="text-white opacity-75 fw-semibold mb-5">Best Settings for Business</div>
+                                        <!--end::Description-->
+                                        <!--begin::Price-->
+                                        <div class="text-center">
+                                            <span class="mb-2 text-white">$</span>
+                                            <span class="fs-3x fw-bold text-white" data-kt-plan-price-month="199" data-kt-plan-price-annual="1999">199</span>
+                                            <span class="fs-7 fw-semibold text-white opacity-75" data-kt-plan-price-month="/ Mon" data-kt-plan-price-annual="/ Ann">/ Mon</span>
+                                        </div>
+                                        <!--end::Price-->
+                                    </div>
+                                    <!--end::Heading-->
+                                    <!--begin::Features-->
+                                    <div class="w-100 mb-10">
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-white opacity-75 text-start pe-3">Up to 10 Active Users</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-white"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-white opacity-75 text-start pe-3">Up to 30 Project Integrations</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-white"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-white opacity-75 text-start pe-3">Keen Analytics Platform</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-white"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-white opacity-75 text-start pe-3">Targets Timelines & Files</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-white"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack">
+                                            <span class="fw-semibold fs-6 text-white opacity-75">Unlimited Projects</span>
+                                            <i class="ki-outline ki-cross-circle fs-1 text-white"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Features-->
+                                    <!--begin::Select-->
+                                    <a href="#" class="btn btn-color-primary btn-active-light-primary btn-light">Select</a>
+                                    <!--end::Select-->
+                                </div>
+                                <!--end::Option-->
+                            </div>
                         </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-xl-4">
+                            <div class="d-flex h-100 align-items-center">
+                                <!--begin::Option-->
+                                <div class="w-100 d-flex flex-column flex-center rounded-3 bg-body py-15 px-10">
+                                    <!--begin::Heading-->
+                                    <div class="mb-7 text-center">
+                                        <!--begin::Title-->
+                                        <h1 class="text-gray-900 mb-5 fw-boldest">Enterprise</h1>
+                                        <!--end::Title-->
+                                        <!--begin::Description-->
+                                        <div class="text-gray-500 fw-semibold mb-5">Best Settings for Enterprise</div>
+                                        <!--end::Description-->
+                                        <!--begin::Price-->
+                                        <div class="text-center">
+                                            <span class="mb-2 text-primary">$</span>
+                                            <span class="fs-3x fw-bold text-primary" data-kt-plan-price-month="999" data-kt-plan-price-annual="9999">999</span>
+                                            <span class="fs-7 fw-semibold opacity-50" data-kt-plan-price-month="/ Mon" data-kt-plan-price-annual="/ Ann">/ Mon</span>
+                                        </div>
+                                        <!--end::Price-->
+                                    </div>
+                                    <!--end::Heading-->
+                                    <!--begin::Features-->
+                                    <div class="w-100 mb-10">
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-gray-800 text-start pe-3">Up to 10 Active Users</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-success"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-gray-800 text-start pe-3">Up to 30 Project Integrations</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-success"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-gray-800 text-start pe-3">Keen Analytics Platform</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-success"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack mb-5">
+                                            <span class="fw-semibold fs-6 text-gray-800 text-start pe-3">Targets Timelines & Files</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-success"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <div class="d-flex flex-stack">
+                                            <span class="fw-semibold fs-6 text-gray-800 text-start pe-3">Unlimited Projects</span>
+                                            <i class="ki-outline ki-check-circle fs-1 text-success"></i>
+                                        </div>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Features-->
+                                    <!--begin::Select-->
+                                    <a href="#" class="btn btn-primary">Select</a>
+                                    <!--end::Select-->
+                                </div>
+                                <!--end::Option-->
+                            </div>
+                        </div>
+                        <!--end::Col-->
                     </div>
+                    <!--end::Row-->
                 </div>
+                <!--end::Pricing-->
             </div>
+            <!--end::Plans-->
         </div>
+        <!--end::Container-->
     </div>
-</section>
+    <!--end::Wrapper-->
+    <!--begin::Curve bottom-->
+    <div class="landing-curve landing-dark-color">
+        <svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z" fill="currentColor"></path>
+        </svg>
+    </div>
+    <!--end::Curve bottom-->
+</div>
+<!--end::Pricing Section-->
+<!--begin::Testimonials Section-->
+<div class="mt-20 mb-n20 position-relative z-index-2">
+    <!--begin::Container-->
+    <div class="container">
+        <!--begin::Heading-->
+        <div class="text-center mb-17">
+            <!--begin::Title-->
+            <h3 class="fs-2hx text-gray-900 mb-5" id="clients" data-kt-scroll-offset="{default: 125, lg: 150}">What Our Clients Say</h3>
+            <!--end::Title-->
+            <!--begin::Description-->
+            <div class="fs-5 text-muted fw-bold">Save thousands to millions of bucks by using single tool
+                <br />for different amazing and great useful admin
+            </div>
+            <!--end::Description-->
+        </div>
+        <!--end::Heading-->
+        <!--begin::Row-->
+        <div class="row g-lg-10 mb-10 mb-lg-20">
+            <!--begin::Col-->
+            <div class="col-lg-4">
+                <!--begin::Testimonial-->
+                <div class="d-flex flex-column justify-content-between h-lg-100 px-10 px-lg-0 pe-lg-10 mb-15 mb-lg-0">
+                    <!--begin::Wrapper-->
+                    <div class="mb-7">
+                        <!--begin::Rating-->
+                        <div class="rating mb-6">
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                        </div>
+                        <!--end::Rating-->
+                        <!--begin::Title-->
+                        <div class="fs-2 fw-bold text-gray-900 mb-3">This is by far the cleanest template
+                            <br />and the most well structured
+                        </div>
+                        <!--end::Title-->
+                        <!--begin::Feedback-->
+                        <div class="text-gray-500 fw-semibold fs-4">The most well thought out design theme I have ever used. The codes are up to tandard. The css styles are very clean. In fact the cleanest and the most up to standard I have ever seen.</div>
+                        <!--end::Feedback-->
+                    </div>
+                    <!--end::Wrapper-->
+                    <!--begin::Author-->
+                    <div class="d-flex align-items-center">
+                        <!--begin::Avatar-->
+                        <div class="symbol symbol-circle symbol-50px me-5">
+                            <img src="{{ getFileVersion('/assets/web/media/avatars/300-1.jpg') }}" class="" alt="" />
+                        </div>
+                        <!--end::Avatar-->
+                        <!--begin::Name-->
+                        <div class="flex-grow-1">
+                            <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-6">Paul Miles</a>
+                            <span class="text-muted d-block fw-bold">Development Lead</span>
+                        </div>
+                        <!--end::Name-->
+                    </div>
+                    <!--end::Author-->
+                </div>
+                <!--end::Testimonial-->
+            </div>
+            <!--end::Col-->
+            <!--begin::Col-->
+            <div class="col-lg-4">
+                <!--begin::Testimonial-->
+                <div class="d-flex flex-column justify-content-between h-lg-100 px-10 px-lg-0 pe-lg-10 mb-15 mb-lg-0">
+                    <!--begin::Wrapper-->
+                    <div class="mb-7">
+                        <!--begin::Rating-->
+                        <div class="rating mb-6">
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                        </div>
+                        <!--end::Rating-->
+                        <!--begin::Title-->
+                        <div class="fs-2 fw-bold text-gray-900 mb-3">This is by far the cleanest template
+                            <br />and the most well structured
+                        </div>
+                        <!--end::Title-->
+                        <!--begin::Feedback-->
+                        <div class="text-gray-500 fw-semibold fs-4">The most well thought out design theme I have ever used. The codes are up to tandard. The css styles are very clean. In fact the cleanest and the most up to standard I have ever seen.</div>
+                        <!--end::Feedback-->
+                    </div>
+                    <!--end::Wrapper-->
+                    <!--begin::Author-->
+                    <div class="d-flex align-items-center">
+                        <!--begin::Avatar-->
+                        <div class="symbol symbol-circle symbol-50px me-5">
+                            <img src="{{ getFileVersion('/assets/web/media/avatars/300-2.jpg') }}" class="" alt="" />
+                        </div>
+                        <!--end::Avatar-->
+                        <!--begin::Name-->
+                        <div class="flex-grow-1">
+                            <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-6">Janya Clebert</a>
+                            <span class="text-muted d-block fw-bold">Development Lead</span>
+                        </div>
+                        <!--end::Name-->
+                    </div>
+                    <!--end::Author-->
+                </div>
+                <!--end::Testimonial-->
+            </div>
+            <!--end::Col-->
+            <!--begin::Col-->
+            <div class="col-lg-4">
+                <!--begin::Testimonial-->
+                <div class="d-flex flex-column justify-content-between h-lg-100 px-10 px-lg-0 pe-lg-10 mb-15 mb-lg-0">
+                    <!--begin::Wrapper-->
+                    <div class="mb-7">
+                        <!--begin::Rating-->
+                        <div class="rating mb-6">
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                            <div class="rating-label me-2 checked">
+                                <i class="ki-outline ki-star fs-5"></i>
+                            </div>
+                        </div>
+                        <!--end::Rating-->
+                        <!--begin::Title-->
+                        <div class="fs-2 fw-bold text-gray-900 mb-3">This is by far the cleanest template
+                            <br />and the most well structured
+                        </div>
+                        <!--end::Title-->
+                        <!--begin::Feedback-->
+                        <div class="text-gray-500 fw-semibold fs-4">The most well thought out design theme I have ever used. The codes are up to tandard. The css styles are very clean. In fact the cleanest and the most up to standard I have ever seen.</div>
+                        <!--end::Feedback-->
+                    </div>
+                    <!--end::Wrapper-->
+                    <!--begin::Author-->
+                    <div class="d-flex align-items-center">
+                        <!--begin::Avatar-->
+                        <div class="symbol symbol-circle symbol-50px me-5">
+                            <img src="{{ getFileVersion('/assets/web/media/avatars/300-16.jpg') }}" class="" alt="" />
+                        </div>
+                        <!--end::Avatar-->
+                        <!--begin::Name-->
+                        <div class="flex-grow-1">
+                            <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-6">Steave Brown</a>
+                            <span class="text-muted d-block fw-bold">Development Lead</span>
+                        </div>
+                        <!--end::Name-->
+                    </div>
+                    <!--end::Author-->
+                </div>
+                <!--end::Testimonial-->
+            </div>
+            <!--end::Col-->
+        </div>
+        <!--end::Row-->
+        <!--begin::Highlight-->
+        <div class="d-flex flex-stack flex-wrap flex-md-nowrap card-rounded shadow p-8 p-lg-12 mb-n5 mb-lg-n13" style="background: linear-gradient(90deg, #20AA3E 0%, #03A588 100%);">
+            <!--begin::Content-->
+            <div class="my-2 me-5">
+                <!--begin::Title-->
+                <div class="fs-1 fs-lg-2qx fw-bold text-white mb-2">Start With Metronic Today,
+                    <span class="fw-normal">Speed Up Development!</span>
+                </div>
+                <!--end::Title-->
+                <!--begin::Description-->
+                <div class="fs-6 fs-lg-5 text-white fw-semibold opacity-75">Join over 100,000 Professionals Community to Stay Ahead</div>
+                <!--end::Description-->
+            </div>
+            <!--end::Content-->
+            <!--begin::Link-->
+            <a href="https://1.envato.market/EA4JP" class="btn btn-lg btn-outline border-2 btn-outline-white flex-shrink-0 my-2">Purchase on Themeforest</a>
+            <!--end::Link-->
+        </div>
+        <!--end::Highlight-->
+    </div>
+    <!--end::Container-->
+</div>
+<!--end::Testimonials Section-->
 @endsection
 
 @push('js')

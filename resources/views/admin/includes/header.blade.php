@@ -14,7 +14,7 @@
                         </button>
                         <!--end::Sidebar toggle-->
                         <!--begin::Logo image-->
-                        <a href="index.html">
+                        <a href="{{ route('admin.index') }}">
                             <img alt="Logo" src="{{ getFileVersion('/assets/admin/media/logos/demo60.svg') }}" class="mh-25px" />
                         </a>
                         <!--end::Logo image-->
@@ -49,7 +49,7 @@
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="index.html" class="menu-link active">
+                                                                <a href="{{ route('admin.index') }}" class="menu-link active">
                                                                     <span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
                                                                         <i class="ki-outline ki-element-11 text-primary fs-1"></i>
                                                                     </span>
@@ -68,7 +68,7 @@
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="dashboards/ecommerce.html" class="menu-link">
+                                                                <a href="{{ route('admin.dashboard.ecommerce.index') }}" class="menu-link">
                                                                     <span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
                                                                         <i class="ki-outline ki-basket text-danger fs-1"></i>
                                                                     </span>
@@ -87,7 +87,7 @@
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="dashboards/projects.html" class="menu-link">
+                                                                <a href="{{ route('admin.dashboard.projects.index') }}" class="menu-link">
                                                                     <span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
                                                                         <i class="ki-outline ki-abstract-44 text-info fs-1"></i>
                                                                     </span>
@@ -106,7 +106,7 @@
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="dashboards/online-courses.html" class="menu-link">
+                                                                <a href="{{ route('admin.dashboard.online-courses.index') }}" class="menu-link">
                                                                     <span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
                                                                         <i class="ki-outline ki-color-swatch text-success fs-1"></i>
                                                                     </span>
@@ -125,7 +125,7 @@
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="dashboards/marketing.html" class="menu-link">
+                                                                <a href="{{ route('admin.dashboard.marketing.index') }}" class="menu-link">
                                                                     <span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
                                                                         <i class="ki-outline ki-chart-simple text-gray-900 fs-1"></i>
                                                                     </span>
@@ -144,7 +144,7 @@
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="dashboards/bidding.html" class="menu-link">
+                                                                <a href="{{ route('admin.dashboard.bidding.index') }}" class="menu-link">
                                                                     <span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
                                                                         <i class="ki-outline ki-switch text-warning fs-1"></i>
                                                                     </span>
@@ -163,7 +163,7 @@
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="dashboards/pos.html" class="menu-link">
+                                                                <a href="{{ route('admin.dashboard.pos.index') }}" class="menu-link">
                                                                     <span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
                                                                         <i class="ki-outline ki-abstract-42 text-danger fs-1"></i>
                                                                     </span>
@@ -182,7 +182,7 @@
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="dashboards/call-center.html" class="menu-link">
+                                                                <a href="{{ route('admin.dashboard.call-center.index') }}" class="menu-link">
                                                                     <span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
                                                                         <i class="ki-outline ki-call text-primary fs-1"></i>
                                                                     </span>
@@ -205,7 +205,7 @@
                                                             <div class="fs-6 fw-bold text-gray-800">Landing Page Template</div>
                                                             <div class="fs-7 fw-semibold text-muted">Onpe page landing template with pricing & others</div>
                                                         </div>
-                                                        <a href="landing.html" class="btn btn-sm btn-primary fw-bold">Explore</a>
+                                                        <a href="{{ route('web.index') }}" class="btn btn-sm btn-primary fw-bold">Explore</a>
                                                     </div>
                                                     <!--end:Landing-->
                                                 </div>
@@ -218,7 +218,7 @@
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item p-0 m-0">
                                                         <!--begin:Menu link-->
-                                                        <a href="dashboards/logistics.html" class="menu-link py-2">
+                                                        <a href="{{ route('admin.dashboard.logistics.index') }}" class="menu-link py-2">
                                                             <span class="menu-title">Logistics</span>
                                                         </a>
                                                         <!--end:Menu link-->
@@ -227,7 +227,7 @@
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item p-0 m-0">
                                                         <!--begin:Menu link-->
-                                                        <a href="dashboards/website-analytics.html" class="menu-link py-2">
+                                                        <a href="{{ route('admin.dashboard.website-analytics.index') }}" class="menu-link py-2">
                                                             <span class="menu-title">Website Analytics</span>
                                                         </a>
                                                         <!--end:Menu link-->
@@ -236,7 +236,7 @@
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item p-0 m-0">
                                                         <!--begin:Menu link-->
-                                                        <a href="dashboards/finance-performance.html" class="menu-link py-2">
+                                                        <a href="{{ route('admin.dashboard.finance-performance.index') }}" class="menu-link py-2">
                                                             <span class="menu-title">Finance Performance</span>
                                                         </a>
                                                         <!--end:Menu link-->
@@ -245,7 +245,7 @@
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item p-0 m-0">
                                                         <!--begin:Menu link-->
-                                                        <a href="dashboards/store-analytics.html" class="menu-link py-2">
+                                                        <a href="{{ route('admin.dashboard.store-analytics.index') }}" class="menu-link py-2">
                                                             <span class="menu-title">Store Analytics</span>
                                                         </a>
                                                         <!--end:Menu link-->
@@ -254,7 +254,7 @@
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item p-0 m-0">
                                                         <!--begin:Menu link-->
-                                                        <a href="dashboards/social.html" class="menu-link py-2">
+                                                        <a href="{{ route('admin.dashboard.social.index') }}" class="menu-link py-2">
                                                             <span class="menu-title">Social</span>
                                                         </a>
                                                         <!--end:Menu link-->
@@ -263,7 +263,7 @@
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item p-0 m-0">
                                                         <!--begin:Menu link-->
-                                                        <a href="dashboards/delivery.html" class="menu-link py-2">
+                                                        <a href="{{ route('admin.dashboard.delivery.index') }}" class="menu-link py-2">
                                                             <span class="menu-title">Delivery</span>
                                                         </a>
                                                         <!--end:Menu link-->
@@ -272,7 +272,7 @@
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item p-0 m-0">
                                                         <!--begin:Menu link-->
-                                                        <a href="dashboards/crypto.html" class="menu-link py-2">
+                                                        <a href="{{ route('admin.dashboard.crypto.index') }}" class="menu-link py-2">
                                                             <span class="menu-title">Crypto</span>
                                                         </a>
                                                         <!--end:Menu link-->
@@ -281,7 +281,7 @@
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item p-0 m-0">
                                                         <!--begin:Menu link-->
-                                                        <a href="dashboards/school.html" class="menu-link py-2">
+                                                        <a href="{{ route('admin.dashboard.school.index') }}" class="menu-link py-2">
                                                             <span class="menu-title">School</span>
                                                         </a>
                                                         <!--end:Menu link-->
@@ -290,7 +290,7 @@
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item p-0 m-0">
                                                         <!--begin:Menu link-->
-                                                        <a href="dashboards/podcast.html" class="menu-link py-2">
+                                                        <a href="{{ route('admin.dashboard.podcast.index') }}" class="menu-link py-2">
                                                             <span class="menu-title">Podcast</span>
                                                         </a>
                                                         <!--end:Menu link-->
@@ -3733,7 +3733,7 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link active" href="index.html">
+                                    <a class="menu-link active" href="{{ route('admin.index') }}">
                                         <span class="menu-icon">
                                             <i class="ki-outline ki-chart-simple fs-3"></i>
                                         </span>
