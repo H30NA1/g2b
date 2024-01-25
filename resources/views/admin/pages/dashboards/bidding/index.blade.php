@@ -1261,7 +1261,7 @@
                                                         <img src="{{ getFileVersion('/assets/admin/media/avatars/300-1.jpg') }}" class="" alt="" />
                                                     </div>
                                                     <div class="d-flex justify-content-start flex-column">
-                                                        <a href="account/overview.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Brooklyn Simmons</a>
+                                                        <a href="{{ route('admin.account.overview.index') }}" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Brooklyn Simmons</a>
                                                         <span class="text-gray-500 fw-semibold d-block fs-7">Zuid Area</span>
                                                     </div>
                                                 </div>
@@ -1307,7 +1307,7 @@
                                                         <img src="{{ getFileVersion('/assets/admin/media/avatars/300-2.jpg') }}" class="" alt="" />
                                                     </div>
                                                     <div class="d-flex justify-content-start flex-column">
-                                                        <a href="account/overview.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Annette Black</a>
+                                                        <a href="{{ route('admin.account.overview.index') }}" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Annette Black</a>
                                                         <span class="text-gray-500 fw-semibold d-block fs-7">Zuid Area</span>
                                                     </div>
                                                 </div>
@@ -1353,7 +1353,7 @@
                                                         <img src="{{ getFileVersion('/assets/admin/media/avatars/300-12.jpg') }}" class="" alt="" />
                                                     </div>
                                                     <div class="d-flex justify-content-start flex-column">
-                                                        <a href="account/overview.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Esther Howard</a>
+                                                        <a href="{{ route('admin.account.overview.index') }}" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Esther Howard</a>
                                                         <span class="text-gray-500 fw-semibold d-block fs-7">Zuid Area</span>
                                                     </div>
                                                 </div>
@@ -1399,7 +1399,7 @@
                                                         <img src="{{ getFileVersion('/assets/admin/media/avatars/300-11.jpg') }}" class="" alt="" />
                                                     </div>
                                                     <div class="d-flex justify-content-start flex-column">
-                                                        <a href="account/overview.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Guy Hawkins</a>
+                                                        <a href="{{ route('admin.account.overview.index') }}" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Guy Hawkins</a>
                                                         <span class="text-gray-500 fw-semibold d-block fs-7">Zuid Area</span>
                                                     </div>
                                                 </div>
@@ -1445,7 +1445,7 @@
                                                         <img src="{{ getFileVersion('/assets/admin/media/avatars/300-3.jpg') }}" class="" alt="" />
                                                     </div>
                                                     <div class="d-flex justify-content-start flex-column">
-                                                        <a href="account/overview.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Marvin McKinney</a>
+                                                        <a href="{{ route('admin.account.overview.index') }}" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Marvin McKinney</a>
                                                         <span class="text-gray-500 fw-semibold d-block fs-7">Zuid Area</span>
                                                     </div>
                                                 </div>
@@ -1527,7 +1527,7 @@
                                 <a class="btn btn-sm btn-primary me-2" data-bs-target="#kt_modal_create_app" data-bs-toggle="modal">Try Now</a>
                                 <!--end::Link-->
                                 <!--begin::Link-->
-                                <a class="btn btn-sm btn-light" href="account/settings.html">Learn More</a>
+                                <a class="btn btn-sm btn-light" href="{{ route('admin.account.settings.index') }}">Learn More</a>
                                 <!--end::Link-->
                             </div>
                             <!--end::Links-->

@@ -635,7 +635,7 @@
                                 <a class="btn btn-sm btn-success btn-color-white me-2" data-bs-target="#kt_modal_invite_friends" data-bs-toggle="modal">Psychologist</a>
                                 <!--end::Link-->
                                 <!--begin::Link-->
-                                <a class="btn btn-sm bg-white btn-color-white bg-opacity-20" href="pages/careers/list.html">Nurse</a>
+                                <a class="btn btn-sm bg-white btn-color-white bg-opacity-20" href="{{ route('admin.pages.careers.index') }}">Nurse</a>
                                 <!--end::Link-->
                             </div>
                             <!--end::Links-->

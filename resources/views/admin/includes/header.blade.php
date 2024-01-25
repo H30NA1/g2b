@@ -482,7 +482,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/careers/list.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.careers.index') }}" class="menu-link">
                                                                                 <span class="menu-title">Careers List</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -491,7 +491,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/careers/apply.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.careers.apply') }}" class="menu-link">
                                                                                 <span class="menu-title">Careers Apply</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -536,7 +536,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/blog/home.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.blog.index') }}" class="menu-link">
                                                                                 <span class="menu-title">Blog Home</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -545,7 +545,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/blog/post.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.blog.post') }}" class="menu-link">
                                                                                 <span class="menu-title">Blog Post</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -653,7 +653,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="account/overview.html" class="menu-link">
+                                                                        <a href="{{ route('admin.account.overview.index') }}" class="menu-link">
                                                                             <span class="menu-title">Overview</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -662,7 +662,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="account/settings.html" class="menu-link">
+                                                                        <a href="{{ route('admin.account.settings.index') }}" class="menu-link">
                                                                             <span class="menu-title">Settings</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -671,7 +671,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="account/security.html" class="menu-link">
+                                                                        <a href="{{ route('admin.account.security.index') }}" class="menu-link">
                                                                             <span class="menu-title">Security</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -680,7 +680,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="account/activity.html" class="menu-link">
+                                                                        <a href="{{ route('admin.account.activity.index') }}" class="menu-link">
                                                                             <span class="menu-title">Activity</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -689,7 +689,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="account/billing.html" class="menu-link">
+                                                                        <a href="{{ route('admin.account.billing.index') }}" class="menu-link">
                                                                             <span class="menu-title">Billing</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -702,7 +702,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="account/statements.html" class="menu-link">
+                                                                        <a href="{{ route('admin.account.statements.index') }}" class="menu-link">
                                                                             <span class="menu-title">Statements</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -711,7 +711,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="account/referrals.html" class="menu-link">
+                                                                        <a href="{{ route('admin.account.referrals.index') }}" class="menu-link">
                                                                             <span class="menu-title">Referrals</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -720,7 +720,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="account/api-keys.html" class="menu-link">
+                                                                        <a href="{{ route('admin.account.api-keys.index') }}" class="menu-link">
                                                                             <span class="menu-title">API Keys</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -729,7 +729,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="account/logs.html" class="menu-link">
+                                                                        <a href="{{ route('admin.account.logs.index') }}" class="menu-link">
                                                                             <span class="menu-title">Logs</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -3508,7 +3508,7 @@
                             <!--end::Menu separator-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-5">
-                                <a href="account/overview.html" class="menu-link px-5">My Profile</a>
+                                <a href="{{ route('admin.account.overview.index') }}" class="menu-link px-5">My Profile</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
@@ -3531,22 +3531,22 @@
                                 <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="account/referrals.html" class="menu-link px-5">Referrals</a>
+                                        <a href="{{ route('admin.account.referrals.index') }}" class="menu-link px-5">Referrals</a>
                                     </div>
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="account/billing.html" class="menu-link px-5">Billing</a>
+                                        <a href="{{ route('admin.account.billing.index') }}" class="menu-link px-5">Billing</a>
                                     </div>
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="account/statements.html" class="menu-link px-5">Payments</a>
+                                        <a href="{{ route('admin.account.statements.index') }}" class="menu-link px-5">Payments</a>
                                     </div>
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="account/statements.html" class="menu-link d-flex flex-stack px-5">Statements
+                                        <a href="{{ route('admin.account.statements.index') }}" class="menu-link d-flex flex-stack px-5">Statements
                                             <span class="ms-2 lh-0" data-bs-toggle="tooltip" title="View your statements">
                                                 <i class="ki-outline ki-information-5 fs-5"></i>
                                             </span></a>
@@ -3571,7 +3571,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-5">
-                                <a href="account/statements.html" class="menu-link px-5">My Statements</a>
+                                <a href="{{ route('admin.account.statements.index') }}" class="menu-link px-5">My Statements</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu separator-->
@@ -3633,7 +3633,7 @@
                                 <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="account/settings.html" class="menu-link d-flex px-5 active">
+                                        <a href="{{ route('admin.account.settings.index') }}" class="menu-link d-flex px-5 active">
                                             <span class="symbol symbol-20px me-4">
                                                 <img class="rounded-1" src="{{ getFileVersion('/assets/admin/media/flags/united-states.svg') }}" alt="" />
                                             </span>English</a>
@@ -3641,7 +3641,7 @@
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="account/settings.html" class="menu-link d-flex px-5">
+                                        <a href="{{ route('admin.account.settings.index') }}" class="menu-link d-flex px-5">
                                             <span class="symbol symbol-20px me-4">
                                                 <img class="rounded-1" src="{{ getFileVersion('/assets/admin/media/flags/spain.svg') }}" alt="" />
                                             </span>Spanish</a>
@@ -3649,7 +3649,7 @@
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="account/settings.html" class="menu-link d-flex px-5">
+                                        <a href="{{ route('admin.account.settings.index') }}" class="menu-link d-flex px-5">
                                             <span class="symbol symbol-20px me-4">
                                                 <img class="rounded-1" src="{{ getFileVersion('/assets/admin/media/flags/germany.svg') }}" alt="" />
                                             </span>German</a>
@@ -3657,7 +3657,7 @@
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="account/settings.html" class="menu-link d-flex px-5">
+                                        <a href="{{ route('admin.account.settings.index') }}" class="menu-link d-flex px-5">
                                             <span class="symbol symbol-20px me-4">
                                                 <img class="rounded-1" src="{{ getFileVersion('/assets/admin/media/flags/japan.svg') }}" alt="" />
                                             </span>Japanese</a>
@@ -3665,7 +3665,7 @@
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="account/settings.html" class="menu-link d-flex px-5">
+                                        <a href="{{ route('admin.account.settings.index') }}" class="menu-link d-flex px-5">
                                             <span class="symbol symbol-20px me-4">
                                                 <img class="rounded-1" src="{{ getFileVersion('/assets/admin/media/flags/france.svg') }}" alt="" />
                                             </span>French</a>
@@ -3677,7 +3677,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-5 my-1">
-                                <a href="account/settings.html" class="menu-link px-5">Account Settings</a>
+                                <a href="{{ route('admin.account.settings.index') }}" class="menu-link px-5">Account Settings</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
@@ -3745,7 +3745,7 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link" href="account/settings.html">
+                                    <a class="menu-link" href="{{ route('admin.account.settings.index') }}">
                                         <span class="menu-icon">
                                             <i class="ki-outline ki-share fs-3"></i>
                                         </span>
@@ -3757,7 +3757,7 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link" href="account/security.html">
+                                    <a class="menu-link" href="{{ route('admin.account.security.index') }}">
                                         <span class="menu-icon">
                                             <i class="ki-outline ki-shield fs-3"></i>
                                         </span>
@@ -3769,7 +3769,7 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link" href="account/activity.html">
+                                    <a class="menu-link" href="{{ route('admin.account.activity.index') }}">
                                         <span class="menu-icon">
                                             <i class="ki-outline ki-scan-barcode fs-3"></i>
                                         </span>
@@ -3781,7 +3781,7 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link" href="account/billing.html">
+                                    <a class="menu-link" href="{{ route('admin.account.billing.index') }}">
                                         <span class="menu-icon">
                                             <i class="ki-outline ki-dollar fs-3"></i>
                                         </span>
