@@ -71,7 +71,7 @@
                                 <div class="fs-4 text-white">
                                     <span class="opacity-75">You have</span>
                                     <span class="position-relative d-inline-block">
-                                        <a href="pages/user-profile/projects.html" class="link-white opacity-75-hover fw-bold d-block mb-1">4 tasks</a>
+                                        <a href="{{ route('admin.pages.user-profile.projects') }}" class="link-white opacity-75-hover fw-bold d-block mb-1">4 tasks</a>
                                         <!--begin::Separator-->
                                         <span class="position-absolute opacity-50 bottom-0 start-0 border-2 border-body border-bottom w-100"></span>
                                         <!--end::Separator-->
@@ -693,7 +693,7 @@
                                 <div class="position-relative fs-2x z-index-2 fw-bold text-white mb-7">
                                     <span class="me-2">You have got
                                         <span class="position-relative d-inline-block text-danger">
-                                            <a href="pages/user-profile/overview.html" class="text-danger opacity-75-hover">2300 bonus</a>
+                                            <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-danger opacity-75-hover">2300 bonus</a>
                                             <!--begin::Separator-->
                                             <span class="position-absolute opacity-50 bottom-0 start-0 border-4 border-danger border-bottom w-100"></span>
                                             <!--end::Separator-->
@@ -752,7 +752,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">UI/UX Design</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-6 fw-bold">UI/UX Design</a>
                                         <span class="text-muted fw-semibold d-block fs-7">40+ Courses</span>
                                     </div>
                                     <!--end:Author-->
@@ -779,7 +779,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">QA Analysis</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-6 fw-bold">QA Analysis</a>
                                         <span class="text-muted fw-semibold d-block fs-7">18 Courses</span>
                                     </div>
                                     <!--end:Author-->
@@ -806,7 +806,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Web Development</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-6 fw-bold">Web Development</a>
                                         <span class="text-muted fw-semibold d-block fs-7">120+ Courses</span>
                                     </div>
                                     <!--end:Author-->
@@ -833,7 +833,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Marketing</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-6 fw-bold">Marketing</a>
                                         <span class="text-muted fw-semibold d-block fs-7">50+ Courses.</span>
                                     </div>
                                     <!--end:Author-->
@@ -860,7 +860,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Philosophy</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-6 fw-bold">Philosophy</a>
                                         <span class="text-muted fw-semibold d-block fs-7">24+ Courses</span>
                                     </div>
                                     <!--end:Author-->
@@ -887,7 +887,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Mathematics</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-6 fw-bold">Mathematics</a>
                                         <span class="text-muted fw-semibold d-block fs-7">24+ Courses</span>
                                     </div>
                                     <!--end:Author-->

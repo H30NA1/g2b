@@ -565,7 +565,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Leslie Alexander</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Leslie Alexander</a>
                                         <span class="text-gray-500 fw-semibold d-block fs-6">Community</span>
                                     </div>
                                     <!--end:Author-->
@@ -590,7 +590,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Jacob Jones</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Jacob Jones</a>
                                         <span class="text-gray-500 fw-semibold d-block fs-6">Community</span>
                                     </div>
                                     <!--end:Author-->
@@ -615,7 +615,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Ronald Richards</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Ronald Richards</a>
                                         <span class="text-gray-500 fw-semibold d-block fs-6">Community</span>
                                     </div>
                                     <!--end:Author-->
@@ -640,7 +640,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Courtney Henry</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Courtney Henry</a>
                                         <span class="text-gray-500 fw-semibold d-block fs-6">Community</span>
                                     </div>
                                     <!--end:Author-->
@@ -665,7 +665,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Arlene McCoy</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Arlene McCoy</a>
                                         <span class="text-gray-500 fw-semibold d-block fs-6">Community</span>
                                     </div>
                                     <!--end:Author-->
@@ -690,7 +690,7 @@
                                 <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                     <!--begin:Author-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Marvin McKinney</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-800 text-hover-primary fs-5 fw-bolder">Marvin McKinney</a>
                                         <span class="text-gray-500 fw-semibold d-block fs-6">Community</span>
                                     </div>
                                     <!--end:Author-->

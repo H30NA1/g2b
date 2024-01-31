@@ -15,4 +15,5 @@ class OverviewController extends Controller
     {
         return view('admin.pages.account.overview.index');
     }
+
 }

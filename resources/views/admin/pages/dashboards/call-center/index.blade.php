@@ -303,7 +303,7 @@
                                                         <!--end::Symbol-->
                                                         <!--begin::Info-->
                                                         <div class="m-0">
-                                                            <a href="pages/user-profile/projects.html" class="text-white text-opacity-75 fs-8">Projects</a>
+                                                            <a href="{{ route('admin.pages.user-profile.projects') }}" class="text-white text-opacity-75 fs-8">Projects</a>
                                                             <span class="fw-bold text-white fs-7 d-block">Up to 500</span>
                                                         </div>
                                                         <!--end::Info-->

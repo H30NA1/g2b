@@ -367,7 +367,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/user-profile/overview.html" class="menu-link">
+                                                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="menu-link">
                                                                             <span class="menu-title">Overview</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -376,7 +376,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/user-profile/projects.html" class="menu-link">
+                                                                        <a href="{{ route('admin.pages.user-profile.projects') }}" class="menu-link">
                                                                             <span class="menu-title">Projects</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -385,7 +385,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/user-profile/campaigns.html" class="menu-link">
+                                                                        <a href="{{ route('admin.pages.user-profile.campaigns') }}" class="menu-link">
                                                                             <span class="menu-title">Campaigns</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -394,7 +394,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/user-profile/documents.html" class="menu-link">
+                                                                        <a href="{{ route('admin.pages.user-profile.documents') }}" class="menu-link">
                                                                             <span class="menu-title">Documents</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -403,7 +403,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/user-profile/followers.html" class="menu-link">
+                                                                        <a href="{{ route('admin.pages.user-profile.followers') }}" class="menu-link">
                                                                             <span class="menu-title">Followers</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -412,7 +412,7 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/user-profile/activity.html" class="menu-link">
+                                                                        <a href="{{ route('admin.pages.user-profile.activities') }}" class="menu-link">
                                                                             <span class="menu-title">Activity</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -430,7 +430,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/about.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.corporate.about') }}" class="menu-link">
                                                                                 <span class="menu-title">About</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -439,7 +439,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/team.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.corporate.team') }}" class="menu-link">
                                                                                 <span class="menu-title">Our Team</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -448,7 +448,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/contact.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.corporate.contact') }}" class="menu-link">
                                                                                 <span class="menu-title">Contact Us</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -457,7 +457,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/licenses.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.corporate.licenses') }}" class="menu-link">
                                                                                 <span class="menu-title">Licenses</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -466,7 +466,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/sitemap.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.corporate.sitemap') }}" class="menu-link">
                                                                                 <span class="menu-title">Sitemap</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -561,7 +561,7 @@
                                                                         <!--begin:Menu item-->
                                                                         <div class="menu-item p-0 m-0">
                                                                             <!--begin:Menu link-->
-                                                                            <a href="pages/pricing.html" class="menu-link">
+                                                                            <a href="{{ route('admin.pages.corporate.pricing') }}" class="menu-link">
                                                                                 <span class="menu-title">Column Pricing</span>
                                                                             </a>
                                                                             <!--end:Menu link-->
@@ -3216,7 +3216,7 @@
                                     <!--end::Items-->
                                     <!--begin::View more-->
                                     <div class="py-3 text-center border-top">
-                                        <a href="pages/user-profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+                                        <a href="{{ route('admin.pages.user-profile.activities') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
                                             <i class="ki-outline ki-arrow-right fs-5"></i></a>
                                     </div>
                                     <!--end::View more-->
@@ -3462,7 +3462,7 @@
                                     <!--end::Items-->
                                     <!--begin::View more-->
                                     <div class="py-3 text-center border-top">
-                                        <a href="pages/user-profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+                                        <a href="{{ route('admin.pages.user-profile.activities') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
                                             <i class="ki-outline ki-arrow-right fs-5"></i></a>
                                     </div>
                                     <!--end::View more-->

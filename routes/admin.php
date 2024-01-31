@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\HomeController;
 */
 use App\Http\Controllers\Admin\Pages\BlogController;
 use App\Http\Controllers\Admin\Pages\CareersController;
+use App\Http\Controllers\Admin\Pages\UserProfileController;
+use App\Http\Controllers\Admin\Pages\CorporateController;
 /*
 |--------------------------------------------------------------------------
 | END of Admin Pages Routes
@@ -55,6 +57,7 @@ use App\Http\Controllers\Admin\Dashboards\SchoolController;
 use App\Http\Controllers\Admin\Dashboards\SocialController;
 use App\Http\Controllers\Admin\Dashboards\StoreAnalyticsController;
 use App\Http\Controllers\Admin\Dashboards\WebsiteAnalyticsController;
+
 /*
 |--------------------------------------------------------------------------
 | END of Admin Dashboard Routes
@@ -99,12 +102,20 @@ Route::prefix('admin')->name('admin.')->group(function () {
             Route::get("/settings", [OverviewController::class, "settings"])->name('settings');
         });
         Route::prefix('user-profile')->name('user-profile.')->group(function () {
-            Route::get("/activity", [OverviewController::class, "activity"])->name('activity');
-            Route::get("/campaigns", [OverviewController::class, "campaigns"])->name('campaigns');
-            Route::get("/documents", [OverviewController::class, "documents"])->name('documents');
-            Route::get("/followers", [OverviewController::class, "followers"])->name('followers');
-            Route::get("/overview", [OverviewController::class, "overview"])->name('overview');
-            Route::get("/projects", [OverviewController::class, "projects"])->name('projects');
+            Route::get("/activity", [UserProfileController::class, "activity"])->name('activities');
+            Route::get("/campaigns", [UserProfileController::class, "campaign"])->name('campaigns');
+            Route::get("/documents", [UserProfileController::class, "document"])->name('documents');
+            Route::get("/followers", [UserProfileController::class, "follower"])->name('followers');
+            Route::get("/overview", [UserProfileController::class, "overview"])->name('overview');
+            Route::get("/projects", [UserProfileController::class, "project"])->name('projects');
+        });
+        Route::prefix('corporate')->name('corporate.')->group(function () {
+            Route::get("/about", [CorporateController::class, "about"])->name('about');
+            Route::get("/contact", [CorporateController::class, "contact"])->name('contact');
+            Route::get("/licenses", [CorporateController::class, "licenses"])->name('licenses');
+            Route::get("/pricing", [CorporateController::class, "pricing"])->name('pricing');
+            Route::get("/sitemap", [CorporateController::class, "sitemap"])->name('sitemap');
+            Route::get("/team", [CorporateController::class, "team"])->name('team');
         });
         Route::prefix('about')->name('about.')->group(function () {
             Route::get("/", [SecurityController::class, "index"])->name('index');

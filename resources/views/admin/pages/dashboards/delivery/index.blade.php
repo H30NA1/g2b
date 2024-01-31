@@ -84,7 +84,7 @@
                                 <a class="btn btn-sm bg-white btn-color-gray-800 me-2" data-bs-target="#kt_modal_bidding" data-bs-toggle="modal">New Delivery</a>
                                 <!--end::Link-->
                                 <!--begin::Link-->
-                                <a class="btn btn-sm bg-white btn-color-white bg-opacity-20" href="pages/user-profile/projects.html">Quick Guide</a>
+                                <a class="btn btn-sm bg-white btn-color-white bg-opacity-20" href="{{ route('admin.pages.user-profile.projects') }}">Quick Guide</a>
                                 <!--end::Link-->
                             </div>
                             <!--end::Links-->

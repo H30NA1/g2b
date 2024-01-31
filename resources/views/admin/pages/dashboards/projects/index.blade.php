@@ -2662,7 +2662,7 @@
                                                     <!--begin::Info-->
                                                     <div class="m-0">
                                                         <span class="fw-semibold text-gray-500 d-block fs-8">Manager</span>
-                                                        <a href="pages/user-profile/overview.html" class="fw-bold text-gray-800 text-hover-primary fs-7">Robert Fox</a>
+                                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="fw-bold text-gray-800 text-hover-primary fs-7">Robert Fox</a>
                                                     </div>
                                                     <!--end::Info-->
                                                 </div>

@@ -114,7 +114,7 @@
                                         <!--end::Image-->
                                         <!--begin::Links-->
                                         <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-                                            <a href="pages/about.html" class="btn btn-primary">About Us</a>
+                                            <a href="{{ route('admin.pages.corporate.about') }}" class="btn btn-primary">About Us</a>
                                             <a href="{{ route('admin.pages.careers.apply') }}" class="btn btn-light-primary ms-3">Join Us</a>
                                         </div>
                                         <!--end::Links-->
@@ -155,7 +155,7 @@
                                         <!--end::Avatar-->
                                         <!--begin::Info-->
                                         <div class="mb-0">
-                                            <a href="pages/user-profile/overview.html" class="text-gray-700 fw-bold text-hover-primary">Jane Johnson</a>
+                                            <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-700 fw-bold text-hover-primary">Jane Johnson</a>
                                             <span class="text-gray-500 fs-7 fw-semibold d-block mt-1">Co-founder</span>
                                         </div>
                                         <!--end::Info-->
@@ -164,7 +164,7 @@
                                     <!--begin::Text-->
                                     <div class="mb-0 fs-6">
                                         <div class="text-muted fw-semibold lh-lg mb-2">First, a disclaimer – the entire process of writing a blog post often takes more than a couple of hours, even if you can type eighty words per minute and your writing skills are sharp writing a blog post often takes more than a couple.</div>
-                                        <a href="pages/user-profile/overview.html" class="fw-semibold link-primary">Author’s Profile</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="fw-semibold link-primary">Author’s Profile</a>
                                     </div>
                                     <!--end::Text-->
                                 </div>
@@ -388,7 +388,7 @@
                                     <!--begin::Body-->
                                     <div class="m-0">
                                         <!--begin::Title-->
-                                        <a href="pages/user-profile/overview.html" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
                                         <!--end::Title-->
                                         <!--begin::Text-->
                                         <div class="fw-semibold fs-5 text-gray-600 text-gray-900 my-4">We’ve been focused on making a the from also not been afraid to and step away been focused create eye</div>
@@ -396,7 +396,7 @@
                                         <!--begin::Content-->
                                         <div class="fs-6 fw-bold">
                                             <!--begin::Author-->
-                                            <a href="pages/user-profile/overview.html" class="text-gray-700 text-hover-primary">Jane Miller</a>
+                                            <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-700 text-hover-primary">Jane Miller</a>
                                             <!--end::Author-->
                                             <!--begin::Date-->
                                             <span class="text-muted">on Mar 21 2021</span>
@@ -421,7 +421,7 @@
                                     <!--begin::Body-->
                                     <div class="m-0">
                                         <!--begin::Title-->
-                                        <a href="pages/user-profile/overview.html" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
                                         <!--end::Title-->
                                         <!--begin::Text-->
                                         <div class="fw-semibold fs-5 text-gray-600 text-gray-900 my-4">We’ve been focused on making the from v4 to v5 but we have also not been afraid to step away been focused</div>
@@ -429,7 +429,7 @@
                                         <!--begin::Content-->
                                         <div class="fs-6 fw-bold">
                                             <!--begin::Author-->
-                                            <a href="pages/user-profile/overview.html" class="text-gray-700 text-hover-primary">Cris Morgan</a>
+                                            <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-700 text-hover-primary">Cris Morgan</a>
                                             <!--end::Author-->
                                             <!--begin::Date-->
                                             <span class="text-muted">on Apr 14 2021</span>
@@ -454,7 +454,7 @@
                                     <!--begin::Body-->
                                     <div class="m-0">
                                         <!--begin::Title-->
-                                        <a href="pages/user-profile/overview.html" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
                                         <!--end::Title-->
                                         <!--begin::Text-->
                                         <div class="fw-semibold fs-5 text-gray-600 text-gray-900 my-4">We’ve been focused on making the from v4 to v5 but we’ve also not been afraid to step away been focused</div>
@@ -462,7 +462,7 @@
                                         <!--begin::Content-->
                                         <div class="fs-6 fw-bold">
                                             <!--begin::Author-->
-                                            <a href="pages/user-profile/overview.html" class="text-gray-700 text-hover-primary">Carles Nilson</a>
+                                            <a href="{{ route('admin.pages.user-profile.overview') }}" class="text-gray-700 text-hover-primary">Carles Nilson</a>
                                             <!--end::Author-->
                                             <!--begin::Date-->
                                             <span class="text-muted">on May 14 2021</span>

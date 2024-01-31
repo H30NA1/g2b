@@ -858,7 +858,7 @@
                                     <!--begin::Body-->
                                     <div class="m-0">
                                         <!--begin::Title-->
-                                        <a href="pages/user-profile/overview.html" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
                                         <!--end::Title-->
                                         <!--begin::Text-->
                                         <div class="fw-semibold fs-5 text-gray-600 text-gray-900 mt-3 mb-5">We’ve been focused on making a the from also not been afraid to and step away been focused create eye</div>
@@ -898,7 +898,7 @@
                                     <!--begin::Body-->
                                     <div class="m-0">
                                         <!--begin::Title-->
-                                        <a href="pages/user-profile/overview.html" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
                                         <!--end::Title-->
                                         <!--begin::Text-->
                                         <div class="fw-semibold fs-5 text-gray-600 text-gray-900 mt-3 mb-5">We’ve been focused on making the from v4 to v5 but we have also not been afraid to step away been focused</div>
@@ -938,7 +938,7 @@
                                     <!--begin::Body-->
                                     <div class="m-0">
                                         <!--begin::Title-->
-                                        <a href="pages/user-profile/overview.html" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
+                                        <a href="{{ route('admin.pages.user-profile.overview') }}" class="fs-4 text-gray-900 fw-bold text-hover-primary text-gray-900 lh-base">Admin Panel - How To Started the Dashboard Tutorial</a>
                                         <!--end::Title-->
                                         <!--begin::Text-->
                                         <div class="fw-semibold fs-5 text-gray-600 text-gray-900 mt-3 mb-5">We’ve been focused on making the from v4 to v5 but we’ve also not been afraid to step away been focused</div>
