@@ -6,10 +6,12 @@ use App\Http\Controllers\Admin\HomeController;
 | START of Admin Pages Routes
 |--------------------------------------------------------------------------
 */
-use App\Http\Controllers\Admin\Pages\BlogController;
-use App\Http\Controllers\Admin\Pages\CareersController;
-use App\Http\Controllers\Admin\Pages\UserProfileController;
-use App\Http\Controllers\Admin\Pages\CorporateController;
+use App\Http\Controllers\Admin\Pages\UserProfile\ActivityController as UserProfileActivityController;
+use App\Http\Controllers\Admin\Pages\UserProfile\CampaignController;
+use App\Http\Controllers\Admin\Pages\UserProfile\DocumentController;
+use App\Http\Controllers\Admin\Pages\UserProfile\FollowerController;
+use App\Http\Controllers\Admin\Pages\UserProfile\OverviewController as UserProfileOverviewController;
+use App\Http\Controllers\Admin\Pages\UserProfile\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | END of Admin Pages Routes
@@ -38,31 +40,22 @@ use App\Http\Controllers\Admin\Account\StatementsController;
 
 /*
 |--------------------------------------------------------------------------
-| START of Admin Dashboard Routes
+| START of Project Routes
 |--------------------------------------------------------------------------
 */
-use App\Http\Controllers\Admin\Dashboards\BiddingController;
-use App\Http\Controllers\Admin\Dashboards\CallCenterController;
-use App\Http\Controllers\Admin\Dashboards\CryptoController;
-use App\Http\Controllers\Admin\Dashboards\DeliveryController;
-use App\Http\Controllers\Admin\Dashboards\EcommerceController;
-use App\Http\Controllers\Admin\Dashboards\FinancePerformanceController;
-use App\Http\Controllers\Admin\Dashboards\LogisticsController;
-use App\Http\Controllers\Admin\Dashboards\MarketingController;
-use App\Http\Controllers\Admin\Dashboards\OnlineCoursesController;
-use App\Http\Controllers\Admin\Dashboards\PodcastController;
-use App\Http\Controllers\Admin\Dashboards\PosController;
-use App\Http\Controllers\Admin\Dashboards\ProjectsController;
-use App\Http\Controllers\Admin\Dashboards\SchoolController;
-use App\Http\Controllers\Admin\Dashboards\SocialController;
-use App\Http\Controllers\Admin\Dashboards\StoreAnalyticsController;
-use App\Http\Controllers\Admin\Dashboards\WebsiteAnalyticsController;
-
+use App\Http\Controllers\Admin\Project\ActivityController as  ProjectActivityController;
+use App\Http\Controllers\Admin\Project\BudgetController;
+use App\Http\Controllers\Admin\Project\FilesController;
+use App\Http\Controllers\Admin\Project\IndexController;
+use App\Http\Controllers\Admin\Project\SettingsController as ProjectSettingsController;
+use App\Http\Controllers\Admin\Project\TargetController;
+use App\Http\Controllers\Admin\Project\UserController;
 /*
 |--------------------------------------------------------------------------
-| END of Admin Dashboard Routes
+| END of Project Routes
 |--------------------------------------------------------------------------
 */
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -79,58 +72,23 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get("/", [HomeController::class, "index"])->name('index');
     Route::prefix('pages')->name('pages.')->group(function () {
-        Route::prefix('blog')->name('blog.')->group(function () {
-            Route::get("/", [BlogController::class, "index"])->name('index');
-            Route::get("/post", [BlogController::class, "post"])->name('post');
-        });
-        Route::prefix('careers')->name('careers.')->group(function () {
-            Route::get("/", [CareersController::class, "index"])->name('index');
-            Route::get("/apply", [CareersController::class, "apply"])->name('apply');
-        });
-        Route::prefix('faq')->name('faq.')->group(function () {
-            Route::get("/classic", [BillingController::class, "classic"])->name('classic');
-            Route::get("/extended", [BillingController::class, "extended"])->name('extended');
-        });
-        Route::prefix('pricing')->name('pricing.')->group(function () {
-            Route::get("/", [LogsController::class, "index"])->name('index');
-            Route::get("/table", [LogsController::class, "table"])->name('table');
-        });
-        Route::prefix('social')->name('social.')->group(function () {
-            Route::get("/activity", [OverviewController::class, "activity"])->name('activity');
-            Route::get("/feeds", [OverviewController::class, "feeds"])->name('feeds');
-            Route::get("/followers", [OverviewController::class, "followers"])->name('followers');
-            Route::get("/settings", [OverviewController::class, "settings"])->name('settings');
-        });
         Route::prefix('user-profile')->name('user-profile.')->group(function () {
-            Route::get("/activity", [UserProfileController::class, "activity"])->name('activities');
-            Route::get("/campaigns", [UserProfileController::class, "campaign"])->name('campaigns');
-            Route::get("/documents", [UserProfileController::class, "document"])->name('documents');
-            Route::get("/followers", [UserProfileController::class, "follower"])->name('followers');
-            Route::get("/overview", [UserProfileController::class, "overview"])->name('overview');
-            Route::get("/projects", [UserProfileController::class, "project"])->name('projects');
+            Route::get("/activity", [UserProfileActivityController::class, "index"])->name('activities');
+            Route::get("/campaigns", [CampaignController::class, "index"])->name('campaigns');
+            Route::get("/documents", [DocumentController::class, "index"])->name('documents');
+            Route::get("/followers", [FollowerController::class, "index"])->name('followers');
+            Route::get("/overview", [UserProfileOverviewController::class, "index"])->name('overview');
+            Route::get("/projects", [ProjectController::class, "index"])->name('projects');
         });
-        Route::prefix('corporate')->name('corporate.')->group(function () {
-            Route::get("/about", [CorporateController::class, "about"])->name('about');
-            Route::get("/contact", [CorporateController::class, "contact"])->name('contact');
-            Route::get("/licenses", [CorporateController::class, "licenses"])->name('licenses');
-            Route::get("/pricing", [CorporateController::class, "pricing"])->name('pricing');
-            Route::get("/sitemap", [CorporateController::class, "sitemap"])->name('sitemap');
-            Route::get("/team", [CorporateController::class, "team"])->name('team');
-        });
-        Route::prefix('about')->name('about.')->group(function () {
-            Route::get("/", [SecurityController::class, "index"])->name('index');
-        });
-        Route::prefix('contact')->name('contact.')->group(function () {
-            Route::get("/", [SettingsController::class, "index"])->name('index');
-        });
-        Route::prefix('licenses')->name('licenses.')->group(function () {
-            Route::get("/", [StatementsController::class, "index"])->name('index');
-        });
-        Route::prefix('sitemap')->name('sitemap.')->group(function () {
-            Route::get("/", [StatementsController::class, "index"])->name('index');
-        });
-        Route::prefix('team')->name('team.')->group(function () {
-            Route::get("/", [StatementsController::class, "index"])->name('index');
+        Route::prefix('project')->name('project.')->group(function () {
+            Route::get("/", [IndexController::class, "index"])->name('index');
+            Route::get("/project", [IndexController::class, "project"])->name('project');
+            Route::get("/activities", [ProjectActivityController::class, "index"])->name('activities');
+            Route::get("/budget", [BudgetController::class, "index"])->name('budget');
+            Route::get("/files", [FilesController::class, "index"])->name('files');
+            Route::get("/settings", [ProjectSettingsController::class, "index"])->name('settings');
+            Route::get("/target", [TargetsController::class, "index"])->name('targets');
+            Route::get("/users", [UsersController::class, "index"])->name('users');
         });
     });
     Route::prefix('account')->name('account.')->group(function () {
@@ -160,56 +118,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
         });
         Route::prefix('statements')->name('statements.')->group(function () {
             Route::get("/", [StatementsController::class, "index"])->name('index');
-        });
-    });
-    Route::prefix('dashboard')->name('dashboard.')->group(function () {
-        Route::prefix('bidding')->name('bidding.')->group(function () {
-            Route::get("/", [BiddingController::class, "index"])->name('index');
-        });
-        Route::prefix('call-center')->name('call-center.')->group(function () {
-            Route::get("/", [CallCenterController::class, "index"])->name('index');
-        });
-        Route::prefix('crypto')->name('crypto.')->group(function () {
-            Route::get("/", [CryptoController::class, "index"])->name('index');
-        });
-        Route::prefix('delivery')->name('delivery.')->group(function () {
-            Route::get("/", [DeliveryController::class, "index"])->name('index');
-        });
-        Route::prefix('ecommerce')->name('ecommerce.')->group(function () {
-            Route::get("/", [EcommerceController::class, "index"])->name('index');
-        });
-        Route::prefix('finance-performance')->name('finance-performance.')->group(function () {
-            Route::get("/", [FinancePerformanceController::class, "index"])->name('index');
-        });
-        Route::prefix('logistics')->name('logistics.')->group(function () {
-            Route::get("/", [LogisticsController::class, "index"])->name('index');
-        });
-        Route::prefix('marketing')->name('marketing.')->group(function () {
-            Route::get("/", [MarketingController::class, "index"])->name('index');
-        });
-        Route::prefix('online-courses')->name('online-courses.')->group(function () {
-            Route::get("/", [OnlineCoursesController::class, "index"])->name('index');
-        });
-        Route::prefix('podcast')->name('podcast.')->group(function () {
-            Route::get("/", [PodcastController::class, "index"])->name('index');
-        });
-        Route::prefix('pos')->name('pos.')->group(function () {
-            Route::get("/", [PosController::class, "index"])->name('index');
-        });
-        Route::prefix('projects')->name('projects.')->group(function () {
-            Route::get("/", [ProjectsController::class, "index"])->name('index');
-        });
-        Route::prefix('school')->name('school.')->group(function () {
-            Route::get("/", [SchoolController::class, "index"])->name('index');
-        });
-        Route::prefix('social')->name('social.')->group(function () {
-            Route::get("/", [SocialController::class, "index"])->name('index');
-        });
-        Route::prefix('store-analytics')->name('store-analytics.')->group(function () {
-            Route::get("/", [StoreAnalyticsController::class, "index"])->name('index');
-        });
-        Route::prefix('website-analytics')->name('website-analytics.')->group(function () {
-            Route::get("/", [WebsiteAnalyticsController::class, "index"])->name('index');
         });
     });
 });
