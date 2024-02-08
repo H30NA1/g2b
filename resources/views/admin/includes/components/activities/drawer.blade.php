@@ -519,7 +519,7 @@
         <!--end::Body-->
         <!--begin::Footer-->
         <div class="card-footer py-5 text-center" id="kt_activities_footer">
-            <a href="{{ route('admin.pages.user-profile.activities') }}" class="btn btn-bg-body text-primary">View All Activities
+            <a href="{{ route('admin.pages.users.index') }}" class="btn btn-bg-body text-primary">View All Activities
                 <i class="ki-outline ki-arrow-right fs-3 text-primary"></i></a>
         </div>
         <!--end::Footer-->

@@ -1,55 +1,11 @@
 <?php
 
 use App\Http\Controllers\Admin\HomeController;
-/*
-|--------------------------------------------------------------------------
-| START of Admin Pages Routes
-|--------------------------------------------------------------------------
-*/
-use App\Http\Controllers\Admin\Pages\UserProfile\ActivityController as UserProfileActivityController;
-use App\Http\Controllers\Admin\Pages\UserProfile\CampaignController;
-use App\Http\Controllers\Admin\Pages\UserProfile\DocumentController;
-use App\Http\Controllers\Admin\Pages\UserProfile\FollowerController;
-use App\Http\Controllers\Admin\Pages\UserProfile\OverviewController as UserProfileOverviewController;
-use App\Http\Controllers\Admin\Pages\UserProfile\ProjectController;
-/*
-|--------------------------------------------------------------------------
-| END of Admin Pages Routes
-|--------------------------------------------------------------------------
-*/
-
-/*
-|--------------------------------------------------------------------------
-| START of Admin Account Routes
-|--------------------------------------------------------------------------
-*/
-use App\Http\Controllers\Admin\Account\ActivityController;
-use App\Http\Controllers\Admin\Account\ApiKeyController;
-use App\Http\Controllers\Admin\Account\BillingController;
-use App\Http\Controllers\Admin\Account\LogsController;
-use App\Http\Controllers\Admin\Account\OverviewController;
-use App\Http\Controllers\Admin\Account\ReferralsController;
-use App\Http\Controllers\Admin\Account\SecurityController;
-use App\Http\Controllers\Admin\Account\SettingsController;
-use App\Http\Controllers\Admin\Account\StatementsController;
-/*
-|--------------------------------------------------------------------------
-| END of Admin Dashboard Routes
-|--------------------------------------------------------------------------
-*/
-
-/*
-|--------------------------------------------------------------------------
-| START of Project Routes
-|--------------------------------------------------------------------------
-*/
-use App\Http\Controllers\Admin\Project\ActivityController as  ProjectActivityController;
-use App\Http\Controllers\Admin\Project\BudgetController;
-use App\Http\Controllers\Admin\Project\FilesController;
-use App\Http\Controllers\Admin\Project\IndexController;
-use App\Http\Controllers\Admin\Project\SettingsController as ProjectSettingsController;
-use App\Http\Controllers\Admin\Project\TargetController;
-use App\Http\Controllers\Admin\Project\UserController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\FileManagerController;
+use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\CalendarController;
 /*
 |--------------------------------------------------------------------------
 | END of Project Routes
@@ -72,52 +28,40 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get("/", [HomeController::class, "index"])->name('index');
     Route::prefix('pages')->name('pages.')->group(function () {
-        Route::prefix('user-profile')->name('user-profile.')->group(function () {
-            Route::get("/activity", [UserProfileActivityController::class, "index"])->name('activities');
-            Route::get("/campaigns", [CampaignController::class, "index"])->name('campaigns');
-            Route::get("/documents", [DocumentController::class, "index"])->name('documents');
-            Route::get("/followers", [FollowerController::class, "index"])->name('followers');
-            Route::get("/overview", [UserProfileOverviewController::class, "index"])->name('overview');
-            Route::get("/projects", [ProjectController::class, "index"])->name('projects');
+        Route::prefix('users')->name('users.')->group(function () {
+            Route::get("/", [UserController::class, "index"])->name('index');
+            Route::get("/campaigns", [UserController::class, "campaigns"])->name('campaigns');
+            Route::get("/documents", [UserController::class, "documents"])->name('documents');
+            Route::get("/followers", [UserController::class, "followers"])->name('followers');
+            Route::get("/overview", [UserController::class, "overview"])->name('overview');
+            Route::get("/projects", [UserController::class, "projects"])->name('projects');
         });
-        Route::prefix('project')->name('project.')->group(function () {
-            Route::get("/", [IndexController::class, "index"])->name('index');
-            Route::get("/project", [IndexController::class, "project"])->name('project');
-            Route::get("/activities", [ProjectActivityController::class, "index"])->name('activities');
-            Route::get("/budget", [BudgetController::class, "index"])->name('budget');
-            Route::get("/files", [FilesController::class, "index"])->name('files');
-            Route::get("/settings", [ProjectSettingsController::class, "index"])->name('settings');
-            Route::get("/target", [TargetsController::class, "index"])->name('targets');
-            Route::get("/users", [UsersController::class, "index"])->name('users');
+        Route::prefix('projects')->name('projects.')->group(function () {
+            Route::get("/", [ProjectController::class, "index"])->name('index');
+            Route::get("/overview/{id?}", [ProjectController::class, "overview"])->name('overview');
+            Route::get("/activities/{id?}", [ProjectController::class, "activities"])->name('activities');
+            Route::get("/budgets/{id?}", [ProjectController::class, "budgets"])->name('budgets');
+            Route::get("/files/{id?}", [ProjectController::class, "files"])->name('files');
+            Route::get("/settings/{id?}", [ProjectController::class, "settings"])->name('settings');
+            Route::get("/targets/{id?}", [ProjectController::class, "targets"])->name('targets');
+            Route::get("/users/{id?}", [ProjectController::class, "users"])->name('users');
         });
-    });
-    Route::prefix('account')->name('account.')->group(function () {
-        Route::prefix('activity')->name('activity.')->group(function () {
-            Route::get("/", [ActivityController::class, "index"])->name('index');
+
+        Route::prefix('profile')->name('profile.')->group(function () {
+            Route::get("/", [ProfileController::class, "index"])->name('index');
+            Route::get("/activity", [ProfileController::class, "activity"])->name('activity');
+            Route::get("/logs", [ProfileController::class, "logs"])->name('logs');
+            Route::get("/security", [ProfileController::class, "security"])->name('security');
+            Route::get("/settings", [ProfileController::class, "settings"])->name('settings');
         });
-        Route::prefix('api-keys')->name('api-keys.')->group(function () {
-            Route::get("/", [ApiKeyController::class, "index"])->name('index');
+
+        Route::prefix('file-manager')->name('file-manager.')->group(function () {
+            Route::get("/", [FileManagerController::class, "index"])->name('index');
+            Route::get("/settings", [FileManagerController::class, "settings"])->name('settings');
         });
-        Route::prefix('billing')->name('billing.')->group(function () {
-            Route::get("/", [BillingController::class, "index"])->name('index');
-        });
-        Route::prefix('logs')->name('logs.')->group(function () {
-            Route::get("/", [LogsController::class, "index"])->name('index');
-        });
-        Route::prefix('overview')->name('overview.')->group(function () {
-            Route::get("/", [OverviewController::class, "index"])->name('index');
-        });
-        Route::prefix('referrals')->name('referrals.')->group(function () {
-            Route::get("/", [ReferralsController::class, "index"])->name('index');
-        });
-        Route::prefix('security')->name('security.')->group(function () {
-            Route::get("/", [SecurityController::class, "index"])->name('index');
-        });
-        Route::prefix('settings')->name('settings.')->group(function () {
-            Route::get("/", [SettingsController::class, "index"])->name('index');
-        });
-        Route::prefix('statements')->name('statements.')->group(function () {
-            Route::get("/", [StatementsController::class, "index"])->name('index');
+
+        Route::prefix('calendar')->name('calendar.')->group(function () {
+            Route::get("/", [CalendarController::class, "index"])->name('index');
         });
     });
 });

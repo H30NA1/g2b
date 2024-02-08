@@ -1911,34 +1911,5 @@
 @endsection
 
 @push('js')
-<!--begin::Vendors Javascript(used for this page only)-->
-<script src="{{ getFileVersion('/assets/admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
-<!--end::Vendors Javascript-->
-<!--begin::Custom Javascript(used for this page only)-->
-<script src="{{ getFileVersion('/assets/admin/js/custom/pages/user-profile/general.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/create-campaign.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/new-target.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/new-card.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/bidding.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/top-up-wallet.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/widgets.bundle.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/widgets.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/apps/chat/chat.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/share-earn.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/upgrade-plan.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/offer-a-deal/type.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/offer-a-deal/details.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/offer-a-deal/finance.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/offer-a-deal/complete.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/offer-a-deal/main.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/create-project/type.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/create-project/budget.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/create-project/settings.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/create-project/team.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/create-project/targets.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/create-project/files.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/create-project/complete.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/create-project/main.js') }}"></script>
-<script src="{{ getFileVersion('/assets/admin/js/custom/utilities/modals/users-search.js') }}"></script>
-<!--end::Custom Javascript-->
+
 @endpush

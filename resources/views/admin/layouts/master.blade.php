@@ -16,7 +16,7 @@
   <meta name="format-detection" content="telephone=no">
 
   <!-- PAGE TITLE HERE -->
-  <title>Server Info</title>
+  <title>G2Byte</title>
   <!-- FAVICONS ICON -->
 
   <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
@@ -43,9 +43,6 @@
       @include('admin.includes.header')
       <!--end::Header-->
       <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
-        <!--begin::Sidebar-->
-        @include('admin.includes.sidebar')
-        <!--end::Sidebar-->
 
         <!--begin::Main-->
         <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
