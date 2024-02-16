@@ -1,0 +1,57 @@
+@extends('web.layouts.master')
+
+@section('title', 'G2B ｜GO TO BYTES')
+@section('bodyClass', 'u-body u-xl-mode')
+
+@push('css')
+@endpush
+
+@section('content')
+<div class="content content-main">
+    <div id="card">
+        <div class="card-inner fade">
+            <header>
+                <img src="${main.avatar.link}" width="${main.avatar.width}" height="${main.avatar.height}" alt="avatar">
+                <h1 data-translate="name">${main.name}</h1>
+                <h2 id="signature" data-translate="signature">${main.signature}</h2>
+            </header>
+
+            <% const { first, second, third, fourth } = main.ul; %>
+            <ul>
+                <li>
+                    <a href="${first.href}" aria-label="${first.text}">
+                        <i class="icon icon-${first.icon}"></i>
+                        <span data-translate="${first.text}">${first.text}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="${second.href}" aria-label="${second.text}">
+                        <i class="icon icon-${second.icon}"></i>
+                        <span data-translate="${second.text}">${second.text}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="${third.href}" aria-label="${third.text}" >
+                        <i class="icon icon-${third.icon}"></i>
+                        <span data-translate="${third.text}">${third.text}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="${fourth.href}" aria-label="${fourth.text}" >
+                        <i class="icon icon-${fourth.icon}"></i>
+                        <span data-translate="${fourth.text}">${fourth.text}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+@endsection
+
+@push('js')
+
+@endpush

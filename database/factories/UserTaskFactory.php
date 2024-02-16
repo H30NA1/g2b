@@ -18,14 +18,11 @@ class UserTaskFactory extends Factory
      */
     public function definition(): array
     {
-        $created = $this->faker->dateTimeBetween('-20 years');
         return [
             'task_id' => self::$currentTaskId++,
-            'lead_id' => rand(1, 201),
-            'user_id' =>  rand(1, 201), 
-            'progress' => $this->faker->randomElement(['waiting', 'pending', 'processing', 'confirming', 'finished', 'failed', 'canceled']),
-            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
-            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
+            'lead_id' => rand(1, 50),
+            'user_id' =>  rand(1, 50),
+            'progress' => $this->faker->randomElement(['waiting', 'pending', 'processing', 'confirming', 'finished', 'failed', 'canceled'])
         ];
     }
 }

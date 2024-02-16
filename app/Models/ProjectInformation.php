@@ -23,11 +23,36 @@ class ProjectInformation extends Model
         'description'
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+
 
     public function project()
     {
         return $this->belongsTo(Project::class);
+    }
+
+    public static function totalCost()
+    {
+        return self::whereMonth('created_at', now()->month)
+            ->whereYear('created_at', now()->year)
+            ->sum('cost');
+    }
+
+    public static function getTopAndOthers()
+    {
+        $topIds = self::whereMonth('created_at', now()->month)
+            ->whereYear('created_at', now()->year)
+            ->orderBy('cost', 'desc')
+            ->take(2)
+            ->pluck('id');
+
+        return [
+            'top' => self::whereIn('id', $topIds)
+                ->get(),
+
+            'others' => self::whereMonth('created_at', now()->month)
+                ->whereYear('created_at', now()->year)
+                ->whereNotIn('id', $topIds)
+                ->sum('cost')
+        ];
     }
 }

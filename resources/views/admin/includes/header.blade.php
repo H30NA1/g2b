@@ -104,26 +104,8 @@
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.users.campaigns') }}" class="menu-link">
-                                                                            <span class="menu-title">Campaigns</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
                                                                         <a href="{{ route('admin.pages.users.documents') }}" class="menu-link">
                                                                             <span class="menu-title">Documents</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.users.followers') }}" class="menu-link">
-                                                                            <span class="menu-title">Followers</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -17,14 +18,29 @@ class Project extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'logo',
         'name',
+        'status',
+        'visibility',
+        'priority',
+        'description',
+        'summary',
         'deadline_at',
         'began_at',
         'finished_at',
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+    public function getBeganAtAttribute($value)
+    {
+        return Carbon::parse($value)->format('Y-m-d');
+    }
+
+    public function getDeadlineAtAttribute($value)
+    {
+        return Carbon::parse($value)->format('Y-m-d');
+    }
+
+    
 
     public function users()
     {
@@ -43,6 +59,31 @@ class Project extends Model
 
     public function setting()
     {
-        return $this->hasOne(ProjectSetting::class);
+        return $this->hasOne(ServerProject::class);
+    }
+
+    public function completeTasks()
+    {
+        return $this->hasMany(Task::class)->where('status', 'resolved');
+    }
+
+    public function pendingTasks()
+    {
+        return $this->hasMany(Task::class)->where('status', 'pending');
+    }
+
+    public function openTasks()
+    {
+        return $this->hasMany(Task::class)->whereIn('status', 'open');
+    }
+
+    public function confirmTasks()
+    {
+        return $this->hasMany(Task::class)->whereIn('status', 'confirming');
+    }
+
+    public function remainingTasks()
+    {
+        return $this->hasMany(Task::class)->whereIn('status', ['open', 'progressing', 'testing', 'confirming', 'pending']);
     }
 }

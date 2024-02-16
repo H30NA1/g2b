@@ -19,12 +19,10 @@ class ProjectUser extends Model
     protected $fillable = [
         'project_id',
         'user_id',
-        'controller',
         'permission'
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+    
 
     public function project()
     {
@@ -33,6 +31,6 @@ class ProjectUser extends Model
 
     public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 }

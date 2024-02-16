@@ -18,17 +18,14 @@ class UserSettingsFactory extends Factory
      */
     public function definition(): array
     {
-        $status = rand(0, 2);
-        $created = $this->faker->dateTimeBetween('-20 years');
+        $status = $this->faker->randomElement(['online', 'offline', 'retired', 'blocked']);
         return [
             'user_id' => self::$currentUserId++, // Assign a unique random user ID
-            'role' => $this->faker->randomElement(['admin', 'employee', 'freelancer']),
+            'role' => $this->faker->randomElement(['admin', 'accountant', 'developer', 'tester', 'freelancer']),
             'status' => $status,
-            'is_blocked' => $status == 0 ? 1 : 0,
+            'is_blocked' => $status == 'blocked' ? 1 : 0,
             'noti_email' => rand(1, 0),
-            'noti_device' => rand(1, 0),
-            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
-            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
+            'noti_device' => rand(1, 0)
         ];
     }
 }

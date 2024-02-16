@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Laravel\Sanctum\HasApiTokens;
+use Laravel\Passport\HasApiTokens;
 
 class AccessToken extends Model
 {
@@ -19,7 +19,8 @@ class AccessToken extends Model
      */
     protected $fillable = [
         'user_id',
-        'employee_id',
+        'encrypt_data',
+        'encrypt_information',
         'access_token',
         'ip_address',
         'last_logged_in',

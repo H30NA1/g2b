@@ -23,8 +23,7 @@ class UserTask extends Model
         'progress'
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+    
 
     public function task()
     {

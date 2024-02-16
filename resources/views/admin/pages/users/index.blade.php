@@ -14,7 +14,7 @@
         <!--begin::Toolbar-->
         <div class="d-flex flex-wrap flex-stack mb-6">
             <!--begin::Heading-->
-            <h3 class="fw-bold my-2">Projects
+            <h3 class="fw-bold my-2">Users
                 <span class="fs-6 text-gray-500 fw-semibold ms-1">Active</span>
             </h3>
             <!--end::Heading-->
@@ -40,14 +40,14 @@
             <!--begin::Col-->
             <div class="col-md-6 col-xl-4">
                 <!--begin::Card-->
-                <a href="{{ route('admin.pages.projects.overview') }}" class="card border-hover-primary">
+                <a href="{{ route('admin.pages.users.overview') }}" class="card border-hover-primary">
                     <!--begin::Card header-->
                     <div class="card-header border-0 pt-9">
                         <!--begin::Card Title-->
                         <div class="card-title m-0">
                             <!--begin::Avatar-->
                             <div class="symbol symbol-50px w-50px bg-light">
-                                <img src="assets/media/svg/brand-logos/plurk.svg" alt="image" class="p-3" />
+                                <img src="{{ getFileVersion('/assets/admin/media/svg/brand-logos/plurk.svg') }}" alt="image" class="p-3" />
                             </div>
                             <!--end::Avatar-->
                         </div>
@@ -92,12 +92,12 @@
                         <div class="symbol-group symbol-hover">
                             <!--begin::User-->
                             <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Emma Smith">
-                                <img alt="Pic" src="assets/media/avatars/300-6.jpg" />
+                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-6.jpg') }}" />
                             </div>
                             <!--begin::User-->
                             <!--begin::User-->
                             <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Rudy Stone">
-                                <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-1.jpg') }}" />
                             </div>
                             <!--begin::User-->
                             <!--begin::User-->
@@ -602,7 +602,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px symbol-circle">
-                                                                <img alt="Pic" src="assets/media/avatars/300-6.jpg" />
+                                                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-6.jpg') }}" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -658,7 +658,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px symbol-circle">
-                                                                <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-1.jpg') }}" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -686,7 +686,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px symbol-circle">
-                                                                <img alt="Pic" src="assets/media/avatars/300-5.jpg" />
+                                                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-5.jpg') }}" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -714,7 +714,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px symbol-circle">
-                                                                <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-25.jpg') }}" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -770,7 +770,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px symbol-circle">
-                                                                <img alt="Pic" src="assets/media/avatars/300-9.jpg" />
+                                                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-9.jpg') }}" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -854,7 +854,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px symbol-circle">
-                                                                <img alt="Pic" src="assets/media/avatars/300-23.jpg" />
+                                                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-23.jpg') }}" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -910,7 +910,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px symbol-circle">
-                                                                <img alt="Pic" src="assets/media/avatars/300-12.jpg" />
+                                                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-12.jpg') }}" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -966,7 +966,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px symbol-circle">
-                                                                <img alt="Pic" src="assets/media/avatars/300-13.jpg" />
+                                                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-13.jpg') }}" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -1022,7 +1022,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px symbol-circle">
-                                                                <img alt="Pic" src="assets/media/avatars/300-21.jpg" />
+                                                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-21.jpg') }}" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -1289,7 +1289,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px">
-                                                                <img src="assets/media/svg/files/pdf.svg" alt="icon" />
+                                                                <img src="{{ getFileVersion('/assets/admin/media/svg/files/pdf.svg') }}" alt="icon" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -1316,7 +1316,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px">
-                                                                <img src="assets/media/svg/files/doc.svg" alt="icon" />
+                                                                <img src="{{ getFileVersion('/assets/admin/media/svg/files/doc.svg') }}" alt="icon" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -1343,7 +1343,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px">
-                                                                <img src="assets/media/svg/files/css.svg" alt="icon" />
+                                                                <img src="{{ getFileVersion('/assets/admin/media/svg/files/css.svg') }}" alt="icon" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -1370,7 +1370,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px">
-                                                                <img src="assets/media/svg/files/ai.svg" alt="icon" />
+                                                                <img src="{{ getFileVersion('/assets/admin/media/svg/files/ai.svg') }}" alt="icon" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -1397,7 +1397,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <!--begin::Avatar-->
                                                             <div class="symbol symbol-35px">
-                                                                <img src="assets/media/svg/files/tif.svg" alt="icon" />
+                                                                <img src="{{ getFileVersion('/assets/admin/media/svg/files/tif.svg') }}" alt="icon" />
                                                             </div>
                                                             <!--end::Avatar-->
                                                             <!--begin::Details-->
@@ -1479,7 +1479,7 @@
                                             <!--end::Actions-->
                                             <!--begin::Illustration-->
                                             <div class="text-center px-4">
-                                                <img src="assets/media/illustrations/sketchy-1/9.png" alt="" class="mww-100 mh-350px" />
+                                                <img src="{{ getFileVersion('/assets/admin/media/illustrations/sketchy-1/9.png') }}" alt="" class="mww-100 mh-350px" />
                                             </div>
                                             <!--end::Illustration-->
                                         </div>
@@ -1887,7 +1887,7 @@
                                         <!--end::Actions-->
                                         <!--begin::Illustration-->
                                         <div class="text-center px-4">
-                                            <img src="assets/media/illustrations/sketchy-1/20.png" alt="" class="mw-100 mh-300px" />
+                                            <img src="{{ getFileVersion('/assets/admin/media/illustrations/sketchy-1/20.png') }}" alt="" class="mw-100 mh-300px" />
                                         </div>
                                         <!--end::Illustration-->
                                     </div>

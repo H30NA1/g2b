@@ -13,14 +13,10 @@ return new class extends Migration
     {
         Schema::create('servers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('service_id')->nullable();
+            $table->string('name', 255)->nullable();
             $table->string('host', 255)->nullable();
             $table->string('port', 255)->nullable();
-            $table->string('username', 255)->nullable();
-            $table->string('password', 255)->nullable();
-            $table->string('plain_password', 255)->nullable();
-            $table->string('prikey', 255)->nullable();
-            $table->string('prikey_passphrase', 255)->nullable();
+            $table->boolean('is_active')->nullable();
             $table->softDeletes()->nullable();
             $table->timestamps();
         });

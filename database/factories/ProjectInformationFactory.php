@@ -17,14 +17,11 @@ class ProjectInformationFactory extends Factory
      */
     public function definition(): array
     {
-        $created = $this->faker->dateTimeBetween('-20 years');
         return [
             'project_id' => self::$currentProjectId++,
             'client' => $this->faker->name(),
             'cost' => rand(1000000, 99999999999),
             'description' => $this->faker->paragraph(),
-            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
-            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
         ];
     }
 }

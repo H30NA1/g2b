@@ -17,17 +17,11 @@ class ServerFactory extends Factory
      */
     public function definition(): array
     {
-        $password = $this->faker->password();
-        $created = $this->faker->dateTimeBetween('-20 years');
         return [
-            'service_id' => rand(1, 10),
+            'name' => $this->faker->name(),
             'host' => $this->faker->ipv4(),
             'port' => rand(0, 65535),
-            'username' => $this->faker->userName(),
-            'password' => Hash::make($password),
-            'plain_password' => $password,
-            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
-            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
+            'is_active' => rand(0, 1)
         ];
     }
 }

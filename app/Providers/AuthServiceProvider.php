@@ -3,12 +3,13 @@
 namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
+
 use App\Models\Project;
 use App\Models\Task;
 use App\Models\User;
-use App\Policies\Admin\ProjectPolicy;
-use App\Policies\Admin\TaskPolicy;
-use App\Policies\Admin\UserPolicy;
+use App\Policies\ProjectPolicy;
+use App\Policies\TaskPolicy;
+use App\Policies\UserPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Laravel\Passport\Passport;
 

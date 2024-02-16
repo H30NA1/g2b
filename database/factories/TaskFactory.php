@@ -17,16 +17,13 @@ class TaskFactory extends Factory
      */
     public function definition(): array
     {
-        $created = $this->faker->dateTimeBetween('-20 years');
         return [
-            'project_id' => rand(1, 200),
+            'project_id' => rand(1, 50),
             'name' => $this->faker->name(),
             'description' => $this->faker->paragraph(),
             'priority' => $this->faker->randomElement(['low', 'medium', 'high', 'urgent']),
-            'status' => rand(0, 5),
+            'status' => $this->faker->randomElement(['open', 'progressing', 'testing', 'resolved', 'confirmation', 'pending', 'closed']),
             'deadline' => $this->faker->dateTimeBetween('-20 years'),
-            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
-            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
         ];
     }
 }

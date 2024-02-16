@@ -15,9 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('logo', 255)->nullable();
             $table->string('name', 255)->nullable();
-            $table->string('username', 255)->nullable();
-            $table->string('password', 255)->nullable();
-            $table->string('plain_password', 255)->nullable();
+            $table->text('description')->nullable();
+            $table->boolean('is_active')->nullable();
             $table->softDeletes()->nullable();
             $table->timestamps();
         });

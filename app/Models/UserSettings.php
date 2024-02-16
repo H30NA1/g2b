@@ -27,8 +27,7 @@ class UserSettings extends Model
         'plain_password',
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+    
 
     public function user()
     {

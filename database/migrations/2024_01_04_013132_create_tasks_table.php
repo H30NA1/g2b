@@ -16,11 +16,12 @@ return new class extends Migration
             $table->unsignedBigInteger('project_id')->nullable();
             $table->string('name', 255)->nullable();
             $table->longText('description')->nullable();
-            $table->string('priority', 255)->nullable();
-            $table->string('status', 255)->nullable();
+            $table->enum('priority', ['low', 'medium', 'high', 'urgent']);
+            $table->enum('status', ['open', 'progressing', 'testing', 'resolved', 'confirmation', 'pending', 'closed']);
             $table->dateTime('deadline')->nullable();
             $table->softDeletes()->nullable();
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 

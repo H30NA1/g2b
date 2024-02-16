@@ -19,30 +19,39 @@ class Service extends Model
     protected $fillable = [
         'logo',
         'name',
-        'username',
-        'password',
-        'plain_password'
+        'description',
+        'is_active'
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+    public function associates()
+    {
+        return $this->hasMany(ServiceAssociate::class);
+    }
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    // protected $hidden = [
-    //     'password',
-    //     'remember_token',
-    // ];
+    public function projects()
+    {
+        return $this->hasMany(ServiceAssociate::class, 'service_id')->where('type', 'project');
+    }
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'password' => 'hashed',
-    ];
+    public function account()
+    {
+        return $this->hasOne(ServiceAccount::class, 'service_id');
+    }
+
+    public function servers()
+    {
+        return $this->hasMany(ServiceAssociate::class, 'service_id')->where('type', 'server');
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($service) {
+            $service->associates()->delete();
+            $service->projects()->delete();
+            $service->account()->delete();
+            $service->servers()->delete();
+        });
+    }
 }

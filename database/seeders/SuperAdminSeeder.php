@@ -17,8 +17,8 @@ class SuperAdminSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'username' => 'hieu',
-            'email' => 'harroncrypto@gmail.com',
+            'username' => 'admin',
+            'email' => 'adnmin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123456789'),
             'plain_password' => '123456789',
@@ -30,9 +30,8 @@ class SuperAdminSeeder extends Seeder
         UserProfessional::create([
             'user_id' => 1,
             'working_experiences' => rand(1, 20),
-            'job_title' => 'Hieu Super Admin',
-            'company_address' => '3/2 Street',
-            'company_tel' => '01234567891',
+            'specialty' => 'Super Admin',
+            'skills' => json_encode(['PHP', 'HTML', 'REACT', 'CSS', 'JAVASCRIPT']),
             'start_working_at' => Carbon::now(),
             'end_working_at' => null,
             'created_at' => now(),
@@ -43,13 +42,13 @@ class SuperAdminSeeder extends Seeder
             'user_id' => 1,
             'birthday' => Carbon::now(),
             'sex' => 'male',
-            'first_name' => 'Lee',
-            'last_name' => 'Harron',
-            'nationality' => 'JAPAN',
-            'post_code' => '1000000',
+            'first_name' => 'Super',
+            'last_name' => 'Admin',
+            'nationality' => 'Vietnam',
+            'post_code' => '70000000',
             'address' => '3/2 Street',
             'tel' => '01234567891',
-            'description' => 'G2B Group',
+            'description' => 'Super Admin',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -64,5 +63,36 @@ class SuperAdminSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        UserRole::create([
+            'user_id' => 1,
+            'permission' => json_encode($this->preparePermission(getRoutes())),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+    }
+
+    private function preparePermission($routes)
+    {
+        $permission = [];
+
+        foreach ($routes as $route) {
+            $name = ucwords(str_replace('.', ' ', $route));
+            $permission[] = [
+                'name' => $name,
+                'route' => $route,
+                'can_access' => 1,
+                'method' => [
+                    'GET' => 1,
+                    'POST' => 1,
+                    'PUT' => 1,
+                    'DELETE' => 1,
+                    'HEAD' => 1,
+                    'OPTIONS' => 1,
+                ]
+            ];
+        }
+
+        return $permission;
     }
 }

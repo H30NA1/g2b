@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ProfileController;
@@ -25,16 +26,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::match(['GET', 'POST'], "/admin/login", [AuthController::class, "index"])->name('admin.login');
+Route::match(['GET', 'POST'], "/admin/forgot", [AuthController::class, "forgot"])->name('admin.forgot');
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get("/", [HomeController::class, "index"])->name('index');
     Route::prefix('pages')->name('pages.')->group(function () {
         Route::prefix('users')->name('users.')->group(function () {
-            Route::get("/", [UserController::class, "index"])->name('index');
-            Route::get("/campaigns", [UserController::class, "campaigns"])->name('campaigns');
-            Route::get("/documents", [UserController::class, "documents"])->name('documents');
-            Route::get("/followers", [UserController::class, "followers"])->name('followers');
-            Route::get("/overview", [UserController::class, "overview"])->name('overview');
-            Route::get("/projects", [UserController::class, "projects"])->name('projects');
+            Route::post("/store", [UserController::class, "store"])->name('store');
+            Route::get("/{id?}", [UserController::class, "index"])->name('index');
+            Route::post("/update/{id?}", [UserController::class, "update"])->name('update');
+            Route::post("/delete/{id?}", [UserController::class, "delete"])->name('delete');
+            Route::get("/documents/{id?}", [UserController::class, "documents"])->name('documents');
+            Route::get("/overview/{id?}", [UserController::class, "overview"])->name('overview');
+            Route::get("/projects/{id?}", [UserController::class, "projects"])->name('projects');
         });
         Route::prefix('projects')->name('projects.')->group(function () {
             Route::get("/", [ProjectController::class, "index"])->name('index');

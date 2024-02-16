@@ -22,7 +22,7 @@
                         <!--begin::Title-->
                         <div class="card-title d-flex flex-column">
                             <!--begin::Amount-->
-                            <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">69</span>
+                            <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">{{ $projects->count() }}</span>
                             <!--end::Amount-->
                             <!--begin::Subtitle-->
                             <span class="text-white opacity-50 pt-1 fw-semibold fs-6">Active Projects</span>
@@ -71,27 +71,20 @@
                         <!--end::Title-->
                         <!--begin::Users group-->
                         <div class="symbol-group symbol-hover flex-nowrap">
-                            <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Alan Warden">
-                                <span class="symbol-label bg-warning text-inverse-warning fw-bold">A</span>
+                            @foreach ($users->take(5) as $user)
+                            <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="{{ $user->username     }}">
+                                @if (isset($user->profile->avatar))
+                                <img alt="Pic" src="{{ $user->profile->avatar ?? getFileVersion('/assets/admin/media/avatars/300-11.jpg') }}" />
+                                @else
+                                <span class="symbol-label bg-warning text-inverse-warning fw-bold">{{ ucfirst(mb_substr($user->username, 0, 1)) }}</span>
+                                @endif
                             </div>
-                            <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Michael Eberon">
-                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-11.jpg') }}" />
-                            </div>
-                            <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Susan Redwood">
-                                <span class="symbol-label bg-primary text-inverse-primary fw-bold">S</span>
-                            </div>
-                            <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Melody Macy">
-                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-2.jpg') }}" />
-                            </div>
-                            <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Perry Matthew">
-                                <span class="symbol-label bg-danger text-inverse-danger fw-bold">P</span>
-                            </div>
-                            <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Barry Walter">
-                                <img alt="Pic" src="{{ getFileVersion('/assets/admin/media/avatars/300-12.jpg') }}" />
-                            </div>
+                            @endforeach
+                            @if ($users->skip(5)->count() > 1)
                             <a href="#" class="symbol symbol-35px symbol-circle" data-bs-toggle="modal" data-bs-target="#kt_modal_view_users">
-                                <span class="symbol-label bg-dark text-gray-300 fs-8 fw-bold">+42</span>
+                                <span class="symbol-label bg-dark text-gray-300 fs-8 fw-bold">+{{ $users->skip(5)->count() }}</span>
                             </a>
+                            @endif
                         </div>
                         <!--end::Users group-->
                     </div>
@@ -114,7 +107,10 @@
                                 <span class="fs-4 fw-semibold text-gray-500 me-1 align-self-start">$</span>
                                 <!--end::Currency-->
                                 <!--begin::Amount-->
-                                <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">69,700</span>
+                                @php
+                                    $totalCost = App\Models\ProjectInformation::totalCost();
+                                @endphp
+                                <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">{{ $totalCost }}</span>
                                 <!--end::Amount-->
                                 <!--begin::Badge-->
                                 <span class="badge badge-light-success fs-base">
@@ -123,7 +119,7 @@
                             </div>
                             <!--end::Info-->
                             <!--begin::Subtitle-->
-                            <span class="text-gray-500 pt-1 fw-semibold fs-6">Projects Earnings in April</span>
+                            <span class="text-gray-500 pt-1 fw-semibold fs-6">Projects Earnings in {{ now()->format('F') }}</span>
                             <!--end::Subtitle-->
                         </div>
                         <!--end::Title-->
@@ -138,32 +134,24 @@
                         <!--end::Chart-->
                         <!--begin::Labels-->
                         <div class="d-flex flex-column content-justify-center flex-row-fluid">
+                            @php
+                                $topAndOtherProjects = App\Models\ProjectInformation::getTopAndOthers(); 
+                            @endphp
+                            @foreach ($topAndOtherProjects['top'] as $key => $topProject)
                             <!--begin::Label-->
                             <div class="d-flex fw-semibold align-items-center">
                                 <!--begin::Bullet-->
-                                <div class="bullet w-8px h-3px rounded-2 bg-success me-3"></div>
+                                <div class="bullet w-8px h-3px rounded-2 bg-{{ $key == 0 ? 'success' : 'primary' }} me-3"></div>
                                 <!--end::Bullet-->
                                 <!--begin::Label-->
-                                <div class="text-gray-500 flex-grow-1 me-4">Leaf CRM</div>
+                                <div class="text-gray-500 flex-grow-1 me-4">{{ $topProject->project->name }}</div>
                                 <!--end::Label-->
                                 <!--begin::Stats-->
-                                <div class="fw-bolder text-gray-700 text-xxl-end">$7,660</div>
+                                <div class="fw-bolder text-gray-700 text-xxl-end">${{ $topProject->cost }}</div>
                                 <!--end::Stats-->
                             </div>
                             <!--end::Label-->
-                            <!--begin::Label-->
-                            <div class="d-flex fw-semibold align-items-center my-3">
-                                <!--begin::Bullet-->
-                                <div class="bullet w-8px h-3px rounded-2 bg-primary me-3"></div>
-                                <!--end::Bullet-->
-                                <!--begin::Label-->
-                                <div class="text-gray-500 flex-grow-1 me-4">Mivy App</div>
-                                <!--end::Label-->
-                                <!--begin::Stats-->
-                                <div class="fw-bolder text-gray-700 text-xxl-end">$2,820</div>
-                                <!--end::Stats-->
-                            </div>
-                            <!--end::Label-->
+                            @endforeach
                             <!--begin::Label-->
                             <div class="d-flex fw-semibold align-items-center">
                                 <!--begin::Bullet-->
@@ -173,7 +161,7 @@
                                 <div class="text-gray-500 flex-grow-1 me-4">Others</div>
                                 <!--end::Label-->
                                 <!--begin::Stats-->
-                                <div class="fw-bolder text-gray-700 text-xxl-end">$45,257</div>
+                                <div class="fw-bolder text-gray-700 text-xxl-end">${{ $topAndOtherProjects['others'] }}</div>
                                 <!--end::Stats-->
                             </div>
                             <!--end::Label-->
@@ -270,9 +258,12 @@
                 <div class="card h-md-100">
                     <!--begin::Header-->
                     <div class="card-header border-0 pt-5">
+                        @php 
+                            $totalTask = (new App\Models\Task)->totalMonthlyResolvedTasks();
+                        @endphp
                         <h3 class="card-title align-items-start flex-column">
                             <span class="card-label fw-bold text-gray-900">What’s up Today</span>
-                            <span class="text-muted mt-1 fw-semibold fs-7">Total 424,567 deliveries</span>
+                            <span class="text-muted mt-1 fw-semibold fs-7">Total {{ $totalTask }} deliveries</span>
                         </h3>
                         <!--begin::Toolbar-->
                         <div class="card-toolbar">
@@ -285,116 +276,28 @@
                     <div class="card-body pt-7 px-0">
                         <!--begin::Nav-->
                         <ul class="nav nav-stretch nav-pills nav-pills-custom nav-pills-active-custom d-flex justify-content-between mb-8 px-5">
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_1">
-                                    <span class="fs-7 fw-semibold">Fr</span>
-                                    <span class="fs-6 fw-bold">20</span>
+                            @php
+                            $today = now();
+
+                            $days = [];
+                            for ($i=-5; $i<=5; $i++) {
+                                if($i == 0) {
+                                    $days[] = ['date' => $today->copy(), 'label' => $today->format('d')]; 
+                                } else {
+                                    $date = $today->copy()->addDays($i);
+                                    $days[] = ['date' => $date];
+                                }
+                            } 
+                            @endphp
+
+                            @foreach ($days as $index => $day)
+                            <li>
+                                <a href="#kt_timeline_widget_3_tab_content_{{ $index }}">
+                                <span>{{ $day['date']->format('D') }}</span>
+                                <span>{{ $day['label'] ?? $day['date']->format('d') }}</span>
                                 </a>
-                                <!--end::Date-->
                             </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_2">
-                                    <span class="fs-7 fw-semibold">Sa</span>
-                                    <span class="fs-6 fw-bold">21</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_3">
-                                    <span class="fs-7 fw-semibold">Su</span>
-                                    <span class="fs-6 fw-bold">22</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger active" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_4">
-                                    <span class="fs-7 fw-semibold">Tu</span>
-                                    <span class="fs-6 fw-bold">23</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_5">
-                                    <span class="fs-7 fw-semibold">Tu</span>
-                                    <span class="fs-6 fw-bold">24</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_6">
-                                    <span class="fs-7 fw-semibold">We</span>
-                                    <span class="fs-6 fw-bold">25</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_7">
-                                    <span class="fs-7 fw-semibold">Th</span>
-                                    <span class="fs-6 fw-bold">26</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_8">
-                                    <span class="fs-7 fw-semibold">Fri</span>
-                                    <span class="fs-6 fw-bold">27</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_9">
-                                    <span class="fs-7 fw-semibold">Sa</span>
-                                    <span class="fs-6 fw-bold">28</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_10">
-                                    <span class="fs-7 fw-semibold">Su</span>
-                                    <span class="fs-6 fw-bold">29</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item p-0 ms-0">
-                                <!--begin::Date-->
-                                <a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px py-4 px-3 btn-active-danger" data-bs-toggle="tab" href="#kt_timeline_widget_3_tab_content_11">
-                                    <span class="fs-7 fw-semibold">Mo</span>
-                                    <span class="fs-6 fw-bold">30</span>
-                                </a>
-                                <!--end::Date-->
-                            </li>
-                            <!--end::Nav item-->
+                            @endforeach
                         </ul>
                         <!--end::Nav-->
                         <!--begin::Tab Content (ishlamayabdi)-->
@@ -426,6 +329,7 @@
                                     </div>
                                     <!--end::Info-->
                                     <!--begin::Action-->
+                                    
                                     <a href="#" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#kt_modal_create_project">View</a>
                                     <!--end::Action-->
                                 </div>
@@ -3210,20 +3114,23 @@
                                 <!--end::Table head-->
                                 <!--begin::Table body-->
                                 <tbody>
+                                    @foreach ($projects as $project)
                                     <tr>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="symbol symbol-50px me-3">
-                                                    <img src="" class="" alt="" />
+                                                    @if(isset($project->logo))
+                                                    <img src="{{ $project->logo }}" class="" alt="{{ $project->name }}" />
+                                                    @endif
                                                 </div>
                                                 <div class="d-flex justify-content-start flex-column">
-                                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Mivy App</a>
-                                                    <span class="text-gray-500 fw-semibold d-block fs-7">Jane Cooper</span>
+                                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">{{ $project->name }}</a>
+                                                    <span class="text-gray-500 fw-semibold d-block fs-7">{{ $project->information->client }}</span>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="text-end pe-0">
-                                            <span class="text-gray-600 fw-bold fs-6">$32,400</span>
+                                            <span class="text-gray-600 fw-bold fs-6">{{ $project->information->cost }} VND</span>
                                         </td>
                                         <td class="text-end pe-0">
                                             <!--begin::Label-->
@@ -3232,7 +3139,15 @@
                                             <!--end::Label-->
                                         </td>
                                         <td class="text-end pe-12">
+                                            @if (isset($project->status) && $project->status == 'in_progress')
                                             <span class="badge py-3 px-4 fs-7 badge-light-primary">In Process</span>
+                                            @elseif (isset($project->status) && $project->status == 'pending')
+                                            <span class="badge py-3 px-4 fs-7 badge-light-warning">Pending</span>
+                                            @elseif (isset($project->status) && $project->status == 'completed')
+                                            <span class="badge py-3 px-4 fs-7 badge-light-success">Completed</span>
+                                            @else
+                                            <span class="badge py-3 px-4 fs-7 badge-light-danger">Not started</span>
+                                            @endif
                                         </td>
                                         <td class="text-end pe-0">
                                             <div id="kt_table_widget_14_chart_1" class="h-50px mt-n8 pe-7" data-kt-chart-color="success"></div>
@@ -3243,6 +3158,7 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                                 <!--end::Table body-->
                             </table>

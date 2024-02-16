@@ -18,15 +18,10 @@ class ServiceFactory extends Factory
      */
     public function definition(): array
     {
-        $password = $this->faker->password();
-        $created = $this->faker->dateTimeBetween('-20 years');
         return [
+            'logo' => $this->faker->imageUrl(),
             'name' => $this->faker->name(),
-            'username' => $this->faker->userName(),
-            'password' => Hash::make($password),
-            'plain_password' => $password,
-            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
-            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
+            'description' => $this->faker->paragraph(),
         ];
     }
 }

@@ -23,6 +23,12 @@ return new class extends Migration
             $table->string('address', 255)->nullable();
             $table->string('tel', 255)->nullable();
             $table->string('avatar', 255)->nullable();
+            $table->string('background_image', 255)->nullable();
+            $table->string('x_url', 255)->nullable();
+            $table->string('facebook_url', 255)->nullable();
+            $table->string('instagram_url', 255)->nullable();
+            $table->string('tiktok_url', 255)->nullable();
+            $table->string('youtube_url', 255)->nullable();
             $table->text('description')->nullable();
             $table->softDeletes()->nullable();
             $table->timestamps();

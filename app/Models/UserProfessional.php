@@ -20,16 +20,13 @@ class UserProfessional extends Model
     protected $fillable = [
         'user_id',
         'working_experiences',
-        'job_title',
-        'company_logo',
-        'company_address',
-        'company_tel',
+        'specialty',
+        'skills',
         'start_working_at',
         'end_working_at',
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+    
 
     public function user()
     {

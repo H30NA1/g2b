@@ -19,14 +19,20 @@ class ProjectFactory extends Factory
     {
         $starting = $this->faker->dateTimeBetween('-20 years');
         $finishing = $this->faker->dateTimeBetween($starting);
-        $created = $this->faker->dateTimeBetween('-20 years');
+        $status = ['in_progress','pending','completed'];
+        $priority = ['low','medium','high'];
+        $visibility = ['public','private'];
         return [
+            'logo' => $this->faker->imageUrl(),
             'name' => $this->faker->name(), // Assign a unique random user ID
+            'status' => $this->faker->randomElement($status),
+            'priority' => $this->faker->randomElement($priority),
+            'visibility' => $this->faker->randomElement($visibility),
+            'description' => $this->faker->text(),
+            'summary' => $this->faker->text(),
             'began_at' => $starting,
             'finished_at' => $finishing,
-            'deadline_at' => $this->faker->dateTimeBetween($starting, $finishing),
-            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
-            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
+            'deadline_at' => $this->faker->dateTimeBetween($starting, $finishing)
         ];
     }
 }

@@ -17,13 +17,10 @@ class ProjectUserFactory extends Factory
      */
     public function definition(): array
     {
-        $created = $this->faker->dateTimeBetween('-20 years');
         return [
             'project_id' => rand(1, 200),
             'user_id' =>  rand(1, 200), // Assign a unique random user ID
-            'permission' => $this->faker->randomElement(['read', 'write', 'create', 'admin']),
-            'created_at' => formatDate($created, 'Y-m-d H:i:s'),
-            'updated_at' => formatDate($this->faker->dateTimeBetween($created), 'Y-m-d H:i:s')
+            'permission' => $this->faker->randomElement(['read', 'write', 'create', 'admin'])
         ];
     }
 }

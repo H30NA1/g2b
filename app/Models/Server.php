@@ -17,18 +17,13 @@ class Server extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'service_id',
+        'name',
         'host',
         'port',
-        'username',
-        'password',
-        'plain_password',
-        'prikey',
-        'prikey_passphrase'
+        'is_active'
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+    
 
     /**
      * The attributes that should be hidden for serialization.
@@ -49,13 +44,13 @@ class Server extends Model
         'password' => 'hashed',
     ];
 
-    public function service()
+    public function associateService()
     {
-        return $this->belongsTo(Service::class);
+        return $this->hasOne(ServiceAssociate::class, 'associate_id')->where('type', 'server');
     }
 
     public function projects()
     {
-        return $this->hasMany(ProjectSetting::class, 'server_id', 'id');
+        return $this->hasMany(ServerProject::class, 'server_id', 'id');
     }
 }

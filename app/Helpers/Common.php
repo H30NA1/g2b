@@ -86,3 +86,41 @@ function getUserStatus($status)
     }
     return $data;
 }
+
+/**
+ * Get all routes in the application excluding specific route names.
+ *
+ * @return array<string>
+ */
+function getRoutes(): array
+{
+    $excludedRoutes = [
+        'passport',
+        'sanctum',
+        'ignition',
+        'null',
+        'laravel-countries'
+    ];
+
+    return array_values(collect(app('router')->getRoutes())
+        ->reject(function ($route) use ($excludedRoutes) {
+            $routeName = $route->getName();
+            return $routeName && collect($excludedRoutes)->contains(function ($excludedRoute) use ($routeName) {
+                return str_starts_with($routeName, $excludedRoute);
+            });
+        })
+        ->map(function ($route) {
+            return $route->getName();
+        })
+        ->filter()
+        ->toArray());
+}
+
+function calculateProjectPercent($project)
+{
+    $tasks = $project->remainingTasks->count();
+    $completeTasks = $project->tasks->where('status', 'resolved')->count();
+    if($tasks > 0)
+        return round((($completeTasks / $tasks) * 100));
+    return 0;
+}

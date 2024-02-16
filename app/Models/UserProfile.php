@@ -23,16 +23,19 @@ class UserProfile extends Model
         'sex',
         'first_name',
         'last_name',
-        'nationality',
         'post_code',
+        'nationality',
+        'country',
+        'state',
+        'city',
         'address',
         'tel',
         'avatar',
-        'description'
+        'background_image',
+        'description',
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+    
 
     public function user()
     {

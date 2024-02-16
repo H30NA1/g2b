@@ -44,8 +44,7 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    /** Remove this when uploading to Production */
-    public $timestamps = false;
+    
 
     public function userToken()
     {
@@ -70,6 +69,31 @@ class User extends Authenticatable
     public function tasks()
     {
         return $this->hasMany(UserTask::class);
+    }
+
+    public function projects()
+    {
+        return $this->hasMany(ProjectUser::class);
+    }
+
+    public function progressingTasks()
+    {
+        return $this->hasMany(UserTask::class)->where('progress', 'progressing');
+    }
+
+    public function pendingTasks()
+    {
+        return $this->hasMany(UserTask::class)->where('progress', 'pending');
+    }
+
+    public function confirmingTasks()
+    {
+        return $this->hasMany(UserTask::class)->where('progress', 'confirming');
+    }
+
+    public function finishedTasks()
+    {
+        return $this->hasMany(UserTask::class)->where('progress', 'finished');
     }
 
     public function role()
