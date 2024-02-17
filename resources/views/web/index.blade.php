@@ -12,7 +12,7 @@
         <div class="center-text">
             <div class="hero-text-holder">
                 <div style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="animate-on-load-1st">
-                    <div class="hero-text"><span class="gradient-text">Tailormade</span> to Manage all your Data registers</div>
+                    <div class="hero-text"><span class="gradient-text">G2Bytes</span> to Manage all your Data registers</div>
                 </div>
                 <div style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="animate-on-load-2st">
                     <div class="paragraph-hero">
@@ -30,11 +30,14 @@
             <div class="app-holder">
                 <div class="app-container" style="will-change: transform; transform: translate3d(0px, -15%, 0px) scale3d(1, 1, 1) rotateX(20deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                     <div class="app-main-photo">
-                        <img src="{{ getFileVersion('/assets/web/images/dashboard.png') }}" loading="lazy" sizes="(max-width: 479px) 89vw, (max-width: 767px) 88vw, (max-width: 991px) 75vw, (max-width: 1439px) 76vw, 1035.1953125px" alt="" class="app-photo"></div>
+                        <img src="{{ getFileVersion('/assets/web/images/dashboard.png') }}" loading="lazy" sizes="(max-width: 479px) 89vw, (max-width: 767px) 88vw, (max-width: 991px) 75vw, (max-width: 1439px) 76vw, 1035.1953125px" alt="" class="app-photo">
+                    </div>
                     <div class="app-info-01" style="will-change: transform, opacity; transform: translate3d(0px, 30%, 10px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0;">
-                    <img src="{{ getFileVersion('/assets/web/images/recent_order.png') }}" loading="lazy" sizes="(max-width: 479px) 100px, (max-width: 991px) 150px, 250px"  alt="" class="_100width"></div>
+                        <img src="{{ getFileVersion('/assets/web/images/recent_order.png') }}" loading="lazy" sizes="(max-width: 479px) 100px, (max-width: 991px) 150px, 250px" alt="" class="_100width">
+                    </div>
                     <div class="app-info-02" style="will-change: transform, opacity; transform: translate3d(0px, 30%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0;">
-                    <img src="{{ getFileVersion('/assets/web/images/discounted_sale.png') }}" loading="lazy" sizes="(max-width: 767px) 180px, (max-width: 991px) 280px, 506px" alt="" class="_100width"></div>
+                        <img src="{{ getFileVersion('/assets/web/images/discounted_sale.png') }}" loading="lazy" sizes="(max-width: 767px) 180px, (max-width: 991px) 280px, 506px" alt="" class="_100width">
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,101 +180,7 @@
         </div>
     </div>
 </div>
-<div class="section">
-    <div class="container _4em">
-        <div class="grid-6-col">
-            <div id="w-node-_9acb6e39-e985-ebce-2ef5-19ba02513fee-aca8ea2d" class="title-container">
-                <div class="fade-in-move-on-scroll" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                    <h1>Access <span class="gradient-text">powerful</span> and helpful features.</h1>
-                </div>
-                <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                    <p class="paragraph-white">Discover and utilize our platform's powerful features for enhanced productivity and success.</p>
-                </div>
-                <div class="top-margin-l">
-                    <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><a href="#contactUs" class="button arrow w-button">Request a demo</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="feature-grid-holder">
-            <div class="w-layout-grid feature-cards">
-                <div id="w-node-_80744953-1164-62c7-834a-49586763b7b6-aca8ea2d" class="feature-cards-container">
-                    <div class="feature-card-paddings">
-                        <div class="feature-card-big-app-holder">
-                            <div class="relative">
-                                <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                    <h4 class="no-margins">Design with real native elements</h4>
-                                </div>
-                                <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                    <p>Create authentic user experiences with real native design elements.</p>
-                                </div>
-                            </div>
-                            <div class="app-gardient-top"></div>
-                            <div class="full-app-image-container"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc59c9b64ae66f68faa904_Feature%20Grid%20Image%2001%20(1).jpg" loading="lazy" alt="" class="full-app-image" style="opacity: 0;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="w-node-_5db75681-33d3-b0fb-2e77-0a4c1ef35b70-aca8ea2d" class="feature-cards-container _02">
-                    <div class="feature-card-paddings">
-                        <div class="feature-card-big-app-holder _02">
-                            <div class="relative">
-                                <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                    <h4 class="no-margins">Real Time Data</h4>
-                                </div>
-                                <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                    <p>Access and analyze data in real time for immediate insights and informed decision-making.</p>
-                                </div>
-                            </div>
-                            <div class="app-gardient-bot"></div>
-                            <div class="app-gardient-top"></div>
-                            <div class="phone-container" style="opacity: 0;">
-                                <div class="phone-image-container"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5afca6c2178c70737e28_Apple%20iPhone%2012%20Pro%20Silver.png" loading="lazy" sizes="(max-width: 479px) 86vw, (max-width: 767px) 65vw, (max-width: 991px) 63vw, 282px" srcset="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5afca6c2178c70737e28_Apple%20iPhone%2012%20Pro%20Silver-p-500.png 500w, https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5afca6c2178c70737e28_Apple%20iPhone%2012%20Pro%20Silver-p-800.png 800w, https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5afca6c2178c70737e28_Apple%20iPhone%2012%20Pro%20Silver.png 1024w" alt="" class="iphone-image"></div>
-                                <div class="iphone-screen-image-container"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5ba6a0bf234a3fd242cc_Iphone%20App%20Image.jpg" loading="lazy" sizes="(max-width: 479px) 80vw, (max-width: 991px) 61vw, 254px" srcset="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5ba6a0bf234a3fd242cc_Iphone%20App%20Image-p-500.jpeg 500w, https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5ba6a0bf234a3fd242cc_Iphone%20App%20Image.jpg 704w" alt="" class="iphone-screen-image"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-layout-grid feature-cards">
-                <div id="w-node-_6eda20d0-05fc-a501-ad3d-6ae5e36c303e-aca8ea2d" class="feature-cards-container _02">
-                    <div class="feature-card-paddings">
-                        <div class="feature-card-big-app-holder _02">
-                            <div class="relative">
-                                <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                    <h4 class="no-margins">Quick overview</h4>
-                                </div>
-                                <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                    <p>Get a rapid and concise overview of key information for swift decision-making.</p>
-                                </div>
-                            </div>
-                            <div class="app-gardient-bot"></div>
-                            <div class="app-gardient-top"></div>
-                            <div class="phone-container _02" style="opacity: 0;">
-                                <div class="phone-image-container"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5afca6c2178c70737e28_Apple%20iPhone%2012%20Pro%20Silver.png" loading="lazy" sizes="(max-width: 991px) 100vw, 394.796875px" srcset="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5afca6c2178c70737e28_Apple%20iPhone%2012%20Pro%20Silver-p-500.png 500w, https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5afca6c2178c70737e28_Apple%20iPhone%2012%20Pro%20Silver-p-800.png 800w, https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5afca6c2178c70737e28_Apple%20iPhone%2012%20Pro%20Silver.png 1024w" alt="" class="iphone-image"></div>
-                                <div class="iphone-screen-image-container"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5ba6a0bf234a3fd242cc_Iphone%20App%20Image.jpg" loading="lazy" sizes="(max-width: 479px) 97vw, (max-width: 991px) 100vw, 366.796875px" srcset="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5ba6a0bf234a3fd242cc_Iphone%20App%20Image-p-500.jpeg 500w, https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5ba6a0bf234a3fd242cc_Iphone%20App%20Image.jpg 704w" alt="" class="iphone-screen-image"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="w-node-_6eda20d0-05fc-a501-ad3d-6ae5e36c3031-aca8ea2d" class="feature-cards-container">
-                    <div class="feature-card-paddings">
-                        <div class="feature-card-big-app-holder">
-                            <div class="relative">
-                                <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                    <h4 class="no-margins">Don't miss anything important</h4>
-                                </div>
-                                <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                    <p>Stay informed and never overlook critical details with our comprehensive solution.</p>
-                                </div>
-                            </div>
-                            <div class="full-app-image-container _02"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc5d770ac88d5925a5d9a7_Feature%20Grid%20Image%2002.svg" loading="lazy" alt="" class="full-app-image" style="opacity: 0;"></div>
-                            <div class="app-gardient-bot"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('web.includes.section.features')
 <div id="Pricing" class="section">
     <div class="container _6em">
         <div class="center-text" id="contactUs">
@@ -305,141 +214,7 @@
         </div>
     </div>
 </div>
-<div class="section">
-    <div class="container _6em">
-        <div class="center-text">
-            <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                <h1>Connect to what you actually need</h1>
-            </div>
-        </div>
-        <div class="connect-section-container">
-            <div class="w-layout-grid connect-grid-container">
-                <div id="w-node-d008f252-532e-9d09-d9c2-0bb50db72bc3-aca8ea2d" class="company-avatar-container">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _01"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc6766fe7b1f6e89ab74d7_Comapny%20Avatar.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-_6b36a120-b831-13db-9104-e521eb83e706-aca8ea2d" class="company-avatar-container">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _02"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc68db99f57152ed8120de_Company%20Avatar%2005.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-_8689b8b6-e83a-0577-b4e9-43bb27f11736-aca8ea2d" class="company-avatar-container bot">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _03"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc68dc83fd9c4685ec8d12_Company%20Avatar%2006.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-_4f1d5286-8618-b7c4-8f9b-154d93084005-aca8ea2d" class="company-avatar-container up">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _04"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc68dc001cf66491f0cbda_Company%20Avatar%2001.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-_52b3093c-671c-ec38-a078-3b81fa20f408-aca8ea2d" class="company-avatar-container">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _05"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc68dce02d27863c0cb675_Company%20Avatar%2007.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-e3acfc95-87cd-c92c-4015-0873834ac1d1-aca8ea2d" class="company-avatar-container random">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _06"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc68dc7d7b7c2415942b54_Company%20Avatar%2004.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-ab6fd3a9-0145-6a3e-94fc-91330bb0f431-aca8ea2d" class="company-avatar-container random">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _07"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc68dc20250608380f0d9e_Company%20Avatar%2003.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-_2bb55183-bd7a-9bae-a4c9-ae37c11720c5-aca8ea2d" class="company-avatar-container bot">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _08"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62bc68dc3fbee74331ea69cc_Company%20Avatar%2008.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-_05e15299-d605-b9eb-85f8-c9e4e84a86e4-aca8ea2d" class="company-avatar-container bot">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _09"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb648357a202689d2688a_Company%20Avatar%2015.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-a9b6046f-debb-78ae-3ea8-b3631ff554a0-aca8ea2d" class="company-avatar-container up hide">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _10"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb64396e2ae80e40c771e_Company%20Avatar%2018.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-layout-grid connect-grid-container">
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff2dd-aca8ea2d" class="company-avatar-container">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _11"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb643730d345dd715bef5_Company%20Avatar%2017.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff2e2-aca8ea2d" class="company-avatar-container bot">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _12"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb64396e2ae80e40c771e_Company%20Avatar%2018.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff2e7-aca8ea2d" class="company-avatar-container bot">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _13"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb6439c2088ac19530a35_Company%20Avatar%2019.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff2ec-aca8ea2d" class="company-avatar-container up">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _14"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb6443a756e338e6987a3_Company%20Avatar%2020.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff2f1-aca8ea2d" class="company-avatar-container">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _15"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb645aea71ce79203da80_Company%20Avatar%2009.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff2f6-aca8ea2d" class="company-avatar-container">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _16"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb6452b9c80cf9068d091_Company%20Avatar%2010.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff2fb-aca8ea2d" class="company-avatar-container random">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _17"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb645870dba6e8b4843eb_Company%20Avatar%2011.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff300-aca8ea2d" class="company-avatar-container">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _18"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb646a31203c301455ae4_Company%20Avatar%2012.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff305-aca8ea2d" class="company-avatar-container">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _19"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb647d17b91bc646d5203_Company%20Avatar%2014.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-                <div id="w-node-bf08120b-cc2a-e2f0-94fd-84a0476ff30a-aca8ea2d" class="company-avatar-container up hide">
-                    <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="company-avatar-circle _20"><img src="https://assets.website-files.com/62bc1260fe7b1f3d37a8ea01/62beb6477be4212229d8a9b4_Company%20Avatar%2013.svg" loading="lazy" alt="" class="company-avatar"></div>
-                    <div class="grey-circle-holder">
-                        <div class="gray-circle"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('web.includes.section.company-avatar')
 <div id="Help" class="section">
     <div class="container _4em">
         <div class="quick-access">
