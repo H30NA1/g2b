@@ -2,33 +2,74 @@
 
 namespace App\Services\Admin;
 
-use App\Repositories\Admin\AccessTokenRepository;
+use App\Mail\Auth\ForgotPasswordEmail;
+use App\Models\AccessToken;
+use App\Models\User;
+use App\Models\UserRequest;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Stevebauman\Location\Facades\Location;
+
 
 class TokenService
 {
-    protected $accessTokenRepository;
-
-    public function __construct(
-        AccessTokenRepository $accessTokenRepository
-    ) {
-        $this->accessTokenRepository = $accessTokenRepository;
+    public function __construct()
+    {
     }
 
     public function retrieveUserToken($user, $request)
     {
         $tokenData = $this->prepareTokenData($user, $request);
-        $token = $this->accessTokenRepository->retrieveUserToken($user->id);
-        
+        $token = AccessToken::where('user_id', $user->id)->first();
+
         if (isset($token)) {
-            $this->accessTokenRepository->updateUserToken($user->id, $tokenData);
+            AccessToken::where('user_id', $user->id)->update($tokenData);
             $token->refresh();
         } else {
-            $token = $this->accessTokenRepository->create($tokenData);
+            $token = AccessToken::create($tokenData);
         }
 
         return $token;
+    }
+
+    public function requestResetPassword($request)
+    {
+        $email = $request->get('email');
+        $user = User::where('email', $email)->first();
+        if (!isset($user)) {
+            abort(404, 'User Not Found');
+        }
+        
+        return true;
+    }
+
+    public function sendForgotPassword($request)
+    {
+        $email = $request->get('email');
+        $user = User::where('email', $email)->first();
+        if (!isset($user)) {
+            abort(404, 'User Not Found');
+        }
+        
+        $userRequest = UserRequest::where('user_id', $user->id)
+        ->where('destination', 'reset-page')
+        ->where('type', 'reset-account')
+        ->whereMonth('requested_at', now()->month)->first();
+
+        if (isset($userRequest) ) {
+            abort(403, 'You have send the email. PLease wait for admin and leader to response');
+        }
+        
+        UserRequest::create([
+            'user_id' => $user->id,
+            'title' => 'Request Reset Password',
+            'content' => 'User ' . $user->username . 'sent a reset password allowance!',
+            'destination' => 'reset-page',
+            'type' => 'reset-account',
+            'status' => 'pending',
+            'requested_at' => now(),
+        ]);
+        return true;
     }
 
     private function prepareTokenData($user, $request)
@@ -47,7 +88,7 @@ class TokenService
         ];
     }
 
-    private function getClientIP($request) 
+    private function getClientIP($request)
     {
         $clientIP = $request->ip();
 
@@ -67,14 +108,14 @@ class TokenService
             'HTTP_FORWARDED',
             'REMOTE_ADDR'
         ];
-    
+
         foreach ($proxies as $proxy) {
             if ($request->hasHeader($proxy)) {
                 $clientIP = $request->header($proxy);
                 break;
             }
         }
-    
+
         return $clientIP;
     }
 }

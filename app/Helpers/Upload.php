@@ -19,7 +19,7 @@ function uploadFunction(?UploadedFile $file, string $path, ?string $oldFile = nu
             Storage::delete($oldFile);
         }
 
-        $newPath = $file->storeAs($newPath, $name,'public');
+        $newPath = $file->storeAs($newPath, $name, 'public');
         return Storage::url($newPath);
     }
 

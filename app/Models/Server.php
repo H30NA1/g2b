@@ -17,40 +17,63 @@ class Server extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'service_id',
         'name',
-        'host',
+        'hostname',
         'port',
-        'is_active'
+        'location',
+        'status',
+        'purchase_date',
+        'warranty_expiry_date'
     ];
 
-    
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    // protected $hidden = [
-    //     'password',
-    //     'remember_token',
-    // ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'password' => 'hashed',
-    ];
-
-    public function associateService()
+    public function backups()
     {
-        return $this->hasOne(ServiceAssociate::class, 'associate_id')->where('type', 'server');
+        return $this->hasMany(ServerBackup::class, 'server_id');
+    }
+
+    public function hardware()
+    {
+        return $this->hasOne(ServerHardware::class, 'server_id');
+    }
+
+    public function software()
+    {
+        return $this->hasOne(ServerSoftware::class, 'server_id');
+    }
+
+    public function network()
+    {
+        return $this->hasOne(ServerNetwork::class, 'server_id');
+    }
+
+    public function security()
+    {
+        return $this->hasOne(ServerSecurity::class, 'server_id');
+    }
+
+    public function setting()
+    {
+        return $this->hasOne(ServerSetting::class, 'server_id');
     }
 
     public function projects()
     {
-        return $this->hasMany(ServerProject::class, 'server_id', 'id');
+        return $this->hasMany(ServerProject::class, 'server_id');
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($server) {
+            $server->projects()->delete();
+            $server->backups()->delete();
+            $server->hardware()->delete();
+            $server->software()->delete();
+            $server->network()->delete();
+            $server->security()->delete();
+            $server->setting()->delete();
+        });
     }
 }

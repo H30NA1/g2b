@@ -3,76 +3,94 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Users\StoreRequest;
+use App\Http\Requests\Users\UpdateRequest;
+use App\Models\User;
+use App\Services\Admin\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 use Throwable;
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
+    private $userService;
+
+    public function __construct(
+        UserService $userService
+    ) {
+        $this->userService = $userService;
     }
 
-    public function index($id = NULL)
+    public function index(Request $request)
     {
-        return view('admin.pages.users.index');
-    }
-
-    public function store()
-    {
+        $data = $request->all();
         try {
-            DB::beginTransaction();
-
-            DB::commit();
-            return redirect()->route('admin.pages.users.index')->with(['success' => 'User created successfully!']);
+            $employees = $this->userService->getUsers($data);
+            
+            return view('pages.employees.index', compact('employees'));
         } catch (Throwable $e) {
-            DB::rollBack();
             report($e);
-            return redirect()->back()->withInput()->withErrors($e, 'message');
+            return redirect()->route('web.employees.index')->withErrors($e->getMessage());
         }
     }
 
-    public function documents($id = NULL)
-    {
-        return view('admin.pages.users.documents.index');
-    }
-
-    public function update($id = NULL)
+    public function detail($id = NULL)
     {
         try {
-            DB::beginTransaction();
-
-            DB::commit();
-            return redirect()->route('admin.pages.users.index')->with(['success' => 'User Updated successfully!']);
+            $employee = null;
+            if (isset($id)) {
+                $employee = $this->userService->getUser($id);
+            }
+            
+            return view('pages.employees.detail', compact('employee'));
         } catch (Throwable $e) {
-            DB::rollBack();
             report($e);
-            return redirect()->back()->withInput()->withErrors($e, 'message');
+            return redirect()->route('web.employees.index')->withErrors($e->getMessage());
         }
     }
 
-    public function delete($id = NULL)
+    public function store(StoreRequest $request)
     {
+        $data = $request->all();
         try {
             DB::beginTransaction();
-
+            $this->userService->createUser($data);
             DB::commit();
-            return redirect()->route('admin.pages.users.index')->with(['success' => 'User Deleted successfully!']);
+            return redirect()->route('web.employees.index')->with(['message', 'Successfully Created', 'code' => 200]);
         } catch (Throwable $e) {
             DB::rollBack();
             report($e);
-            return redirect()->back()->withInput()->withErrors($e, 'message');
+            return redirect()->route('web.employees.index')->withErrors($e->getMessage());
         }
     }
 
-    public function overview($id = NULL)
+    public function update(UpdateRequest $request, $id)
     {
-        dd('in');
-        return view('admin.pages.users.overview.index');
+        $data = $request->all();
+        try {
+            DB::beginTransaction();
+            $this->userService->updateUser($id, $data);
+            DB::commit();
+            return redirect()->route('web.employees.detail', ['id' => $id])->with(['message', 'Successfully Updated', 'code' => 200]);
+        } catch (Throwable $e) {
+            DB::rollBack();
+            report($e);
+            return redirect()->route('web.employees.index')->withErrors($e->getMessage());
+        }
     }
 
-    public function projects($id = NULL)
+    public function destroy($id)
     {
-        return view('admin.pages.users.projects.index');
+        try {
+            DB::beginTransaction();
+            $this->userService->deleteUser($id);
+            DB::commit();
+            return redirect()->route('web.employees.index')->withStatus(trans('common.delete_successfully'));
+        } catch (Throwable $e) {
+            DB::rollBack();
+            report($e);
+            return redirect()->route('web.employees.index')->withErrors($e->getMessage());
+        }
     }
 }

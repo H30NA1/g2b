@@ -2,80 +2,176 @@
 
 namespace App\Services\Admin;
 
-use App\Repositories\Admin\PermissionRepository;
-use App\Repositories\Admin\UserRoleRepository;
-use Stevebauman\Location\Facades\Location;
+use App\Models\Permission;
+use App\Models\UserRole;
 
 class PermissionService
 {
-    protected $permissionRepository;
-    protected $userRoleRepository;
-
-    public function __construct(
-        PermissionRepository $permissionRepository,
-        UserRoleRepository $userRoleRepository
-    ) {
-        $this->permissionRepository = $permissionRepository;
-        $this->userRoleRepository = $userRoleRepository;
+    public function __construct()
+    {
     }
 
-    public function getAllPermissions()
+    public function getPermissions()
     {
-        $data = [];
-        $data['parents'] = $this->permissionRepository->all()->map(function($parent) {
-            $parent->permission = json_decode($parent->permission, true);
-            return $parent;
-        })->toArray();
-        $data['users'] = $this->userRoleRepository->all()->map(function($userRole) {
-            $userRole->user = $userRole->user;
-            $userRole->permission = json_decode($userRole->permission, true);
-            return $userRole;
-        })->toArray();
-
-        return $data;
+        $permissions = Permission::where('role', '!=', 'super_admin')->get();
+        return $permissions;
     }
 
-    public function getParentPermissions($id = NULL)
+    public function getPermission($id)
     {
-        if (isset($id)) {
-            $role = $this->permissionRepository->find($id);
+        $permission = Permission::findOrFail($id);
+        $permission['permission'] = $this->mappingRoles(json_decode($permission['permission'], true));
+        return $permission;
+    }
 
-            if (!isset($permission)) {
-                abort(404, 'Role Not Found');
+    public function updatePermissions($id, $roles)
+    {
+        $permission = [];
+
+        foreach ($roles as $key => $method) {
+            $name = ucwords(str_replace('.', ' ', $key));
+            $permission[] = [
+                'name' => $name,
+                'route' => $key,
+                'can_access' => 1,
+                'method' => $method
+            ];
+        }
+
+        Permission::where('id', $id)->latest()->update([
+            'permission' => json_encode($permission)
+        ]);
+
+        return true;
+    }
+
+    public function refreshPermissions($id, $option = NULL)
+    {
+        $permission = Permission::findOrFail($id);
+        $permissions = json_decode($permission['permission'], true);
+
+        $routes = getRoutes();
+        
+        if (isset($option['action']) && $option['action'] == 'reset') {
+            $permissions = $this->preparePermission($routes, $permission->role);
+        } else {
+            $permissions = $this->filterPermission($permissions, $routes);
+        }
+
+        $permission->update([
+            'permission' => $permissions
+        ]);
+        return true;
+    }
+
+    public function deletePermission($id)
+    {
+        $permission = Permission::findOrFail($id);
+        $permission->delete();
+
+        return true;
+    }
+
+    private function preparePermission($routes, $role)
+    {
+        $permission = [];
+        $extra = [];
+        if ($role == 'admin')
+        {
+            $extra = [
+                'can_access' => 1,
+                'method' => [
+                    'GET' => 1,
+                    'POST' => 1,
+                    'PUT' => 1,
+                    'DELETE' => 1,
+                    'HEAD' => 1,
+                    'OPTIONS' => 1,
+                ]
+                ];
+        } else {
+            $extra = [
+                'can_access' => 0,
+                'method' => [
+                    'GET' => 0,
+                    'POST' => 0,
+                    'PUT' => 0,
+                    'DELETE' => 0,
+                    'HEAD' => 0,
+                    'OPTIONS' => 0,
+                ]
+            ];
+        }
+        
+        foreach ($routes as $route)
+        {
+            $name = ucwords(str_replace('.', ' ', $route));
+            $permission[] = [
+                'name' => $name,
+                'route' => $route,
+            ] + $extra;
+        }
+
+        return $permission;
+    }
+
+    private function mappingRoles($permissions)
+    {
+        $groupedRoutes = [];
+        foreach ($permissions as $permission) {
+            // Extract the last word from the route name
+            $words = explode('.', $permission['route']);
+            $lastWord = end($words);
+
+            // Skip routes with no words
+            if (empty($lastWord)) {
+                continue;
             }
 
-            return $role->map(function($parent) {
-                $parent->permission = json_decode($parent->permission, true);
-                return $parent;
-            })->toArray();
-        } else {
-            return $this->permissionRepository->all()->map(function($parent) {
-                $parent->permission = json_decode($parent->permission, true);
-                return $parent;
-            })->toArray();
-        }
-    }
+            // Group based on the last word in the route
+            $groupLabel = ucfirst($lastWord) . ' Settings';
 
-    public function getUserPermissions($id = NULL)
-    {
-        if (isset($id)) {
-            $userRole = $this->userRoleRepository->find($id);
-            
-            if (!isset($userRole)) {
-                abort(404, 'user Role Not Found');
+            // Create the group if it doesn't exist
+            if (!isset($groupedRoutes[$groupLabel])) {
+                $groupedRoutes[$groupLabel] = [
+                    'label' => $groupLabel,
+                    'routes' => [],
+                ];
             }
 
-            return $userRole->map(function($role) {
-                $role->user = $role->user;
-                $role->permission = json_decode($role->permission, true);
-                return $role;
-            })->toArray();
-        } else {
-            return $this->userRoleRepository->all()->map(function($role) {
-                $role->user = $role->user;
-                $role->permission = json_decode($role->permission, true);
-                return $role;
-            })->toArray();
+            // Add the route to the corresponding group
+            $groupedRoutes[$groupLabel]['routes'][] = $permission;
         }
+
+        return array_values($groupedRoutes);
+    }
+
+    private function filterPermission($permissions, $routesList)
+    {
+        foreach ($routesList as $route) {
+            $name = ucwords(str_replace('.', ' ', $route));
+
+            $existingRole = array_filter($permissions, function ($role) use ($route) {
+                return $role['route'] === $route;
+            });
+
+            if (empty($existingRole)) {
+                $permissions[] = [
+                    'name' => $name,
+                    'route' => $route,
+                    'can_access' => 1,
+                    'method' => [
+                        'GET' => 1,
+                        'POST' => 1,
+                        'PUT' => 1,
+                        'DELETE' => 1,
+                        'HEAD' => 1,
+                        'OPTIONS' => 1,
+                    ]
+                ];
+            }
+        }
+
+        return $permissions;
     }
 }

@@ -36,6 +36,17 @@ function formatDate($date, $format = 'Y-m-d')
     return null;
 }
 
+function displayTimeAgo($dateTime)
+{
+    // Convert the given date and time string to a Carbon instance
+    $dateTime = Carbon::parse($dateTime);
+
+    // Calculate the difference between the current time and the given time
+    $difference = $dateTime->diffForHumans();
+
+    return $difference;
+}
+
 function getUserStatus($status)
 {
     $data = [];
@@ -120,7 +131,37 @@ function calculateProjectPercent($project)
 {
     $tasks = $project->remainingTasks->count();
     $completeTasks = $project->tasks->where('status', 'resolved')->count();
-    if($tasks > 0)
+    if ($tasks > 0)
         return round((($completeTasks / $tasks) * 100));
     return 0;
+}
+
+function mapApp($version)
+{
+    $url = $version->url;
+    $extension = pathinfo($url, PATHINFO_EXTENSION);
+    $environment = $version->environment;
+
+    $qrCodeData = "";
+    $isAndroid = $extension !== "plist";
+    $isRelease = $environment === "Release";
+
+    if ($isAndroid) {
+        $qrCodeData = asset("storage/$url");
+    } else {
+        $domain = "https://" . request()->getHost();
+        $qrCodeData = $domain . '/qrCode?link=' . $url;
+    }
+
+    $created = formatDate($version->created_at, 'd/m/Y H:i');
+    $projectName = $version->app->project->name;
+    $version = $version->version;
+    $build = $version->build_number;
+
+    $version->app->data = html_entity_decode($qrCodeData, ENT_QUOTES, 'UTF-8');
+    $imageType = $isAndroid ? ($isRelease ? 'android-release.png' : 'android.png') : ($isRelease ? 'ios-release.png' : 'ios.webp');
+    $version->app->image = getFileVersion('/assets/images/' . $imageType);
+    $version->app->title = "$projectName    $created    $version+$build";
+
+    return $version;
 }

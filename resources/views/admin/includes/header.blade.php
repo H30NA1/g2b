@@ -1,909 +1,187 @@
-<div id="kt_app_header" class="app-header">
-    <!--begin::Header primary-->
-    <div class="app-header-primary">
-        <!--begin::Header primary container-->
-        <div class="app-container container-fluid d-flex align-items-stretch justify-content-between" id="kt_app_header_primary_container">
-            <!--begin::Header primary wrapper-->
-            <div class="d-flex flex-stack flex-grow-1">
-                <div class="d-flex">
-                    <!--begin::Logo-->
-                    <div class="app-header-logo d-flex flex-center gap-2 me-lg-15">
-                        <!--begin::Sidebar toggle-->
-                        <button class="btn btn-icon btn-sm btn-custom d-flex d-lg-none ms-n2" id="kt_app_header_menu_toggle">
-                            <i class="ki-outline ki-abstract-14 fs-2"></i>
-                        </button>
-                        <!--end::Sidebar toggle-->
-                        <!--begin::Logo image-->
-                        <a href="{{ route('admin.index') }}">
-                            <img alt="Logo" src="{{ getFileVersion('/assets/admin/media/logos/demo60.svg') }}" class="mh-25px" />
+<div class="header">
+    <div class="header-content">
+        <nav class="navbar navbar-expand">
+            <div class="collapse navbar-collapse justify-content-between">
+                <div class="header-left">
+                    <form>
+                        <div class="input-group search-area">
+                            <span class="input-group-text"><button class="bg-transparent border-0">
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="8.78605" cy="8.78605" r="8.23951" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.5168 14.9447L17.7471 18.1667" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+                <ul class="navbar-nav header-right">
+                    @if(in_array(auth()->user()->settings->role, ['super_admin', 'admin']))
+                    <li class="nav-item dropdown notification_dropdown">
+                        <a class="nav-link " href="javascript:void(0);" data-bs-toggle="dropdown">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8067 7.62358L20.1842 6.54349C19.6577 5.62957 18.4907 5.31429 17.5755 5.83869V5.83869C17.1399 6.09531 16.6201 6.16812 16.1307 6.04106C15.6413 5.91399 15.2226 5.59749 14.9668 5.16134C14.8023 4.88412 14.7139 4.56836 14.7105 4.24601V4.24601C14.7254 3.72919 14.5304 3.22837 14.17 2.85764C13.8096 2.48691 13.3145 2.27783 12.7975 2.27805H11.5435C11.037 2.27804 10.5513 2.47988 10.194 2.83891C9.83669 3.19795 9.63717 3.68456 9.63961 4.19109V4.19109C9.6246 5.23689 8.77248 6.07678 7.72657 6.07667C7.40421 6.07332 7.08846 5.98491 6.81123 5.82038V5.82038C5.89606 5.29598 4.72911 5.61126 4.20254 6.52519L3.53435 7.62358C3.00841 8.53636 3.3194 9.70258 4.23 10.2323V10.2323C4.8219 10.574 5.18653 11.2056 5.18653 11.889C5.18653 12.5725 4.8219 13.204 4.23 13.5458V13.5458C3.32056 14.0719 3.00923 15.2353 3.53435 16.1453V16.1453L4.16593 17.2346C4.41265 17.6798 4.8266 18.0083 5.31619 18.1474C5.80578 18.2866 6.33064 18.2249 6.77462 17.976V17.976C7.21108 17.7213 7.73119 17.6515 8.21934 17.7822C8.70749 17.9128 9.12324 18.233 9.37416 18.6716C9.5387 18.9489 9.62711 19.2646 9.63046 19.587V19.587C9.63046 20.6435 10.487 21.5 11.5435 21.5H12.7975C13.8505 21.5 14.7055 20.6491 14.7105 19.5961V19.5961C14.7081 19.088 14.9089 18.6 15.2682 18.2407C15.6275 17.8814 16.1155 17.6806 16.6236 17.6831C16.9452 17.6917 17.2596 17.7797 17.5389 17.9394V17.9394C18.4517 18.4653 19.6179 18.1543 20.1476 17.2437V17.2437L20.8067 16.1453C21.0618 15.7075 21.1318 15.186 21.0012 14.6963C20.8706 14.2067 20.5502 13.7893 20.111 13.5366V13.5366C19.6718 13.2839 19.3514 12.8665 19.2208 12.3769C19.0902 11.8873 19.1603 11.3658 19.4154 10.9279C19.5812 10.6383 19.8214 10.3982 20.111 10.2323V10.2323C21.0161 9.70286 21.3264 8.54346 20.8067 7.63274V7.63274V7.62358Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="12.1751" cy="11.889" r="2.63616" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
                         </a>
-                        <!--end::Logo image-->
-                    </div>
-                    <!--end::Logo-->
-                    <!--begin::Menu wrapper-->
-                    <div class="d-flex align-items-stretch" id="kt_app_header_menu_wrapper">
-                        <!--begin::Menu holder-->
-                        <div class="app-header-menu app-header-mobile-drawer align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="app-header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true" data-kt-swapper-mode="{default: 'append', lg: 'prepend'}" data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_menu_wrapper'}">
-                            <!--begin::Menu-->
-                            <div class="menu menu-rounded menu-column menu-lg-row menu-active-bg menu-title-gray-700 menu-state-gray-900 menu-icon-gray-500 menu-arrow-gray-500 menu-state-icon-primary menu-state-bullet-primary fw-semibold fs-6 align-items-stretch my-5 my-lg-0 px-2 px-lg-0" id="#kt_app_header_menu" data-kt-menu="true">
-                                <!--begin:Menu item-->
-                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
-                                    <!--begin:Menu link-->
-                                    <span class="menu-link">
-                                        <span class="menu-title">Pages</span>
-                                        <span class="menu-arrow d-lg-none"></span>
-                                    </span>
-                                    <!--end:Menu link-->
-                                    <!--begin:Menu sub-->
-                                    <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0">
-                                        <!--begin:Pages menu-->
-                                        <div class="menu-active-bg px-4 px-lg-0">
-                                            <!--begin:Tabs nav-->
-                                            <div class="d-flex w-100 overflow-auto">
-                                                <ul class="nav nav-stretch nav-line-tabs fw-bold fs-6 p-0 p-lg-10 flex-nowrap flex-grow-1">
-                                                    <!--begin:Nav item-->
-                                                    <li class="nav-item mx-lg-1">
-                                                        <a class="nav-link py-3 py-lg-6 active text-active-primary" href="#" data-bs-toggle="tab" data-bs-target="#kt_app_header_menu_pages_pages">General</a>
-                                                    </li>
-                                                    <!--end:Nav item-->
-                                                    <!--begin:Nav item-->
-                                                    <li class="nav-item mx-lg-1">
-                                                        <a class="nav-link py-3 py-lg-6 text-active-primary" href="#" data-bs-toggle="tab" data-bs-target="#kt_app_header_menu_pages_account">Profile</a>
-                                                    </li>
-                                                    <!--end:Nav item-->
-                                                    <!--begin:Nav item-->
-                                                    <li class="nav-item mx-lg-1">
-                                                        <a class="nav-link py-3 py-lg-6 text-active-primary" href="{{ route('admin.pages.calendar.index') }}" >Calendar</a>
-                                                    </li>
-                                                    <!--end:Nav item-->
-                                                </ul>
-                                            </div>
-                                            <!--end:Tabs nav-->
-                                            <!--begin:Tab content-->
-                                            <div class="tab-content py-4 py-lg-8 px-lg-7">
-                                                <!--begin:Tab pane-->
-                                                <div class="tab-pane active w-lg-1000px" id="kt_app_header_menu_pages_pages">
-                                                    <!--begin:Row-->
-                                                    <div class="row">
-                                                        <!--begin:Col-->
-                                                        <div class="col-lg-8">
-                                                            <!--begin:Row-->
-                                                            <div class="row">
-                                                                <!--begin:Col-->
-                                                                <div class="col-lg-3 mb-6 mb-lg-0">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Users</h4>
-                                                                    <!--end:Menu heading-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.users.index') }}" class="menu-link">
-                                                                            <span class="menu-title">Users</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.users.overview') }}" class="menu-link">
-                                                                            <span class="menu-title">Overview</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.users.projects') }}" class="menu-link">
-                                                                            <span class="menu-title">Projects</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.users.documents') }}" class="menu-link">
-                                                                            <span class="menu-title">Documents</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.users.index') }}" class="menu-link">
-                                                                            <span class="menu-title">Activity</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Col-->
-                                                                <!--begin:Col-->
-                                                                <div class="col-lg-3 mb-6 mb-lg-0">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Projects</h4>
-                                                                    <!--end:Menu heading-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.projects.index') }}" class="menu-link">
-                                                                            <span class="menu-title">Projects</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.projects.targets') }}" class="menu-link">
-                                                                            <span class="menu-title">Targets</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.projects.budgets') }}" class="menu-link">
-                                                                            <span class="menu-title">Budgets</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.projects.users') }}" class="menu-link">
-                                                                            <span class="menu-title">Users</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.projects.files') }}" class="menu-link">
-                                                                            <span class="menu-title">Files</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.projects.activities') }}" class="menu-link">
-                                                                            <span class="menu-title">Activity</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.projects.settings') }}" class="menu-link">
-                                                                            <span class="menu-title">Settings</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Col-->
-                                                                <!--begin:Col-->
-                                                                <div class="col-lg-3 mb-6 mb-lg-0">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">File Manager</h4>
-                                                                    <!--end:Menu heading-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.file-manager.index') }}" class="menu-link">
-                                                                            <span class="menu-title">Files</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.file-manager.settings') }}" class="menu-link">
-                                                                            <span class="menu-title">Settings</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Col-->
-                                                            </div>
-                                                            <!--end:Row-->
-                                                        </div>
-                                                        <!--end:Col-->
-                                                        <!--begin:Col-->
-                                                        <div class="col-lg-4">
-                                                            <img src="{{ getFileVersion('/assets/admin/media/stock/600x600/img-82.jpg') }}" class="rounded mw-100" alt="" />
-                                                        </div>
-                                                        <!--end:Col-->
-                                                    </div>
-                                                    <!--end:Row-->
-                                                </div>
-                                                <!--end:Tab pane-->
-                                                <!--begin:Tab pane-->
-                                                <div class="tab-pane w-lg-600px" id="kt_app_header_menu_pages_account">
-                                                    <!--begin:Row-->
-                                                    <div class="row">
-                                                        <!--begin:Col-->
-                                                        <div class="col-lg-5 mb-6 mb-lg-0">
-                                                            <!--begin:Row-->
-                                                            <div class="row">
-                                                                <!--begin:Col-->
-                                                                <div class="col-lg-6">
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.profile.index') }}" class="menu-link">
-                                                                            <span class="menu-title">Overview</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.profile.settings') }}" class="menu-link">
-                                                                            <span class="menu-title">Settings</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.profile.security') }}" class="menu-link">
-                                                                            <span class="menu-title">Security</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.profile.activity') }}" class="menu-link">
-                                                                            <span class="menu-title">Activity</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Col-->
-                                                                <!--begin:Col-->
-                                                                <div class="col-lg-6">
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="{{ route('admin.pages.profile.logs') }}" class="menu-link">
-                                                                            <span class="menu-title">Logs</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Col-->
-                                                            </div>
-                                                            <!--end:Row-->
-                                                        </div>
-                                                        <!--end:Col-->
-                                                        <!--begin:Col-->
-                                                        <div class="col-lg-7">
-                                                            <img src="{{ getFileVersion('/assets/admin/media/stock/900x600/46.jpg') }}" class="rounded mw-100" alt="" />
-                                                        </div>
-                                                        <!--end:Col-->
-                                                    </div>
-                                                    <!--end:Row-->
-                                                </div>
-                                                <!--end:Tab pane-->
-                                            </div>
-                                            <!--end:Tab content-->
-                                        </div>
-                                        <!--end:Pages menu-->
-                                    </div>
-                                    <!--end:Menu sub-->
-                                </div>
-                                <!--end:Menu item-->
-                            </div>
-                            <!--end::Menu-->
-                        </div>
-                        <!--end::Menu holder-->
-                    </div>
-                    <!--end::Menu wrapper-->
-                </div>
-                <!--begin::Navbar-->
-                <div class="app-navbar flex-shrink-0 gap-2">
-                    <!--begin::Notifications-->
-                    <div class="app-navbar-item ms-1">
-                        <!--begin::Menu- wrapper-->
-                        <div class="btn btn-sm btn-icon btn-custom h-35px w-35px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-                            <i class="ki-outline ki-category fs-3"></i>
-                        </div>
-                        <!--begin::Menu-->
-                        <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" id="kt_menu_notifications">
-                            <!--begin::Heading-->
-                            <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('{{ getFileVersion('/assets/admin/media/misc/menu-header-bg.jpg') }}">
-                                <!--begin::Title-->
-                                <h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notifications
-                                    <span class="fs-8 opacity-75 ps-3">24 reports</span>
-                                </h3>
-                                <!--end::Title-->
-                                <!--begin::Tabs-->
-                                <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_1">Alerts</a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <div id="DZ_W_TimeLine02" class="widget-timeline dz-scroll style-1 p-3 height370">
+                                <ul class="timeline">
+                                    @foreach ($adminRequestNotifications as $request)
+                                    <li>
+                                        @if ($request->status == 'approved' && isset($request->approved_at))
+                                        <div class="timeline-badge success"></div>
+                                        @elseif ($request->status == 'rejected' && isset($request->rejected_at))
+                                        <div class="timeline-badge danger"></div>
+                                        @else
+                                        <div class="timeline-badge primary"></div>
+                                        @endif
+                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
+                                            <span>{{ displayTimeAgo($request->updated_at) }}</span>
+                                            <h6 class="mb-0">{{ @$request->employee->username }} . {{ @$request->title }}</h6>
+                                        </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active" data-bs-toggle="tab" href="#kt_topbar_notifications_2">Updates</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_3">Logs</a>
-                                    </li>
+                                    @endforeach
                                 </ul>
-                                <!--end::Tabs-->
                             </div>
-                            <!--end::Heading-->
-                            <!--begin::Tab content-->
-                            <div class="tab-content">
-                                <!--begin::Tab panel-->
-                                <div class="tab-pane fade" id="kt_topbar_notifications_1" role="tabpanel">
-                                    <!--begin::Items-->
-                                    <div class="scroll-y mh-325px my-5 px-8">
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Symbol-->
-                                                <div class="symbol symbol-35px me-4">
-                                                    <span class="symbol-label bg-light-primary">
-                                                        <i class="ki-outline ki-abstract-28 fs-2 text-primary"></i>
-                                                    </span>
-                                                </div>
-                                                <!--end::Symbol-->
-                                                <!--begin::Title-->
-                                                <div class="mb-0 me-2">
-                                                    <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Project Alice</a>
-                                                    <div class="text-gray-500 fs-7">Phase 1 development</div>
-                                                </div>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">1 hr</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Symbol-->
-                                                <div class="symbol symbol-35px me-4">
-                                                    <span class="symbol-label bg-light-danger">
-                                                        <i class="ki-outline ki-information fs-2 text-danger"></i>
-                                                    </span>
-                                                </div>
-                                                <!--end::Symbol-->
-                                                <!--begin::Title-->
-                                                <div class="mb-0 me-2">
-                                                    <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">HR Confidential</a>
-                                                    <div class="text-gray-500 fs-7">Confidential staff documents</div>
-                                                </div>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">2 hrs</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Symbol-->
-                                                <div class="symbol symbol-35px me-4">
-                                                    <span class="symbol-label bg-light-warning">
-                                                        <i class="ki-outline ki-briefcase fs-2 text-warning"></i>
-                                                    </span>
-                                                </div>
-                                                <!--end::Symbol-->
-                                                <!--begin::Title-->
-                                                <div class="mb-0 me-2">
-                                                    <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Company HR</a>
-                                                    <div class="text-gray-500 fs-7">Corporeate staff profiles</div>
-                                                </div>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">5 hrs</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Symbol-->
-                                                <div class="symbol symbol-35px me-4">
-                                                    <span class="symbol-label bg-light-success">
-                                                        <i class="ki-outline ki-abstract-12 fs-2 text-success"></i>
-                                                    </span>
-                                                </div>
-                                                <!--end::Symbol-->
-                                                <!--begin::Title-->
-                                                <div class="mb-0 me-2">
-                                                    <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Project Redux</a>
-                                                    <div class="text-gray-500 fs-7">New frontend admin theme</div>
-                                                </div>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">2 days</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Symbol-->
-                                                <div class="symbol symbol-35px me-4">
-                                                    <span class="symbol-label bg-light-primary">
-                                                        <i class="ki-outline ki-colors-square fs-2 text-primary"></i>
-                                                    </span>
-                                                </div>
-                                                <!--end::Symbol-->
-                                                <!--begin::Title-->
-                                                <div class="mb-0 me-2">
-                                                    <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Project Breafing</a>
-                                                    <div class="text-gray-500 fs-7">Product launch status update</div>
-                                                </div>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">21 Jan</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Symbol-->
-                                                <div class="symbol symbol-35px me-4">
-                                                    <span class="symbol-label bg-light-info">
-                                                        <i class="ki-outline ki-picture fs-2 text-info"></i>
-                                                    </span>
-                                                </div>
-                                                <!--end::Symbol-->
-                                                <!--begin::Title-->
-                                                <div class="mb-0 me-2">
-                                                    <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Banner Assets</a>
-                                                    <div class="text-gray-500 fs-7">Collection of banner images</div>
-                                                </div>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">21 Jan</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Symbol-->
-                                                <div class="symbol symbol-35px me-4">
-                                                    <span class="symbol-label bg-light-warning">
-                                                        <i class="ki-outline ki-color-swatch fs-2 text-warning"></i>
-                                                    </span>
-                                                </div>
-                                                <!--end::Symbol-->
-                                                <!--begin::Title-->
-                                                <div class="mb-0 me-2">
-                                                    <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Icon Assets</a>
-                                                    <div class="text-gray-500 fs-7">Collection of SVG icons</div>
-                                                </div>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">20 March</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                    </div>
-                                    <!--end::Items-->
-                                    <!--begin::View more-->
-                                    <div class="py-3 text-center border-top">
-                                        <a href="{{ route('admin.pages.users.index') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
-                                            <i class="ki-outline ki-arrow-right fs-5"></i></a>
-                                    </div>
-                                    <!--end::View more-->
-                                </div>
-                                <!--end::Tab panel-->
-                                <!--begin::Tab panel-->
-                                <div class="tab-pane fade show active" id="kt_topbar_notifications_2" role="tabpanel">
-                                    <!--begin::Wrapper-->
-                                    <div class="d-flex flex-column px-9">
-                                        <!--begin::Section-->
-                                        <div class="pt-10 pb-0">
-                                            <!--begin::Action-->
-                                            <div class="text-center mt-5 mb-9">
-                                            </div>
-                                            <!--end::Action-->
-                                        </div>
-                                        <!--end::Section-->
-                                        <!--begin::Illustration-->
-                                        <div class="text-center px-4">
-                                            <img class="mw-100 mh-200px" alt="image" src="{{ getFileVersion('/assets/admin/media/illustrations/sketchy-1/1.png') }}" />
-                                        </div>
-                                        <!--end::Illustration-->
-                                    </div>
-                                    <!--end::Wrapper-->
-                                </div>
-                                <!--end::Tab panel-->
-                                <!--begin::Tab panel-->
-                                <div class="tab-pane fade" id="kt_topbar_notifications_3" role="tabpanel">
-                                    <!--begin::Items-->
-                                    <div class="scroll-y mh-325px my-5 px-8">
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-success me-4">200 OK</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">New order</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">Just now</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">New customer</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">2 hrs</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-success me-4">200 OK</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">Payment process</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">5 hrs</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">Search query</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">2 days</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-success me-4">200 OK</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">API connection</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">1 week</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-success me-4">200 OK</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">Database restore</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">Mar 5</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">System update</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">May 15</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">Server OS update</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">Apr 3</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">API rollback</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">Jun 30</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">Refund process</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">Jul 10</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">Withdrawal process</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">Sep 10</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="d-flex flex-stack py-4">
-                                            <!--begin::Section-->
-                                            <div class="d-flex align-items-center me-2">
-                                                <!--begin::Code-->
-                                                <span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-                                                <!--end::Code-->
-                                                <!--begin::Title-->
-                                                <a href="#" class="text-gray-800 text-hover-primary fw-semibold">Mail tasks</a>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Section-->
-                                            <!--begin::Label-->
-                                            <span class="badge badge-light fs-8">Dec 10</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Item-->
-                                    </div>
-                                    <!--end::Items-->
-                                    <!--begin::View more-->
-                                    <div class="py-3 text-center border-top">
-                                        <a href="{{ route('admin.pages.users.index') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
-                                            <i class="ki-outline ki-arrow-right fs-5"></i></a>
-                                    </div>
-                                    <!--end::View more-->
-                                </div>
-                                <!--end::Tab panel-->
-                            </div>
-                            <!--end::Tab content-->
+                            <a class="all-notification" href="{{ route('web.reports.index') }}#requests">See all Requests <i class="ti-arrow-end"></i></a>
                         </div>
-                        <!--end::Menu-->
-                        <!--end::Menu wrapper-->
-                    </div>
-                    <!--end::Notifications-->
-                    <!--begin::User menu-->
-                    <div class="app-navbar-item ms-1">
-                        <!--begin::Menu wrapper-->
-                        <div class="cursor-pointer symbol position-relative symbol-35px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-                            <img src="{{ getFileVersion('/assets/admin/media/avatars/300-2.jpg') }}" alt="user" />
-                            <span class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle mb-1 bottom-0 start-100 animation-blink"></span>
+                    </li>
+                    @endif
+                    <li class="nav-item dropdown notification_dropdown">
+                        <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <div id="DZ_W_Notification1" class="widget-media dz-scroll p-3" style="height:380px;">
+                                <ul class="timeline">
+                                    @foreach ($notifications as $notification)
+                                    <li>
+                                        <a href="{{ route('web.notifications.read', ['id' => $notification->id]) }}">
+                                            <div class="timeline-panel">
+                                                <div class="media me-2">
+                                                    <img alt="image" width="50" src="{{ getFileVersion('/assets/images/avatar/1.jpg') }}">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="mb-1">{{ $notification->title }}</h6>
+                                                    <small class="d-block">{{ formatDate($notification->created_at, 'd F Y - h:i A') }}</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <a class="all-notification" href="{{ route('web.reports.index') }}#notifications">See all notifications <i class="ti-arrow-end"></i></a>
                         </div>
-                        <!--begin::User account menu-->
-                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <div class="menu-content d-flex align-items-center px-3">
-                                    <!--begin::Avatar-->
-                                    <div class="symbol symbol-50px me-5">
-                                        <img alt="Logo" src="{{ getFileVersion('/assets/admin/media/avatars/300-2.jpg') }}" />
+                    </li>
+                    <li class="nav-item dropdown notification_dropdown">
+                        <a class="nav-link bell-link" href="javascript:void(0);">
+                            <svg width="20" height="22" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9026 6.85114L12.4593 10.4642C11.6198 11.1302 10.4387 11.1302 9.59922 10.4642L5.11844 6.85114" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9089 19C18.9502 19.0084 21 16.5095 21 13.4384V6.57001C21 3.49883 18.9502 1 15.9089 1H6.09114C3.04979 1 1 3.49883 1 6.57001V13.4384C1 16.5095 3.04979 19.0084 6.09114 19H15.9089Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown notification_dropdown">
+                        <a class="nav-link bell dz-fullscreen" href="javascript:void(0);">
+                            <svg id="icon-full" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path>
+                            </svg>
+                            <svg id="icon-minimize" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="A098AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize">
+                                <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <div class="dropdown header-profile2">
+                            <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="header-info2 d-flex align-items-center">
+                                    <div class="header-media">
+                                        <img src="{{ isset(auth()->user()->profile->avatar) ? auth()->user()->profile->avatar : getFileVersion('/assets/images/tab/1.jpg') }}" width="30" height="30" alt="">
                                     </div>
-                                    <!--end::Avatar-->
-                                    <!--begin::Username-->
-                                    <div class="d-flex flex-column">
-                                        <div class="fw-bold d-flex align-items-center fs-5">Ana Fox
-                                            <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
-                                        </div>
-                                        <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">ana@nio.com</a>
+                                    <div class="header-info">
+                                        <h6>{{ auth()->user()->username }}</h6>
+                                        <p>{{ auth()->user()->email }}</p>
                                     </div>
-                                    <!--end::Username-->
+
                                 </div>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator my-2"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-5">
-                                <a href="{{ route('admin.pages.profile.index') }}" class="menu-link px-5">My Profile</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-5">
-                                <a href="apps/projects/list.html" class="menu-link px-5">
-                                    <span class="menu-text">My Projects</span>
-                                    <span class="menu-badge">
-                                        <span class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator my-2"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                <a href="#" class="menu-link px-5">
-                                    <span class="menu-title position-relative">Mode
-                                        <span class="ms-5 position-absolute translate-middle-y top-50 end-0">
-                                            <i class="ki-outline ki-night-day theme-light-show fs-2"></i>
-                                            <i class="ki-outline ki-moon theme-dark-show fs-2"></i>
-                                        </span></span>
-                                </a>
-                                <!--begin::Menu-->
-                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-gray-500 menu-active-bg menu-state-color fw-semibold py-4 fs-base w-150px" data-kt-menu="true" data-kt-element="theme-mode-menu">
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-3 my-0">
-                                        <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="light">
-                                            <span class="menu-icon" data-kt-element="icon">
-                                                <i class="ki-outline ki-night-day fs-2"></i>
-                                            </span>
-                                            <span class="menu-title">Light</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" style="">
+                                <div class="card border-0 mb-0">
+                                    <div class="card-header py-2">
+                                        <div class="products">
+                                            <img src="{{ isset(auth()->user()->profile->avatar) ? auth()->user()->profile->avatar : getFileVersion('/assets/images/tab/1.jpg') }}" width="45" height="45" class="avatar avatar-md" alt="">
+                                            <div>
+                                                <h6>{{ auth()->user()->username }}</h6>
+                                                <span>{{ auth()->user()->professional->job_title }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body px-0 py-2">
+                                        <a href="{{ route('web.profile.index') }}" class="dropdown-item ai-icon ">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9848 15.3462C8.11714 15.3462 4.81429 15.931 4.81429 18.2729C4.81429 20.6148 8.09619 21.2205 11.9848 21.2205C15.8524 21.2205 19.1543 20.6348 19.1543 18.2938C19.1543 15.9529 15.8733 15.3462 11.9848 15.3462Z" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9848 12.0059C14.5229 12.0059 16.58 9.94779 16.58 7.40969C16.58 4.8716 14.5229 2.81445 11.9848 2.81445C9.44667 2.81445 7.38857 4.8716 7.38857 7.40969C7.38 9.93922 9.42381 11.9973 11.9524 12.0059H11.9848Z" stroke="var(--primary)" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            <span class="ms-2">Profile </span>
+                                        </a>
+                                        <a href="{{ route('web.projects.index') }}" class="dropdown-item ai-icon ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart">
+                                                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                                                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                                            </svg>
+
+                                            <span class="ms-2">My Project</span><span class="badge badge-sm badge-secondary light rounded-circle text-white ms-2">{{ auth()->user()->projects->count()  }}</span>
+                                        </a>
+                                        <a href="javascript:void(0);" class="dropdown-item ai-icon ">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.9026 8.85114L13.4593 12.4642C12.6198 13.1302 11.4387 13.1302 10.5992 12.4642L6.11844 8.85114" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9089 21C19.9502 21.0084 22 18.5095 22 15.4384V8.57001C22 5.49883 19.9502 3 16.9089 3H7.09114C4.04979 3 2 5.49883 2 8.57001V15.4384C2 18.5095 4.04979 21.0084 7.09114 21H16.9089Z" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            <span class="ms-2">Message </span>
+                                        </a>
+                                        <a href="email-inbox.html" class="dropdown-item ai-icon ">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.8476C17.6392 17.8476 20.2481 17.1242 20.5 14.2205C20.5 11.3188 18.6812 11.5054 18.6812 7.94511C18.6812 5.16414 16.0452 2 12 2C7.95477 2 5.31885 5.16414 5.31885 7.94511C5.31885 11.5054 3.5 11.3188 3.5 14.2205C3.75295 17.1352 6.36177 17.8476 12 17.8476Z" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M14.3888 20.8572C13.0247 22.372 10.8967 22.3899 9.51947 20.8572" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            <span class="ms-2">Notification </span>
                                         </a>
                                     </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-3 my-0">
-                                        <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="dark">
-                                            <span class="menu-icon" data-kt-element="icon">
-                                                <i class="ki-outline ki-moon fs-2"></i>
-                                            </span>
-                                            <span class="menu-title">Dark</span>
+                                    <div class="card-footer px-0 py-2">
+                                        <a href="{{ route('web.profile.setting') }}" class="dropdown-item ai-icon ">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8066 7.62355L20.1842 6.54346C19.6576 5.62954 18.4907 5.31426 17.5755 5.83866V5.83866C17.1399 6.09528 16.6201 6.16809 16.1307 6.04103C15.6413 5.91396 15.2226 5.59746 14.9668 5.16131C14.8023 4.88409 14.7139 4.56833 14.7105 4.24598V4.24598C14.7254 3.72916 14.5304 3.22834 14.17 2.85761C13.8096 2.48688 13.3145 2.2778 12.7975 2.27802H11.5435C11.0369 2.27801 10.5513 2.47985 10.194 2.83888C9.83666 3.19791 9.63714 3.68453 9.63958 4.19106V4.19106C9.62457 5.23686 8.77245 6.07675 7.72654 6.07664C7.40418 6.07329 7.08843 5.98488 6.8112 5.82035V5.82035C5.89603 5.29595 4.72908 5.61123 4.20251 6.52516L3.53432 7.62355C3.00838 8.53633 3.31937 9.70255 4.22997 10.2322V10.2322C4.82187 10.574 5.1865 11.2055 5.1865 11.889C5.1865 12.5725 4.82187 13.204 4.22997 13.5457V13.5457C3.32053 14.0719 3.0092 15.2353 3.53432 16.1453V16.1453L4.16589 17.2345C4.41262 17.6797 4.82657 18.0082 5.31616 18.1474C5.80575 18.2865 6.33061 18.2248 6.77459 17.976V17.976C7.21105 17.7213 7.73116 17.6515 8.21931 17.7821C8.70746 17.9128 9.12321 18.233 9.37413 18.6716C9.53867 18.9488 9.62708 19.2646 9.63043 19.5869V19.5869C9.63043 20.6435 10.4869 21.5 11.5435 21.5H12.7975C13.8505 21.5 14.7055 20.6491 14.7105 19.5961V19.5961C14.7081 19.088 14.9088 18.6 15.2681 18.2407C15.6274 17.8814 16.1154 17.6806 16.6236 17.6831C16.9451 17.6917 17.2596 17.7797 17.5389 17.9393V17.9393C18.4517 18.4653 19.6179 18.1543 20.1476 17.2437V17.2437L20.8066 16.1453C21.0617 15.7074 21.1317 15.1859 21.0012 14.6963C20.8706 14.2067 20.5502 13.7893 20.111 13.5366V13.5366C19.6717 13.2839 19.3514 12.8665 19.2208 12.3769C19.0902 11.8872 19.1602 11.3658 19.4153 10.9279C19.5812 10.6383 19.8213 10.3981 20.111 10.2322V10.2322C21.0161 9.70283 21.3264 8.54343 20.8066 7.63271V7.63271V7.62355Z" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <circle cx="12.175" cy="11.889" r="2.63616" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            <span class="ms-2">Settings </span>
+                                        </a>
+                                        <a href="{{ route('web.logout') }}" class="dropdown-item ai-icon">
+                                            <svg class="profle-logout" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff7979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                                <polyline points="16 17 21 12 16 7"></polyline>
+                                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                                            </svg>
+                                            <span class="ms-2 text-danger">Logout </span>
                                         </a>
                                     </div>
-                                    <!--end::Menu item-->
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-3 my-0">
-                                        <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="system">
-                                            <span class="menu-icon" data-kt-element="icon">
-                                                <i class="ki-outline ki-screen fs-2"></i>
-                                            </span>
-                                            <span class="menu-title">System</span>
-                                        </a>
-                                    </div>
-                                    <!--end::Menu item-->
                                 </div>
-                                <!--end::Menu-->
+
                             </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-5 my-1">
-                                <a href="{{ route('admin.pages.profile.settings') }}" class="menu-link px-5">Settings</a>
-                            </div>
-                            <!--end::Menu item-->
                         </div>
-                        <!--end::User account menu-->
-                        <!--end::Menu wrapper-->
-                    </div>
-                    <!--end::User menu-->
-                    <!--begin::Header menu toggle-->
-                    <div class="app-navbar-item d-lg-none" title="Show header menu">
-                        <button class="btn btn-sm btn-icon btn-custom h-35px w-35px" id="kt_header_secondary_mobile_toggle">
-                            <i class="ki-outline ki-element-4 fs-2"></i>
-                        </button>
-                    </div>
-                    <!--end::Header menu toggle-->
-                    <!--begin::Header menu toggle-->
-                    <div class="app-navbar-item d-lg-none me-n3" title="Show header menu">
-                        <button class="btn btn-sm btn-icon btn-custom h-35px w-35px" id="kt_app_sidebar_mobile_toggle">
-                            <i class="ki-outline ki-setting-3 fs-2"></i>
-                        </button>
-                    </div>
-                    <!--end::Header menu toggle-->
-                </div>
-                <!--end::Navbar-->
+                    </li>
+                </ul>
             </div>
-            <!--end::Header primary wrapper-->
-        </div>
-        <!--end::Header primary container-->
+        </nav>
     </div>
-    <!--end::Header primary-->
 </div>

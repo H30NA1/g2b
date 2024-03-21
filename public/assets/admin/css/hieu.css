@@ -1,0 +1,20 @@
+.bordered-list {
+  border-top: 1px solid black; /* Top border */
+  border-bottom: 1px solid black; /* Bottom border */
+}
+
+.bordered-list:first-child {
+  border-top: none; /* Remove bottom border for the last item */
+}
+
+.bordered-list:last-child {
+  border-bottom: none; /* Remove bottom border for the last item */
+}
+
+.height370 {
+  height: 38.125rem !important;
+}
+
+.mt30 {
+  margin-top: 30px;
+}

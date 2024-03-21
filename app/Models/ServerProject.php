@@ -21,21 +21,16 @@ class ServerProject extends Model
         'server_id',
         'status',
         'username',
-        'password',
-        'plain_password',
-        'prikey',
-        'prikey_passphrase'
+        'password'
     ];
-
-    
-
-    public function project()
-    {
-        return $this->belongsTo(Project::class);
-    }
 
     public function server()
     {
-        return $this->belongsTo(Server::class);
+        return $this->belongsTo(Server::class, 'server_id');
+    }
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class, 'project_id');
     }
 }

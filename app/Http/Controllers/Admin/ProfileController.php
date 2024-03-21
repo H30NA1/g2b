@@ -4,35 +4,66 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Resources\Profile\IndexResource;
+use Throwable;
+use App\Services\Admin\UserService;
+use Illuminate\Support\Facades\DB;
 
 class ProfileController extends Controller
 {
-    public function __construct()
-    {
+    private $userService;
+
+    public function __construct(
+        UserService $userService
+    ) {
+        $this->userService = $userService;
     }
 
     public function index()
     {
-        return view('admin.pages.profile.index');
+        try {
+            $user = $this->userService->getProfile(auth()->id());
+            return view('pages.profile.index', compact('user'));
+        } catch (Throwable $e) {
+            report($e);
+            return redirect()->route('web.index')->withErrors($e->getMessage());
+        }
     }
 
-    public function logs()
+    public function setting()
     {
-        return view('admin.pages.profile.logs.index');
+        try {
+            $user = $this->userService->getProfile(auth()->id());
+            return view('pages.profile.setting', compact('user'));
+        } catch (Throwable $e) {
+            report($e);
+            return redirect()->route('web.index')->withErrors($e->getMessage());
+        }
     }
 
-    public function activity()
+    public function edit()
     {
-        return view('admin.pages.profile.activity.index');
+        try {
+            $user = $this->userService->getProfile(auth()->id());
+            return view('pages.profile.detail', compact('user'));
+        } catch (Throwable $e) {
+            report($e);
+            return redirect()->route('web.index')->withErrors($e->getMessage());
+        }
     }
 
-    public function security()
+    public function update(Request $request)
     {
-        return view('admin.pages.profile.security.index');
-    }
-
-    public function settings()
-    {
-        return view('admin.pages.profile.settings.index');
+        $data = $request->all();
+        try {
+            DB::beginTransaction();
+            $user = $this->userService->updateUser(auth()->id(), $data);
+            DB::commit();
+            return view('pages.profile.index', compact('user'));
+        } catch (Throwable $e) {
+            DB::rollBack();
+            report($e);
+            return redirect()->route('web.index')->withErrors($e->getMessage());
+        }
     }
 }

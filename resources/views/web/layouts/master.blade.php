@@ -10,7 +10,7 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>G2Bytes</title>
+    <title>Harron</title>
     <meta content="Go To Bytes" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Webflow" name="generator">
@@ -36,6 +36,7 @@
     <link href="#" rel="shortcut icon" type="image/x-icon">
     <link href="#" rel="apple-touch-icon">
     <style data-styled="active" data-styled-version="5.3.8"></style>
+    @stack('css')
 </head>
 
 <body>
@@ -44,6 +45,7 @@
     @include('web.includes.footer')
     <script src="{{ getFileVersion('/assets/web/js/jquery.min.js') }}" type="text/javascript"></script>
     <script src="{{ getFileVersion('/assets/web/js/script.js') }}" type="text/javascript"></script>
+    @stack('js')
 </body>
 
 </html>

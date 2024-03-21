@@ -18,8 +18,8 @@ class Project extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'logo',
         'name',
+        'environment',
         'status',
         'visibility',
         'priority',
@@ -40,8 +40,6 @@ class Project extends Model
         return Carbon::parse($value)->format('Y-m-d');
     }
 
-    
-
     public function users()
     {
         return $this->hasMany(ProjectUser::class);
@@ -55,11 +53,6 @@ class Project extends Model
     public function information()
     {
         return $this->hasOne(ProjectInformation::class);
-    }
-
-    public function setting()
-    {
-        return $this->hasOne(ServerProject::class);
     }
 
     public function completeTasks()

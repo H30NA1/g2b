@@ -3,7 +3,7 @@
 @section('title', 'G2B')
 
 @push('css')
-
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 @endpush
 
 @section('content')
@@ -185,26 +185,23 @@
     <div class="container _6em">
         <div class="center-text" id="contactUs">
             <div class="fade-in-move-on-scroll" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                <h1>Our payment plan is easy to understand</h1>
+                <h1>Remarkable Projects I've Accomplished</h1>
             </div>
         </div>
         <div class="payment-holder">
             <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
                 <div class="tabs-menu w-tab-menu" role="tablist">
                     <a data-w-tab="Tab 1" class="tab-link right-side w-inline-block w-tab-link  w--current" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" tabindex="-1" id="w-tabs-0-data-w-tab-1" href="#w-tabs-0-data-w-pane-1" role="tab" aria-controls="w-tabs-0-data-w-pane-0" aria-selected="true">
-                        <div class="tab-text">Data Fortress</div>
+                        <div class="tab-text">Rightly.Inc</div>
                     </a>
                     <a data-w-tab="Tab 2" class="tab-link w-inline-block w-tab-link" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="w-tabs-0-data-w-tab-2" href="#w-tabs-0-data-w-pane-2" role="tab" aria-controls="w-tabs-0-data-w-pane-2" aria-selected="false">
-                        <div class="tab-text">Backend Citadel</div>
+                        <div class="tab-text">GoTip</div>
                     </a>
                     <a data-w-tab="Tab 3" class="tab-link w-inline-block w-tab-link" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="w-tabs-0-data-w-tab-3" href="#w-tabs-0-data-w-pane-3" role="tab" aria-controls="w-tabs-0-data-w-pane-3" aria-selected="false">
-                        <div class="tab-text">Pixel Playground</div>
+                        <div class="tab-text">Q.E.D. Study</div>
                     </a>
                     <a data-w-tab="Tab 4" class="tab-link w-inline-block w-tab-link" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="w-tabs-0-data-w-tab-4" href="#w-tabs-0-data-w-pane-4" role="tab" aria-controls="w-tabs-0-data-w-pane-4" aria-selected="false">
-                        <div class="tab-text">Universal Interface Fusion</div>
-                    </a>
-                    <a data-w-tab="Tab 5" class="tab-link w-inline-block w-tab-link" style="opacity: 0; transform: translate3d(0px, 25px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" id="w-tabs-0-data-w-tab-5" href="#w-tabs-0-data-w-pane-5" role="tab" aria-controls="w-tabs-0-data-w-pane-5" aria-selected="false">
-                        <div class="tab-text">Universal Nexus</div>
+                        <div class="tab-text">Others</div>
                     </a>
                 </div>
                 <div class="tabs-content w-tab-content">
@@ -264,8 +261,79 @@
         </div>
     </div>
 </div>
+<div id="fullscreen-img">
+    <img id="fullscreen-img-src" src="" alt="">
+</div>
 @endsection
 
 @push('js')
+<script>
+    // Get all images with the class "clickable-img"
+    const images = document.querySelectorAll('.clickable-img');
+    // Get the fullscreen image container and its child img element
+    const fullscreenImgContainer = document.getElementById('fullscreen-img');
+    const fullscreenImg = document.getElementById('fullscreen-img-src');
 
+    // Function to handle image click event
+    function openFullscreenImage(imgSrc) {
+        // Set the source of the fullscreen image
+        fullscreenImg.src = imgSrc;
+
+        // Show the fullscreen image container
+        fullscreenImgContainer.style.display = 'flex';
+
+        // Toggle fullscreen mode
+        if (fullscreenImg.requestFullscreen) {
+            fullscreenImg.requestFullscreen();
+        } else if (fullscreenImg.mozRequestFullScreen) {
+            /* Firefox */
+            fullscreenImg.mozRequestFullScreen();
+        } else if (fullscreenImg.webkitRequestFullscreen) {
+            /* Chrome, Safari & Opera */
+            fullscreenImg.webkitRequestFullscreen();
+        } else if (fullscreenImg.msRequestFullscreen) {
+            /* IE/Edge */
+            fullscreenImg.msRequestFullscreen();
+        }
+    }
+
+    // Add click event listeners to each image
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            const imgSrc = this.src;
+            console.log(imgSrc)
+            openFullscreenImage(imgSrc);
+        });
+    });
+
+    // Exit fullscreen mode when clicking on the fullscreen image container
+    fullscreenImgContainer.addEventListener('click', function() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            /* Firefox */
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            /* Chrome, Safari & Opera */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            /* IE/Edge */
+            document.msExitFullscreen();
+        }
+        // Hide the fullscreen image container
+        fullscreenImgContainer.style.display = 'none';
+    });
+</script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // Enable drag
+    grabCursor: true,
+    // Enable mousewheel control
+    mousewheel: true,
+});
+</script>
 @endpush
